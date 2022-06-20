@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\IndexController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,11 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
+});*/
+
+//Route group for UserController
+Route::controller(IndexController::class)->group(function () {
+    Route::get('/', 'index'); //Display practice data
 });
 
-
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('index');
-});
+});*/
