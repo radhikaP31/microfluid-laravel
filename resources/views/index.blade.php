@@ -17,7 +17,7 @@
 			<div class="carousel-inner" role="listbox">
 
 				<!-- Slide 1 -->
-				<div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg);">
+				<div class="carousel-item active" style="background-image: url(images/slide/slide-1.jpg);">
 					<div class="carousel-container">
 						<div class="carousel-content animate__animated animate__fadeInUp">
 						</div>
@@ -75,19 +75,18 @@
 				</div>
 
 				<div class="row">
-					<?php  
-					if ($whatWeOfferData->num_rows > 0) { 
-						while($offer = $whatWeOfferData->fetch_assoc()) { ?>
+					@if ($whatWeOfferData->count() > 0)
+						@foreach($whatWeOfferData as $key => $offer)
 							<div class="col-lg-3 col-md-6 align-items-stretch min-height310  " >
 								<div class="icon-box rounded shadow mb-5">
 									<div class="icon">
-										<img alt="<?= $offer['mstr_nm']; ?>" src="<?= $offer['mstr_img']; ?>">
+										<img alt="<?= $offer->mstr_nm; ?>" src="<?= $offer->mstr_img; ?>">
 									</div>
-									<h4><a href="<?= $offer['mstr_link']; ?>" class="service_name primary-text"><?= $offer['mstr_nm']; ?>&nbsp;&nbsp;<i class="fa fa-arrow-right" style="font-size: 13px;"></i></a></h4>
+									<h4><a href="<?= $offer->mstr_link; ?>" class="service_name primary-text"><?= $offer->mstr_nm; ?>&nbsp;&nbsp;<i class="fa fa-arrow-right" style="font-size: 13px;"></i></a></h4>
 								</div>
 							</div>
-						<?php } ?>
-					<?php } ?>  
+						@endforeach
+					@endif  
 					<br>   
 				</div>
 			</div>
@@ -112,25 +111,24 @@
 						</div>
 					</div>
 
-					<?php $fieldApplication = $common->getIndependentDataByTypeCode('FOA'); 
-					if ($fieldApplication->num_rows > 0) { 
-						while($field = $fieldApplication->fetch_assoc()) { ?>
+					@if ($fieldApplication->count() > 0)
+						@foreach($fieldApplication as $key => $field)
 							<div class="col-lg-4 col-md-6 align-items-stretch mt-4" >
 								<div class="field field-has-link field-has-icon field-has-content">
 										<div class="field-header">
-											<a target="_self" href="<?= $field['mstr_link']; ?>"><img alt="<?= $field['mstr_nm']; ?>" src="<?= $field['mstr_img']; ?>"></a>
+											<a target="_self" href="<?= $field->mstr_link; ?>"><img alt="<?= $field->mstr_nm; ?>" src="<?= $field->mstr_img; ?>"></a>
 										</div>
 										<div class="field-content">
 											<h3 class="field-title">
-												<span class="iconify field-icon" data-icon="<?= $field['mstr_icon']; ?>"></span><?= $field['mstr_nm']; ?>
+												<span class="iconify field-icon" data-icon="<?= $field->mstr_icon; ?>"></span><?= $field->mstr_nm; ?>
 											</h3><!-- <br> -->
-											<p class="field-desc text-black"><?= $field['mstr_desc']; ?></p>
-											<a class="read-more primary-text" target="_self" href="<?= $field['mstr_link']; ?>">Read More</a>
+											<p class="field-desc text-black"><?= $field->mstr_desc; ?></p>
+											<a class="read-more primary-text" target="_self" href="<?= $field->mstr_link; ?>">Read More</a>
 										</div>
 								</div>
 							</div>
-						<?php } ?>
-					<?php } ?>
+						@endforeach
+					@endif
 				</div>
 				<br>
 				<div class="text-center">
@@ -142,7 +140,7 @@
 		<!-- <hr style="border-width: 2px;background-color: var(--secondary_color);" class="container"> -->
 
 		<!-- ======= About Us Section ======= -->
-		<section id="about-us" class="about-us about-us-banner" style="background: url('assets/img/about-banner.png') no-repeat center top ; height:26rem ; background-size: cover;padding: 0px;background-attachment: fixed;">  
+		<section id="about-us" class="about-us about-us-banner" style="background: url('images/about-banner.png') no-repeat center top ; height:26rem ; background-size: cover;padding: 0px;background-attachment: fixed;">  
 			<div class="banner-opacity" style="position: absolute;z-index: 0;opacity: 0.7;width: 100%;height: 100%;    background: #C4C4C4 !important;"></div>
 				<div class="row col-md-12">
 					<div class="col-md-7">

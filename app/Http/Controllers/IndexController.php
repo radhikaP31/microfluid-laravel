@@ -15,10 +15,10 @@ class IndexController extends Controller
      */
     public function index()
     {
-       $common = new Common;
-       dd(DB::table('common_type')->first());
+        $common = new Common;
         return view('index', [
-            'whatWeOfferData' => $common->getIndependentDataByTypeCode('WTOFR') //call repository method
+            'whatWeOfferData' => $common->getIndependentDataByTypeCode('WTOFR'),
+            'fieldApplication' => $common->getIndependentDataByTypeCode('FOA')
         ]);        
     }
 
