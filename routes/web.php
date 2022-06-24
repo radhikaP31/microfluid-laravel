@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\AboutController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,9 +18,14 @@ use App\Http\Controllers\IndexController;
     return view('welcome');
 });*/
 
-//Route group for UserController
+//Route group for IndexController index page
 Route::controller(IndexController::class)->group(function () {
     Route::get('/', 'index'); //Display practice data
+});
+
+//Route group for AboutController about page
+Route::controller(AboutController::class)->group(function () {
+    Route::get('/about', 'index'); //Display practice data
 });
 
 /*Route::get('/', function () {

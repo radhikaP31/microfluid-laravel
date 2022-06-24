@@ -15,7 +15,7 @@
       </div>
         <ul>
           <li class="active"><a href="index.php">Home</a></li>
-          <li><a href="about.php">About Us</a></li>
+          <li><a href="about">About Us</a></li>
           <li class="drop-down"><a href="products.php?category_id=1">Products</a> 
           </li>
           <li><a href="">Industries</a></li>
