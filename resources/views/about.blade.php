@@ -11,6 +11,7 @@
     @endif
 
 
+{{ Breadcrumbs::render('about') }}
   <main id="main">
     <!-- <hr style="margin: 2% 10%;background: #b5b5b5;" /> -->
     <!-- ======= About Us Section ======= -->

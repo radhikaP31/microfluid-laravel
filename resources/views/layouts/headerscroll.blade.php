@@ -20,8 +20,8 @@
             <x-nav-link :active="request()->routeIs('about')">
               <a href="{{route('about')}}">{{ __('About Us') }}</a>
             </x-nav-link>
-            <x-nav-link :active="request()->routeIs('home')">
-              <a href="{{route('home')}}">{{ __('Products') }}</a>
+            <x-nav-link :active="request()->routeIs('products')">
+              <a href="{{route('products')}}">{{ __('Products') }}</a>
             </x-nav-link>
             <x-nav-link :active="request()->routeIs('home')">
               <a href="{{route('home')}}">{{ __('Industries') }}</a>

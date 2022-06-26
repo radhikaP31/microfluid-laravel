@@ -98,7 +98,7 @@
 <!-- <hr style="border-width: 2px;background-color: var(--secondary_color);" class="container"> -->
 
 				<!-- ======= Field of application Section ======= -->
-		<section id="field-appilication" class="field-appilication" style="background: #e2e2e2 !important">
+		<section id="field-appilication" class="field-appilication" style="background: #fff !important">
 			<div class="container">
 
 				<div class="row">

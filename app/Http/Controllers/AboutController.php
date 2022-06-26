@@ -8,8 +8,9 @@ use Illuminate\Support\Facades\DB;
 
 class AboutController extends Controller
 {
+
     /**
-     * get all user data
+     * get all about us data
      *
      * @return \Illuminate\View\View
      */

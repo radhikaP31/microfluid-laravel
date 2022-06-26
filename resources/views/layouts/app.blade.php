@@ -34,9 +34,7 @@
         @include('layouts.headerscroll')
 
         <!-- Page Content -->
-        <main class="mt-5">
             {{ $slot }}
-        </main>
     </div>
     @include('layouts.footer')
 </body>

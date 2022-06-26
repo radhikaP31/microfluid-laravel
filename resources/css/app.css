@@ -642,7 +642,7 @@ section {
 }
 
 .section-bg {
-  background-color: #f7f7f7 !important;
+  background-color: #fbfbfb !important;
 }
 
 .section-title,.client_section_title {
@@ -692,7 +692,7 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 15px 0;
-  background: var(--secondary_color);
+  /*background: var(--secondary_color);*/
   min-height: 40px;
 }
 
@@ -1107,7 +1107,7 @@ a.list-group-item, button.list-group-item {
 
 #footer .footer-top {
   padding: 60px 0 0 0;
-  background: #e2e2e2;
+  background: #f9f9f9;
 }
 
 #footer .footer-top .footer-contact {
@@ -1199,7 +1199,7 @@ a.list-group-item, button.list-group-item {
   text-decoration: none;
   color: var(--primary_color);
   padding-left: 5px;
-  font-weight: 600;
+  /*font-weight: 600;*/
 }
 
 #footer .footer-newsletter {
