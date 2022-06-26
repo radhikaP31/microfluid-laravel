@@ -14,13 +14,24 @@
       <div class="list-logo" style="margin-left:5%;top: 4px;"><a href="index.php" class="logo mr-auto"><img src="{{ asset('images/Logo.png') }}" alt="" class="img-fluid" ></a>
       </div>
         <ul>
-          <li class="active"><a href="index.php">Home</a></li>
-          <li><a href="about">About Us</a></li>
-          <li class="drop-down"><a href="products.php?category_id=1">Products</a> 
-          </li>
-          <li><a href="">Industries</a></li>
-          <li><a href="">Inquiry</a></li>
-          <li><a href="">Contact</a></li>
+          <x-nav-link :active="request()->routeIs('home')">
+              <a href="{{route('home')}}">{{ __('Home') }}</a>
+            </x-nav-link>
+            <x-nav-link :active="request()->routeIs('about')">
+              <a href="{{route('about')}}">{{ __('About Us') }}</a>
+            </x-nav-link>
+            <x-nav-link :active="request()->routeIs('home')">
+              <a href="{{route('home')}}">{{ __('Products') }}</a>
+            </x-nav-link>
+            <x-nav-link :active="request()->routeIs('home')">
+              <a href="{{route('home')}}">{{ __('Industries') }}</a>
+            </x-nav-link>
+            <x-nav-link :active="request()->routeIs('home')">
+              <a href="{{route('home')}}">{{ __('Inquiry') }}</a>
+            </x-nav-link>
+            <x-nav-link :active="request()->routeIs('home')">
+              <a href="{{route('home')}}">{{ __('Contact') }}</a>
+            </x-nav-link>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -33,3 +44,5 @@
 
     </div>
 </header>
+
+<div class="header_space"></div>
