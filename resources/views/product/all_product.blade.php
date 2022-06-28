@@ -19,25 +19,59 @@
         <!-- Product category and sub category sidebar section end-->
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" style="border-right: 1px solid var(--primary_color);">
           <div class="list-group product-list-group">
-              <?php $product_cat_tab = $query_obj->getAllProductCategories(); //get all product category
-                  if ($product_cat_tab->num_rows > 0) {
-                    while($cat = $product_cat_tab->fetch_assoc()) { ?>
-                      <a href="<?php echo BASE_URL.'/products.php?category_id='.$cat['id'] ?>" class="product-list-group-item list-group-item text-black product-cat letter-spacing" data-sc_cat="<?php echo $cat['c_code'] ?>"><?php echo $cat['c_name'] ?></a>
+            @if ($allCategory->count() > 0)
+              @foreach($allCategory as $key => $category)
+                <a href="/products/{{$category->id}}" class="product-list-group-item list-group-item text-black product-cat letter-spacing" data-sc_cat="{{$category->c_code}}">{{$category->c_name}}</a>
 
-                        <!-- Product sub category sidebar section start-->
-                        <div class="list-group product-cat-filter <?php echo 'product-cat-filter-'.$cat['c_code']; ?>" data-sc_cat="<?php echo $cat['c_code']; ?>" style="display: none;">
-                          <?php $products_tab = $query_obj->getProductSubCategoryByCategoryID($cat['id']); //get category wise products product
-                          if ($products_tab->num_rows > 0) { 
-                            while($product = $products_tab->fetch_assoc()) { ?>
-                                <a href="<?php echo BASE_URL.'/products.php?category_id='.$cat['id'].'&sub_cat_id='.$product['id']?>" class="product-item list-group-item text-black"><?php echo $product['sc_name'] ?></a>
-                          <?php } ?>
-                         <?php } ?> 
-                        </div>
+                  <!-- Product sub category sidebar section start-->
+                  <div class="list-group product-cat-filter product-cat-filter-{{$category->c_code}}" data-sc_cat="{{$category->c_code;}}" style="display: none;">
+                    @if($category->subCategory->count() > 0)
+                      @foreach($category->subCategory as $key => $subcategory)
+                        <a href="/products/{{$category->id}}/{{$subcategory->id}}" class="product-item list-group-item text-black">{{$subcategory->sc_name}}</a>
+                      @endforeach
+                    @endif
+                  </div>
                         <!-- Product sub category sidebar section end-->
-                   <?php } ?>
-                  <?php } ?> 
+              @endforeach
+            @endif
           </div> 
         </div>
+        
+        <!-- Product category and sub category sidebar section end-->
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 container" style="margin: unset;">
+          <!-- Display Product Sub Category title, description start-->
+            @if ($productData->count() > 0)
+              @foreach($productData as $key => $title_product)
+                @if($sub_cat_id)
+                  <h2 class="primary-text header-font-size">{{ $title_product->sc_name }}</h2>
+                  <p>{{ $title_product->sc_description }}</p>
+                @else
+                  <h2 class="primary-text header-font-size">{{ $title_product->c_name }}</h2>
+                  <p>{{ $title_product->c_description }}</p>
+                @endif 
+              @endforeach
+            @endif
+            <!-- Display Product Sub Category title, description end-->
+
+            <!-- Display Category wise Products start-->
+            <div class="row services">
+              @if ($product_data && $product_data->count() > 0) 
+                @foreach ($product_data as $key => $product)
+                  <div class="col-lg-4 col-md-6 align-items-stretch min-height310" >
+                    <div class="icon-box rounded shadow mb-5">
+                      <div class="icon">
+                        <img alt="{{ $product->p_name }}" src="{{ url($product->p_image) }}">
+                      </div>
+                      <h4><a href="/product/{{ $product->id }}" class="service_name primary-text">{{ $product->p_name }}</a></h4>
+                      <p  class="text-left">{{ substr($product->p_description, 0, 100) . ' ...' }}</p>
+                    </div>
+                  </div>
+                @endforeach
+              @endif
+              <br>   
+            </div>
+            <!-- Display Category wise Products end-->
+          </div>
       </div>
   </section><!-- End Product Section -->
 </main><!-- End #main -->

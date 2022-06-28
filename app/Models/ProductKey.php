@@ -4,19 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Product;
 
-class ProductImage extends Model
+class ProductKey extends Model
 {
     use HasFactory;
 
-    public $table = "web_product_image";
+    public $table = "web_product_keys";
 
     /**
-     * Get the product that owns the image.
+     * Get the category that owns the Product.
      */
     public function product()
     {
         return $this->belongsTo(Product::class);
     }
+
 }

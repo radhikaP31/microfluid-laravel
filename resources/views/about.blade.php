@@ -46,16 +46,6 @@
                       </h2>
                   </div>
                   <?php echo $about_details->description ?>
-               
-                 <!--  <div class="row col-md-12"> 
-                  <div class="col-md-6"> 
-                    <img src="{{ $about_details->image }}" style="height: auto;width: 350px;">
-                  <br>
-                  </div>
-                  <div class="col-md-6">
-                    <p class="letter-spacing">{{ $about_details->description }}</p>
-                  </div> 
-                  </div>  -->
                 </div>
               @endforeach
             @endif

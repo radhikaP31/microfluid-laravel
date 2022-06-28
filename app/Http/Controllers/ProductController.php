@@ -14,11 +14,23 @@ class ProductController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function allProduct()
+    public function allProduct($id=null, $sub_cat_id=null)
     {
-        $product = new Product;
+        if($sub_cat_id){
+          $product_tab = ProductSubCategory::where('id',$sub_cat_id)->orderBy('sequence')->get(); //get sub category wise products product
+          $product_data = Product::where('is_deleted',0)->where('category_id',$id)->where('sub_cat_id',$sub_cat_id)->orderBy('sequence')->get();
+        }else{
+          $product_tab = ProductCategory::where('is_deleted',0)->where('id',$id)->orderBy('sequence')->get(); //get category wise products product
+          $product_data = Product::where('is_deleted',0)->where('category_id',$id)->orderBy('sequence')->get();
+        } 
+
         return view('product.all_product', [
-            'category' => ProductCategory::with('subCategory')->where('is_deleted',0)->orderBy('sequence')->get(),
+            'category_id' => $id,
+            'sub_cat_id' => $sub_cat_id,
+            'allCategory' => ProductCategory::with('subCategory')->where('is_deleted',0)->orderBy('sequence')->get(),
+            'productData' => $product_tab,
+            'product_data' => $product_data,
+        ]);
     }
 
     /**
@@ -26,12 +38,11 @@ class ProductController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function singleProduct($id = 0)
+    public function singleProduct($product_id = 0)
     {
-        $common = new Common;
         return view('product.product', [
-            'aboutUsInformation' => $common->getAboutUsInformation(),
-            'fieldApplication' => $common->getIndependentDataByTypeCode('FOA')
+            'product_id' => $product_id,
+            'productData' => Product::with('image')->where('is_deleted',0)->where('id',$product_id)->orderBy('sequence')->first(),
         ]);        
     }
 }

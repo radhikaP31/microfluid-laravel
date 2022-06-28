@@ -34,10 +34,19 @@ class Product extends Model
     /**
      * Get the image for the product.
      */
-    public function subCategory()
+    public function image()
     {
         return $this->hasMany(ProductImage::class, 'product_id', 'id');
     
+    }
+
+    /**
+     * Get the keys for the product.
+     */
+    public function key()
+    {
+        return $this->hasMany(ProductKey::class, 'product_id', 'id');
+    }
 
     /**Function to get All products from web_products table
     * @params $category_id type integer

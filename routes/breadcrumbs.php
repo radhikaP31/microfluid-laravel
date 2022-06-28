@@ -33,5 +33,10 @@ Breadcrumbs::for('products', function (BreadcrumbTrail $trail): void {
     $trail->push('products', route('products'));
 });
 
+Breadcrumbs::for('product', function (BreadcrumbTrail $trail): void {
+    $trail->parent('home');
+    $trail->push('product', route('product'));
+});
+
 
 ?>

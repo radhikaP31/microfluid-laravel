@@ -18,19 +18,19 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::controller(IndexController::class)->group(function () {
-    Route::get('/', 'index')->name('home'); //Display practice data
+    Route::get('/', 'index')->name('home'); //Display Home Page
 });
 
 Route::controller(AboutController::class)->group(function () {
-    Route::get('/about', 'index')->name('about'); //Display practice data
+    Route::get('/about', 'index')->name('about'); //Display About Page
 });
 
 Route::controller(ProductController::class)->group(function () {
-    Route::get('/products', 'allProduct')->name('products'); //Display practice data
+    Route::get('/products/{id?}/{sub_cat_id?}', 'allProduct')->name('products'); //Display product data
 });
 
-Route::controller(ProductController::class)->group(function () {
-    Route::get('/products/{id}', 'singleProduct')->name('product'); //Display practice data
+Route::controller(ProductController::class)->group(function ($id = 1) {
+    Route::get('/product/{id?}', 'singleProduct')->name('product'); //Display practice data
 });
 
 
