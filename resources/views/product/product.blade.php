@@ -14,7 +14,7 @@
 {{ Breadcrumbs::render('product') }}
 <main id="main">
    <!-- ======= Product Section ======= -->
-  <section class="product container-fluid" id="product">
+  <section class="row col-md-12 product container-fluid" id="product" style="padding-right: 0%;margin: 0px;padding-left: 0px;">
 
       @if($productData->count() > 0) <!-- main if 1 -->
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="padding-bottom: 2%;">
@@ -60,10 +60,47 @@
           <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="padding-bottom: 2%;">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
               <a href="#" class="btn prod_desc_btn" data-toggle="modal" data-target="#req_quote">
-                <img src="assets/img/icons/quote.png" style="height: 96px; width: auto;" /><span class="header-font-size">Request Quote</span></a>
+                <img src="{{ url('images/icons/quote.png') }}" style="height: 96px; width: auto;" /><span class="header-font-size">Request Quote</span></a>
             </div>
           </div>
         </div>
+
+        <!-- product keys nav section start -->
+        <hr style="width: 100%;border-top: 1px solid var(--secondary_color);margin-bottom: 0px;">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light secondary-page-menu col-md-12">
+            <div class="" id="navbarNav">
+              <ul class="navbar-nav">
+
+                  @if ($productData->key->count() > 0)<!-- product key start 1 -->
+                    @php $count = 1; @endphp
+                    @foreach($productData->key as $key => $product_key)<!-- product key start 2 -->
+                      <li class="nav-item active">
+                        <a class="nav-link product-feature" href="#{{ $product_key->tab_name }}"  style="font-size: 13px;"><?= $product_key->key_name; ?></a>
+                      </li>
+
+                      @php $count++; @endphp
+                    @endforeach <!-- product key end 1 -->
+                  @endif <!-- product key end 2 -->
+
+              </ul>
+            </div>
+          </nav>
+
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="    padding-bottom: 2%;">
+            @if ($productData->key->count() > 0)<!-- product key start 1 -->
+              @php $count = 1; @endphp
+              @foreach($productData->key as $key => $product_key)<!-- product key start 2 -->
+                <div id="{{ $product_key->tab_name }}">
+                  
+                  <h4 class="primary-text header-font-size" style="text-align: left;padding-left: 7px;">{{ $product_key->key_name }}</h4>
+                  {{ $product_key->description }}<br><br>
+                </div>
+              @php $count++; @endphp
+              @endforeach <!-- product key end 1 -->
+            @endif <!-- product key end 2 -->
+          </div>
+
+          <!-- product keys nav section end -->
 
 
       @endif <!-- end main if 1 -->

@@ -1094,6 +1094,11 @@ a.list-group-item, button.list-group-item {
   }
 }
 
+.sticky_keynav{
+  position: fixed;
+  top: 69px;
+  z-index: 100;
+}
 
 
 /*--------------------------------------------------------------
@@ -1653,7 +1658,7 @@ p {
   width: 100%;
   background: white !important;
   color: var(--primary_color);
-  height: 67px;
+  height: 69px;
  /* padding-top: 10px !important;*/
   border-bottom: 1px solid var(--primary_color);
 

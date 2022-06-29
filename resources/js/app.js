@@ -272,7 +272,10 @@ if(activeTab){
 
 //products page js end
 
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {
+  myFunction();
+  keyNavbar(); // for product page nav stick
+};
 
 var header = document.getElementById("myHeader");
 var sticky = header.offsetTop;
@@ -285,5 +288,19 @@ function myFunction() {
     header.classList.remove("sticky");
   }
 }
+
+//product page js
+
+var productNav = $('.secondary-page-menu');
+
+function keyNavbar() {
+  if (window.pageYOffset > sticky) {
+    productNav.addClass('sticky_keynav');
+    
+  } else {
+    productNav.removeClass('sticky_keynav');
+  }
+}
+
 
 })(jQuery);

@@ -42,7 +42,7 @@ class ProductController extends Controller
     {
         return view('product.product', [
             'product_id' => $product_id,
-            'productData' => Product::with('image')->where('is_deleted',0)->where('id',$product_id)->orderBy('sequence')->first(),
+            'productData' => Product::with('image','key')->where('is_deleted',0)->where('id',$product_id)->orderBy('sequence')->first(),
         ]);        
     }
 }

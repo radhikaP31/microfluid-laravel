@@ -2409,6 +2409,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
   window.onscroll = function () {
     myFunction();
+    keyNavbar(); // for product page nav stick
   };
 
   var header = document.getElementById("myHeader");
@@ -2419,6 +2420,17 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
       header.classList.add("sticky");
     } else {
       header.classList.remove("sticky");
+    }
+  } //product page js
+
+
+  var productNav = $('.secondary-page-menu');
+
+  function keyNavbar() {
+    if (window.pageYOffset > sticky) {
+      productNav.addClass('sticky_keynav');
+    } else {
+      productNav.removeClass('sticky_keynav');
     }
   }
 }(jQuery);
