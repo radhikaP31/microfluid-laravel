@@ -1,7 +1,11 @@
-
-<header>
+<x-app-layout>
+    <x-slot name="title" metaname="{{ __('tagstitle') }}" meta-content="{{ __('content') }}">
+            {{ __('Home | Microfluid Process Equipment') }}
+    </x-slot>
+<main id="main">
+<div>
   <img src="Assets/images/Header1.jpg" id="headImage">
-</header>
+</div>
 <nav id="navBar">
   <ul>
     <li><a href="index.html" class="active">Home</a></li>
@@ -11,11 +15,10 @@
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
+</main><!-- End #main -->
 
 
-
-<footer>
-</footer>
+</x-app-layout>
 
 <style type="text/css">
   

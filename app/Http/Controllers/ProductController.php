@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Common;
 use App\Models\ProductCategory;
 use App\Models\ProductSubCategory;
 
@@ -40,9 +41,20 @@ class ProductController extends Controller
      */
     public function singleProduct($product_id = 0)
     {
+        $common = new Common();
+        $productData = Product::with('image','key')->where('is_deleted',0)->where('id',$product_id)->orderBy('sequence')->first();
+
+        //get product nav details
+        $navDetails = [];
+        foreach($productData->key as $key => $keyDetails){
+   
+            $navDetails[$keyDetails->tab_name] = $common->getProductKeyDetailsByID($product_id,$keyDetails->db_table_name);
+        }
+
         return view('product.product', [
             'product_id' => $product_id,
-            'productData' => Product::with('image','key')->where('is_deleted',0)->where('id',$product_id)->orderBy('sequence')->first(),
+            'productData' => $productData,
+            'navDetails' => $navDetails,
         ]);        
     }
 }

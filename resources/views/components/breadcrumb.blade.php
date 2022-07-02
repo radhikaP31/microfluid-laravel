@@ -22,11 +22,6 @@
                 @endforeach
               </h2>         
             </div>
-
-            <h2 class="primary-text breadcrumb-link">
-                
-            
-            </h2>
         </div>
     </section>
     <!-- End Breadcrumbs -->

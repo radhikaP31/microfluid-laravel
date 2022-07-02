@@ -50,20 +50,13 @@ class Common extends Model
         return $result;
     }
 
-    /**Function to get products keys from web_product_keys table
+    /**Function to get products from web_products,web_product_image table
     * @params $product_id type integer
     * @return array  
     **/
-    function getProductKeysByProductID($product_id=0) {   
+    function getProductKeyDetailsByID($product_id=0, $tableName='') {  
 
-
-        $sql = '';
-        if($product_id) {
-            $result = DB::table('web_product_keys')->where('is_deleted',0)->where('product_id',$product_id)->get();
-        } else {
-            $result = DB::table('web_product_keys')->where('is_deleted',0)->whereNull('product_id')->get();
-        }
-
-        return $result;
+        $result = DB::table($tableName)->where('is_deleted',0)->where('product_id',$product_id)->orderBy('sequence')->get();
+        return $result; 
     }
 }

@@ -45,7 +45,7 @@
                       <h2 class="primary-text header-font-size text-center mb-4 ">{{ $about_details->name }}
                       </h2>
                   </div>
-                  <?php echo $about_details->description ?>
+                  @php echo $about_details->description //don't change it @endphp
                 </div>
               @endforeach
             @endif

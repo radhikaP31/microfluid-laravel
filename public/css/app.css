@@ -1102,6 +1102,18 @@ a.list-group-item, button.list-group-item {
   z-index: 100;
 }
 
+.secondary-page-menu {
+  padding-left: 5%;
+  border-bottom: 1px solid var(--secondary_color);
+}
+
+.product-feature {
+  font-size: 15px;
+}
+
+li.nav-item {
+    padding: 0px 3px;
+}
 
 /*--------------------------------------------------------------
 # Footer

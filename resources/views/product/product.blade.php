@@ -75,9 +75,8 @@
                     @php $count = 1; @endphp
                     @foreach($productData->key as $key => $product_key)<!-- product key start 2 -->
                       <li class="nav-item active">
-                        <a class="nav-link product-feature" href="#{{ $product_key->tab_name }}"  style="font-size: 13px;"><?= $product_key->key_name; ?></a>
+                        <a class="nav-link product-feature" href="#{{ $product_key->tab_name }}" ><?= $product_key->key_name; ?></a>
                       </li>
-
                       @php $count++; @endphp
                     @endforeach <!-- product key end 1 -->
                   @endif <!-- product key end 2 -->
@@ -86,22 +85,24 @@
             </div>
           </nav>
 
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="    padding-bottom: 2%;">
-            @if ($productData->key->count() > 0)<!-- product key start 1 -->
-              @php $count = 1; @endphp
-              @foreach($productData->key as $key => $product_key)<!-- product key start 2 -->
-                <div id="{{ $product_key->tab_name }}">
-                  
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="padding-bottom: 2%;">
+            @if ($productData->key->count() > 0)<!-- product feature start 1 -->
+              @foreach($productData->key as $key => $product_key)<!-- product feature start 2 -->
+                <div id="{{ $product_key->tab_name }}" style=" padding-top: 2%;">
                   <h4 class="primary-text header-font-size" style="text-align: left;padding-left: 7px;">{{ $product_key->key_name }}</h4>
-                  {{ $product_key->description }}<br><br>
+                  
+                  @foreach($navDetails[$product_key->tab_name] as $navKey => $navValue)
+                     <h2> {{ $navValue->name}} </h2>
+                      <div> @php echo $navValue->description @endphp </div>
+                  @endforeach
+
                 </div>
-              @php $count++; @endphp
               @endforeach <!-- product key end 1 -->
             @endif <!-- product key end 2 -->
+
           </div>
 
           <!-- product keys nav section end -->
-
 
       @endif <!-- end main if 1 -->
   </section><!-- End Product Section -->
