@@ -92,7 +92,7 @@
                   <h4 class="primary-text header-font-size" style="text-align: left;padding-left: 7px;">{{ $product_key->key_name }}</h4>
                   
                   @foreach($navDetails[$product_key->tab_name] as $navKey => $navValue)
-                     <h2> {{ $navValue->name}} </h2>
+                     <!-- <h2> {{ $navValue->name}} </h2> -->
                       <div> @php echo $navValue->description @endphp </div>
                   @endforeach
 
