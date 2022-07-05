@@ -6,6 +6,7 @@ use Diglactic\Breadcrumbs\Generator as BreadcrumbTrail;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\BlogsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,12 +31,22 @@ Breadcrumbs::for('about', function (BreadcrumbTrail $trail): void {
 
 Breadcrumbs::for('products', function (BreadcrumbTrail $trail): void {
     $trail->parent('home');
-    $trail->push('products', route('products'));
+    $trail->push('Products', route('products'));
 });
 
 Breadcrumbs::for('product', function (BreadcrumbTrail $trail): void {
-    $trail->parent('home');
+    $trail->parent('products');
     $trail->push('product', route('product'));
+});
+
+Breadcrumbs::for('blog', function (BreadcrumbTrail $trail): void {
+    $trail->parent('home');
+    $trail->push('Blog', route('blog'));
+});
+
+Breadcrumbs::for('blogs', function (BreadcrumbTrail $trail): void {
+    $trail->parent('home');
+    $trail->push('Blogs', route('blogs'));
 });
 
 

@@ -16,6 +16,14 @@ class Product extends Model
     public $table = "web_products";
 
     /**
+     * get url slug
+     */
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
+    /**
      * Get the category that owns the Product.
      */
     public function category()

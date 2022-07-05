@@ -6,6 +6,7 @@ use Diglactic\Breadcrumbs\Generator as BreadcrumbTrail;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\BlogsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,10 +30,24 @@ Route::controller(ProductController::class)->group(function () {
     Route::get('/products/{id?}/{sub_cat_id?}', 'allProduct')->name('products'); //Display product data
 });
 
+/* Route::controller(ProductController::class)->group(function ($id = 1) {
+    Route::get('/product/{product:slug?}', 'singleProduct')->name('product'); //Display practice data
+});
+
+Route::get('/product/{product:slug?}', [ProductController::class, 'singleProduct'])
+        ->name('product'); */
+
 Route::controller(ProductController::class)->group(function ($id = 1) {
     Route::get('/product/{id?}', 'singleProduct')->name('product'); //Display practice data
 });
 
+Route::controller(BlogsController::class)->group(function ($id = 1) {
+    Route::get('/blog', 'getBlog')->name('blog'); //Display practice data
+});
+
+Route::controller(BlogsController::class)->group(function ($id = 1) {
+    Route::get('/blog/{id?}', 'getBlog')->name('blogs'); //Display practice data
+});
 
 //Route group for IndexController index page
 /*Route::controller(IndexController::class)->group(function () {

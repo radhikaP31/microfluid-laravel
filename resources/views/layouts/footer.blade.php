@@ -40,6 +40,7 @@
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
               <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="pinterest"><i class="bx bxl-pinterest"></i></a>
               <a href="#" class="youtube"><i class="bx bxl-youtube"></i></a>
               <a href="https://api.whatsapp.com/send?phone=917016865019&amp;text=Hi, I want to business with you!!" target="_blank" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
               <a href="#" class="skype"><i class="bx bxl-skype"></i></a>
