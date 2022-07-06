@@ -62,7 +62,7 @@
                       <div class="icon">
                         <img alt="{{ $product->p_name }}" src="{{ url($product->p_image) }}">
                       </div>
-                      <h4><a href="/product/{{ $product->id }}" class="service_name primary-text">{{ $product->p_name }}</a></h4>
+                      <h4><a href="/product/{{ $product->slug }}" class="service_name primary-text">{{ $product->p_name }}</a></h4>
                       <p  class="text-left">{{ substr($product->p_description, 0, 100) . ' ...' }}</p>
                     </div>
                   </div>

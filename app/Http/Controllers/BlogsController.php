@@ -12,17 +12,17 @@ class BlogsController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function getBlog($blog_id=null)
+    public function getBlog($slug=null)
     {
-        if($blog_id){
-          $blogData = Blog::where('id',$blog_id)->orderBy('sequence')->get();
-        }else{
-          $blogData = Blog::where('is_deleted',0)->orderBy('sequence')->get(); 
-        } 
-
-        return view('blog.blogs', [
-            'blogData' => $blogData,
-        ]);
+      if($slug){
+        $blogData = Blog::where('slug',$slug)->orderBy('sequence')->paginate(2);
+      }else{
+        $blogData = Blog::where('is_deleted',0)->orderBy('sequence')->paginate(2); 
+      }
+      
+      return view('blog.blogs', [
+          'blogData' => $blogData,
+      ]);
     }
 
 }

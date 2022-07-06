@@ -39,8 +39,14 @@ class ProductController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function singleProduct($product_id = 0)
+    public function singleProduct($slug = null)
     {
+        
+        if($slug == null){
+            return redirect(route('home'));
+        }
+        $product_id = Product::select('id')->where('slug',$slug)->first()->id;
+
         $common = new Common();
         $productData = Product::with('image','key')->where('is_deleted',0)->where('id',$product_id)->orderBy('sequence')->first();
 
