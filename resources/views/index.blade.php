@@ -140,7 +140,7 @@
 		<!-- <hr style="border-width: 2px;background-color: var(--secondary_color);" class="container"> -->
 
 		<!-- ======= About Us Section ======= -->
-		<section id="about-us" class="about-us about-us-banner" style="background: url( {{ url('images/about-banner.png') }}) no-repeat center top ; height:26rem ; background-size: cover;padding: 0px;background-attachment: fixed;">  
+		<section id="about-us" class="about-us about-us-banner" style="background: url( {{ url('images/about-banner.png') }}) no-repeat center top; height:26rem ; background-size: cover;padding: 0px;background-attachment: fixed;">  
 			<div class="banner-opacity" style="position: absolute;z-index: 0;opacity: 0.7;width: 100%;height: 100%;    background: #C4C4C4 !important;"></div>
 				<div class="row col-md-12">
 					<div class="col-md-7">

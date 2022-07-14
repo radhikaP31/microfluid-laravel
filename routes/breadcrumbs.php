@@ -39,14 +39,14 @@ Breadcrumbs::for('product', function (BreadcrumbTrail $trail): void {
     $trail->push('product', route('product'));
 });
 
-Breadcrumbs::for('blog', function (BreadcrumbTrail $trail): void {
-    $trail->parent('home');
-    $trail->push('Blog', route('blog'));
-});
-
 Breadcrumbs::for('blogs', function (BreadcrumbTrail $trail): void {
     $trail->parent('home');
     $trail->push('Blogs', route('blogs'));
+});
+
+Breadcrumbs::for('blog', function (BreadcrumbTrail $trail): void {
+    $trail->parent('blogs');
+    $trail->push('Blog', route('blog'));
 });
 
 

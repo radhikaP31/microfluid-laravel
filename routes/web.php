@@ -42,11 +42,11 @@ Route::controller(ProductController::class)->group(function ($slug = null) {
 });
 
 Route::controller(BlogsController::class)->group(function () {
-    Route::get('/blog', 'getBlog')->name('blog'); //Display practice data
+    Route::get('/blogs', 'getBlog')->name('blogs'); //Display practice data
 });
 
 Route::controller(BlogsController::class)->group(function ($id = null) {
-    Route::get('/blog/{slug?}', 'getBlog')->name('blogs'); //Display practice data
+    Route::get('/blog/{slug?}', 'getBlog')->name('blog'); //Display practice data
 });
 
 //Route group for IndexController index page
