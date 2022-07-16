@@ -17,7 +17,7 @@ class AboutController extends Controller
     public function index()
     {
         $common = new Common;
-        return view('about', [
+        return view('about.about', [
             'aboutUsInformation' => $common->getAboutUsInformation(),
             'fieldApplication' => $common->getIndependentDataByTypeCode('FOA')
         ]);        

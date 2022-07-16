@@ -25,7 +25,7 @@ class ProductController extends Controller
           $product_data = Product::where('is_deleted',0)->where('category_id',$id)->orderBy('sequence')->get();
         } 
 
-        return view('product.all_product', [
+        return view('product.allProducts', [
             'category_id' => $id,
             'sub_cat_id' => $sub_cat_id,
             'allCategory' => ProductCategory::with('subCategory')->where('is_deleted',0)->orderBy('sequence')->get(),
@@ -57,7 +57,7 @@ class ProductController extends Controller
             $navDetails[$keyDetails->tab_name] = $common->getProductKeyDetailsByID($product_id,$keyDetails->db_table_name);
         }
 
-        return view('product.product', [
+        return view('product.singleProduct', [
             'product_id' => $product_id,
             'productData' => $productData,
             'navDetails' => $navDetails,

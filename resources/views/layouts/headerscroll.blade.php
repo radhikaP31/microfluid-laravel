@@ -23,8 +23,8 @@
             <x-nav-link :active="request()->routeIs('products')">
               <a href="{{route('products',['id' => 1, 'sub_cat_id' => 1])}}">{{ __('Products') }}</a>
             </x-nav-link>
-            <x-nav-link :active="request()->routeIs('home')">
-              <a href="{{route('home')}}">{{ __('Industries') }}</a>
+            <x-nav-link :active="request()->routeIs('industries')">
+              <a href="{{route('industries')}}">{{ __('Industries') }}</a>
             </x-nav-link>
             <x-nav-link :active="request()->routeIs('blogs')" >
               <a href="{{route('blogs')}}">{{ __('Blogs') }}</a>

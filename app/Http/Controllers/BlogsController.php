@@ -20,21 +20,18 @@ class BlogsController extends Controller
 
       if($slug){
         $blogData = Blog::where('slug',$slug)->orderBy('sequence')->get();
-        return view('blog.blog', [
+        return view('blog.singleBlog', [
             'blogData' => $blogData,
             'tagsData' => $tagsData,
             'recentBlogData' => $recentBlogData,
         ]);
       }else{
         $blogData = Blog::where('is_deleted',0)->orderBy('sequence')->paginate(2); 
-        return view('blog.blogs', [
+        return view('blog.allBlogs', [
             'blogData' => $blogData,
             'tagsData' => $tagsData,
             'recentBlogData' => $recentBlogData,
         ]);
       }
-
-      
     }
-
 }

@@ -3,10 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use Diglactic\Breadcrumbs\Breadcrumbs;
 use Diglactic\Breadcrumbs\Generator as BreadcrumbTrail;
-use App\Http\Controllers\IndexController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BlogsController;
+use App\Http\Controllers\IndustriesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,8 +19,8 @@ use App\Http\Controllers\BlogsController;
 |
 */
 
-Route::controller(IndexController::class)->group(function () {
-    Route::get('/', 'index')->name('home'); //Display Home Page
+Route::controller(HomeController::class)->group(function () {
+    Route::get('/', 'home')->name('home'); //Display Home Page
 });
 
 Route::controller(AboutController::class)->group(function () {
@@ -47,6 +48,14 @@ Route::controller(BlogsController::class)->group(function () {
 
 Route::controller(BlogsController::class)->group(function ($id = null) {
     Route::get('/blog/{slug?}', 'getBlog')->name('blog'); //Display practice data
+});
+
+Route::controller(IndustriesController::class)->group(function () {
+    Route::get('/industries', 'getIndustry')->name('industries'); //Display practice data
+});
+
+Route::controller(IndustriesController::class)->group(function ($slug = '') {
+    Route::get('/industry/{slug?}', 'getIndustry')->name('industries'); //Display practice data
 });
 
 //Route group for IndexController index page

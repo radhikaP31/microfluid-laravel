@@ -6,17 +6,17 @@ use Illuminate\Http\Request;
 use App\Models\Common;
 use Illuminate\Support\Facades\DB;
 
-class IndexController extends Controller
+class HomeController extends Controller
 {
     /**
      * get all user data
      *
      * @return \Illuminate\View\View
      */
-    public function index()
+    public function home()
     {
         $common = new Common;
-        return view('index', [
+        return view('home.home', [
             'whatWeOfferData' => $common->getIndependentDataByTypeCode('WTOFR'),
             'fieldApplication' => $common->getIndependentDataByTypeCode('FOA')
         ]);        
