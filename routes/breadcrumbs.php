@@ -54,4 +54,9 @@ Breadcrumbs::for('industries', function (BreadcrumbTrail $trail): void {
     $trail->push('Industries', route('industries'));
 });
 
+Breadcrumbs::for('industry', function (BreadcrumbTrail $trail): void {
+    $trail->parent('industries');
+    $trail->push('Industry', route('industry'));
+});
+
 ?>

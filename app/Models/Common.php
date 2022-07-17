@@ -32,6 +32,16 @@ class Common extends Model
         return $result;
     }
 
+    /*function for get master data by slug
+    * @params varchar type $slug
+    * @return array
+    */
+    public function getIndependentDataBylug($slug=''){
+
+        $result = DB::table('independent_mst')->where('slug',$slug)->get();
+        return $result;
+    }
+
     /**Function to get clients from web_clients table
     * @return array  
     **/

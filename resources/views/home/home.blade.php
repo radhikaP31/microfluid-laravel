@@ -86,13 +86,13 @@
 								</div>
 							</div>
 						@endforeach
-					@endif  
-					<br>   
+					@endif
+					<br>
 				</div>
 			</div>
 						<div class="text-center">
-				<a href="#" class="btn btn-primary primary-text" style="border-radius: 30px;padding: 7px 20px 7px 20px;"><b>Read More</b></a>
-			</div> 
+				<a href="/products/1/1" class="btn btn-primary primary-text" style="border-radius: 30px;padding: 7px 20px 7px 20px;"><b>Read More</b></a>
+			</div>
 		</section><!-- End What we offer/services Section -->
 
 <!-- <hr style="border-width: 2px;background-color: var(--secondary_color);" class="container"> -->
@@ -123,7 +123,7 @@
 												<span class="iconify field-icon" data-icon="{{ $field->mstr_icon }}"></span>{{ $field->mstr_nm }}
 											</h3><!-- <br> -->
 											<p class="field-desc text-black">{{ $field->mstr_desc }}</p>
-											<a class="read-more primary-text" target="_self" href="{{ $field->mstr_link }}">Read More</a>
+											<a class="read-more primary-text" target="_self" href="/industry/{{ $field->slug }}">Read More</a>
 										</div>
 								</div>
 							</div>
@@ -132,7 +132,7 @@
 				</div>
 				<br>
 				<div class="text-center">
-					<a href="#" class="btn btn-primary primary-text" style="border-radius: 30px;padding: 7px 20px 7px 20px;"><b>Read More</b></a>
+					<a href="/industries" class="btn btn-primary primary-text" style="border-radius: 30px;padding: 7px 20px 7px 20px;"><b>Read More</b></a>
 				</div>
 			</div>
 		</section><!-- End Field of application Section -->
@@ -140,7 +140,7 @@
 		<!-- <hr style="border-width: 2px;background-color: var(--secondary_color);" class="container"> -->
 
 		<!-- ======= About Us Section ======= -->
-		<section id="about-us" class="about-us about-us-banner" style="background: url( {{ url('images/about-banner.png') }}) no-repeat center top; height:26rem ; background-size: cover;padding: 0px;background-attachment: fixed;">  
+		<section id="about-us" class="about-us about-us-banner" style="background: url( {{ url('images/about-banner.png') }}) no-repeat center top; height:26rem ; background-size: cover;padding: 0px;background-attachment: fixed;">
 			<div class="banner-opacity" style="position: absolute;z-index: 0;opacity: 0.7;width: 100%;height: 100%;    background: #C4C4C4 !important;"></div>
 				<div class="row col-md-12">
 					<div class="col-md-7">
@@ -150,15 +150,15 @@
 								<br><br>From last many years of now, <span class="primary-text"> Microfluid Process Equipment </span> has been persistently in its profession to provide best-in-class products and after sales service.<br><br>
 								<span class="primary-text"> Microfluid Process Equipment </span> have more than 25 years of experience in manufacturing, process industries and high pressure reciprocating pumps and homogenizers.
 							</p>
-						</div> 
+						</div>
 						<div class="text-left" style="padding-left: 30px;padding-top: 16px;"><a href="#" class="btn primary-text about-read-more" style="border-radius: 30px;padding: 5px 20px 5px 20px;background: transparent;"><b>Read More</b></a></div>
 					</div>
 					<div class="col-md-5">
-					
+
 						<iframe style="padding-top: 7%;height: 100%;width: 100%;" id="player" src="https://www.youtube.com/embed/r5MhAK8lAmU" allowfullscreen="true" scrolling="no" frameborder="0"></iframe>
 
 							<!-- <a target="_self" href="#"><img alt="Homogenizers" src="assets/img/application/homogenizers.jpeg" style="height: auto;width: 94%;padding-top: 33px;padding-left: 31%;"></a> -->
-					</div>          
+					</div>
 				</div>
 		</section>
 	 <!-- End About Us Section -->

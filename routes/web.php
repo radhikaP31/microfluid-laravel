@@ -55,7 +55,7 @@ Route::controller(IndustriesController::class)->group(function () {
 });
 
 Route::controller(IndustriesController::class)->group(function ($slug = '') {
-    Route::get('/industry/{slug?}', 'getIndustry')->name('industries'); //Display practice data
+    Route::get('/industry/{slug?}', 'getIndustry')->name('industry'); //Display practice data
 });
 
 //Route group for IndexController index page
