@@ -8,6 +8,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\IndustriesController;
+use App\Http\Controllers\InquiryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -58,16 +59,6 @@ Route::controller(IndustriesController::class)->group(function ($slug = '') {
     Route::get('/industry/{slug?}', 'getIndustry')->name('industry'); //Display practice data
 });
 
-//Route group for IndexController index page
-/*Route::controller(IndexController::class)->group(function () {
-    Route::get('/', 'index')->name('home'); //Display practice data
-});*/
-
-//Route group for AboutController about page
-/*Route::controller(AboutController::class)->group(function () {
-    Route::get('/about', 'index'); //Display practice data
-});*/
-
-/*Route::get('/', function () {
-    return view('index');
-});*/
+Route::controller(InquiryController::class)->group(function () {
+    Route::any('/inquiry', 'add')->name('inquiry'); //Display practice data
+});

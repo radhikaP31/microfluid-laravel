@@ -10,7 +10,6 @@
     </div>
     @endif
 
-
 {{ Breadcrumbs::render('products') }}
 <main id="main">
    <!-- ======= Product Section ======= -->
@@ -34,9 +33,9 @@
                         <!-- Product sub category sidebar section end-->
               @endforeach
             @endif
-          </div> 
+          </div>
         </div>
-        
+
         <!-- Product category and sub category sidebar section end-->
         <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 container" style="margin: unset;">
           <!-- Display Product Sub Category title, description start-->
@@ -48,14 +47,14 @@
                 @else
                   <h2 class="primary-text header-font-size">{{ $title_product->c_name }}</h2>
                   <p>{{ $title_product->c_description }}</p>
-                @endif 
+                @endif
               @endforeach
             @endif
             <!-- Display Product Sub Category title, description end-->
 
             <!-- Display Category wise Products start-->
             <div class="row services">
-              @if ($product_data && $product_data->count() > 0) 
+              @if ($product_data && $product_data->count() > 0)
                 @foreach ($product_data as $key => $product)
                   <div class="col-lg-4 col-md-6 align-items-stretch min-height310" >
                     <div class="icon-box rounded shadow mb-5">
@@ -68,13 +67,11 @@
                   </div>
                 @endforeach
               @endif
-              <br>   
+              <br>
             </div>
             <!-- Display Category wise Products end-->
           </div>
       </div>
   </section><!-- End Product Section -->
 </main><!-- End #main -->
-
-
 </x-app-layout>

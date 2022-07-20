@@ -9,8 +9,7 @@
         <strong>{{ $message }}</strong>
     </div>
     @endif
-
-
+    
 {{ Breadcrumbs::render('about') }}
   <main id="main">
     <!-- <hr style="margin: 2% 10%;background: #b5b5b5;" /> -->
@@ -50,10 +49,7 @@
               @endforeach
             @endif
         </div>
-        
       </div>
     </section><!-- End About Us Section -->
   </main><!-- End #main -->
-
-
 </x-app-layout>

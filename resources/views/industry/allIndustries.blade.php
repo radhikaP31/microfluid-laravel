@@ -18,9 +18,7 @@
       <div class="container">
         <section id="field-appilication" class="field-appilication" style="background: #fff !important">
           <div class="container">
-
             <div class="row">
-
               <div class="col-lg-4 col-md-6 align-items-stretch min-height310 mt-4">
                 <div class="icon-box field-find-more section-bg">
                   <h4 class="primary-text header-font-size" style="text-align: left;padding-left: 7px;">Field of <br>Application</h4>
@@ -28,7 +26,6 @@
                   <h4 class="primary-text body-font-size" style="text-align: left;padding-left: 7px;"><a href="#" class="text-black">Find a right solutions for your industry!!</a></h4>
                 </div>
               </div>
-
               @if ($fieldApplication->count() > 0)
               @foreach($fieldApplication as $key => $field)
               <div class="col-lg-4 col-md-6 align-items-stretch mt-4">
@@ -51,8 +48,6 @@
             <br>
           </div>
         </section>
-
-
       </div>
     </section><!-- End Industries Section -->
   </main><!-- End #main -->

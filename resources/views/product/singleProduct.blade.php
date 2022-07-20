@@ -10,7 +10,6 @@
     </div>
     @endif
 
-
 {{ Breadcrumbs::render('product') }}
 <main id="main">
    <!-- ======= Product Section ======= -->
@@ -23,7 +22,7 @@
         <div class="col-md-4" style="border-right: 1px solid black;">
           @if ($productData->image->count() > 0) <!-- product image start 1 -->
             @foreach($productData->image  as $key => $image) <!-- product image start 2 -->
-          
+
             <div class="my-product-slides">
               <div class="image-number-text">1 / 2</div>
               <img src="{{ url($image['img_path']) }}" class="product_active_img">
@@ -90,7 +89,7 @@
               @foreach($productData->key as $key => $product_key)<!-- product feature start 2 -->
                 <div id="{{ $product_key->tab_name }}" style=" padding-top: 2%;">
                   <h4 class="primary-text header-font-size" style="text-align: left;padding-left: 7px;">{{ $product_key->key_name }}</h4>
-                  
+
                   @foreach($navDetails[$product_key->tab_name] as $navKey => $navValue)
                      <!-- <h2> {{ $navValue->name}} </h2> -->
                       <div> @php echo $navValue->description @endphp </div>
@@ -107,8 +106,6 @@
       @endif <!-- end main if 1 -->
   </section><!-- End Product Section -->
 </main><!-- End #main -->
-
-
 </x-app-layout>
 
 <script type="text/javascript">

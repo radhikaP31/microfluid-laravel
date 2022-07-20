@@ -65,7 +65,6 @@
 
 	<main id="main">
 
-
 		<!-- ======= What we offer/services Section ======= -->
 		<section id="what-we-offer services" class="what-we-offer services section-bg">
 			<div class="container">
@@ -162,7 +161,6 @@
 				</div>
 		</section>
 	 <!-- End About Us Section -->
-
 
 	</main><!-- End #main -->
 

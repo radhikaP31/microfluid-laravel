@@ -52,8 +52,6 @@
             <div class="d-flex justify-content-center">
               {!! $blogData->links() !!}
             </div>
-
-
             @endif
 
           </div><!-- End blog entries list -->
@@ -61,7 +59,6 @@
           <div class="col-lg-4">
 
             <div class="sidebar">
-
               <!-- <h3 class="sidebar-title">Search</h3>
               <div class="sidebar-item search-form">
                 <form action="">

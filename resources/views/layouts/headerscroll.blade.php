@@ -9,7 +9,7 @@
     </div>
 
     <div class="container-fluid d-flex align-items-center padding0 primary-bg header" id="myHeader">
-          
+
       <nav class="nav-menu d-none d-lg-block">
       <div class="list-logo" style="margin-left:5%;top: 4px;"><a href="index.php" class="logo mr-auto"><img src="{{ asset('images/Logo.png') }}" alt="" class="img-fluid" ></a>
       </div>
@@ -29,8 +29,8 @@
             <x-nav-link :active="request()->routeIs('blogs')" >
               <a href="{{route('blogs')}}">{{ __('Blogs') }}</a>
             </x-nav-link>
-            <x-nav-link :active="request()->routeIs('home')">
-              <a href="{{route('home')}}">{{ __('Inquiry') }}</a>
+            <x-nav-link :active="request()->routeIs('inquiry')">
+              <a href="{{route('inquiry')}}">{{ __('Inquiry') }}</a>
             </x-nav-link>
             <x-nav-link :active="request()->routeIs('home')">
               <a href="{{route('home')}}">{{ __('Contact') }}</a>
