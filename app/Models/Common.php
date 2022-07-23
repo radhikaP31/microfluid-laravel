@@ -69,4 +69,23 @@ class Common extends Model
         $result = DB::table($tableName)->where('is_deleted',0)->where('product_id',$product_id)->orderBy('sequence')->get();
         return $result; 
     }
+
+    /**Function to get countries from web_country table
+     * @return array  
+     **/
+    function getAllCountry()
+    {
+        $result = DB::table('web_country')->where('is_deleted', 0)->orderBy('name')->get();
+        return $result;
+    }
+
+    /**Function to get states from web_state table
+     * @params $product_id type integer
+     * @return array  
+     **/
+    function getAllState()
+    {
+        $result = DB::table('web_states')->where('is_deleted', 0)->orderBy('name')->get();
+        return $result;
+    }
 }

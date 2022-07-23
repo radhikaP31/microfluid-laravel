@@ -20,6 +20,6 @@ class AboutController extends Controller
         return view('about.about', [
             'aboutUsInformation' => $common->getAboutUsInformation(),
             'fieldApplication' => $common->getIndependentDataByTypeCode('FOA')
-        ]);        
+        ]);
     }
 }

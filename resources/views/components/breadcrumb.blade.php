@@ -13,7 +13,7 @@
                     @if(!is_null($breadcrumb->url) && !$loop->last)
                         <a href="{{ $breadcrumb->url }}">{{ $breadcrumb->title }}</a>
                     @else
-                        <a class="breadcrumb-item active primary-text">{{ ucfirst($breadcrumb->title) }}</a>
+                        <a class="breadcrumb-item active text-white">{{ ucfirst($breadcrumb->title) }}</a>
                     @endif
 
                     @if(!$loop->last)

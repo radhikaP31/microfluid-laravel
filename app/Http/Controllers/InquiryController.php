@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Inquiry;
+use App\Models\Common;
 use Illuminate\Http\Request;
 
 class InquiryController extends Controller
@@ -14,7 +15,6 @@ class InquiryController extends Controller
      */
     public function add(Request $request)
     {
-
         if ($request->method() == 'POST') {
 
             $validated = $request->validate([
@@ -71,7 +71,10 @@ class InquiryController extends Controller
                 return redirect()->route('inquiry');
             }
         } else {
+            $common = new Common;
             return view('inquiry.inquiry', [
+                'country' => $common->getAllCountry(),
+                'state' => $common->getAllState(),
             ]);
         }
     }
