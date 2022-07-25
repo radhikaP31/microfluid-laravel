@@ -40,25 +40,27 @@ Route::get('/product/{product:slug?}', [ProductController::class, 'singleProduct
         ->name('product'); */
 
 Route::controller(ProductController::class)->group(function ($slug = null) {
-    Route::get('/product/{slug?}', 'singleProduct')->name('product'); //Display practice data
+    Route::get('/product/{slug?}', 'singleProduct')->name('product'); //Display single product data
 });
 
 Route::controller(BlogsController::class)->group(function () {
-    Route::get('/blogs', 'getBlog')->name('blogs'); //Display practice data
+    Route::get('/blogs', 'getBlog')->name('blogs'); //Display all blogs data
 });
 
 Route::controller(BlogsController::class)->group(function ($id = null) {
-    Route::get('/blog/{slug?}', 'getBlog')->name('blog'); //Display practice data
+    Route::get('/blog/{slug?}', 'getBlog')->name('blog'); //Display single blog data
 });
 
 Route::controller(IndustriesController::class)->group(function () {
-    Route::get('/industries', 'getIndustry')->name('industries'); //Display practice data
+    Route::get('/industries', 'getIndustry')->name('industries'); //Display all industry data
 });
 
 Route::controller(IndustriesController::class)->group(function ($slug = '') {
-    Route::get('/industry/{slug?}', 'getIndustry')->name('industry'); //Display practice data
+    Route::get('/industry/{slug?}', 'getIndustry')->name('industry'); //Display display single industry data
 });
 
 Route::controller(InquiryController::class)->group(function () {
-    Route::any('/inquiry', 'add')->name('inquiry'); //Display practice data
+    Route::any('/inquiry/selectState/{countryId}','getAllState')->name('ajax.selectState');
+    Route::get('/inquiry', 'add')->name('inquiry'); //Display inquiry form
+    Route::any('/inquiry/add', 'create')->name('inquiry_add'); //Create inquiry
 });

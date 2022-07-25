@@ -83,9 +83,12 @@ class Common extends Model
      * @params $product_id type integer
      * @return array  
      **/
-    function getAllState()
+    function getAllState($country_id = '')
     {
-        $result = DB::table('web_states')->where('is_deleted', 0)->orderBy('name')->get();
-        return $result;
+        if($country_id) {
+            return DB::table('web_states')->where('country_id', $country_id)->where('is_deleted', 0)->orderBy('name')->get()->toArray();
+        } else {
+            return DB::table('web_states')->where('is_deleted', 0)->orderBy('name')->get();
+        }
     }
 }

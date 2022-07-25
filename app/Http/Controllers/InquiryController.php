@@ -8,12 +8,40 @@ use Illuminate\Http\Request;
 
 class InquiryController extends Controller
 {
-   /**
+    /**
+     * get all state data for ajax request
+     * @param $country_id integer
+     * return array
+     */
+    public function getAllState($country_id=0){
+        $common = new Common;
+        $data = $common->getAllState($country_id);
+        $optionHtml = "<option>Select a State</option>";
+        foreach ($data as $key => $state) {
+            $optionHtml .=  "<option value='" . $state->id . "'>" . $state->name . "</option>";
+        }
+        return $optionHtml;
+    }
+
+    /**
      * Add Inquiry.
      *
      * @return \Illuminate\View\View
      */
-    public function add(Request $request)
+    public function add()
+    {
+        $common = new Common;
+        return view('inquiry.inquiry', [
+            'country' => $common->getAllCountry(),
+            'state' => $common->getAllState(),
+        ]);
+    }
+    /**
+     * create Inquiry.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function create(Request $request)
     {
         if ($request->method() == 'POST') {
 
@@ -29,6 +57,31 @@ class InquiryController extends Controller
                 'website' => 'required',
                 'message' => 'required',
                 'image' => 'required|mimes:jpg,png,jpeg,pdf,doc,docx,xls|max:1024',
+                /* 'uploadedImages' => [
+                    'nullable',
+                    function ($attribute, $value, $fail) {
+                        foreach ($value as $image) {
+                            if (strpos($image['path'], "base64") !== false) {
+                                $extesion = explode(";", explode("/", $image['path'])[1])[0];
+                                if (!in_array($extesion, ['jpeg', 'jpg', 'png', 'gif'])) {
+                                    $fail("The image must be a file of type: jpeg, jpg, png, gif.");
+                                }
+                            }
+                        }
+                    },
+                    function ($attribute, $value, $fail) {
+                        foreach ($value as $image) {
+                            if ((strpos($image['path'], "base64") !== false) && (strlen(base64_decode($image['path'])) > 5000000)) {
+                                $fail("The image size may not be greater than 5MB.");
+                            }
+                        }
+                    },
+                    function ($attribute, $value, $fail) {
+                        if (count($value) > 10) {
+                            $fail("Please upload up to 10 images.");
+                        }
+                    },
+                ], */
             ]);
 
             $inquiry = new Inquiry;

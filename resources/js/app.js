@@ -283,7 +283,7 @@ var sticky = header.offsetTop;
 function myFunction() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
-    
+
   } else {
     header.classList.remove("sticky");
   }
@@ -296,11 +296,9 @@ var productNav = $('.secondary-page-menu');
 function keyNavbar() {
   if (window.pageYOffset > sticky) {
     productNav.addClass('sticky_keynav');
-    
   } else {
     productNav.removeClass('sticky_keynav');
   }
 }
-
 
 })(jQuery);
