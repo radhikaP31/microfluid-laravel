@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\InquiryRequest;
 use App\Models\Inquiry;
 use App\Models\Common;
 use Illuminate\Http\Request;
@@ -41,22 +42,12 @@ class InquiryController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function create(Request $request)
+    public function create(InquiryRequest $request)
     {
         if ($request->method() == 'POST') {
 
-            $validated = $request->validate([
-                'name' => 'required|max:255',
-                'email' => 'required|max:255',
-                'phone' => 'required|numeric|max:255|min:10',
-                'company_name' => 'required|max:255',
-                'postal_code' => 'required|max:255',
-                'city' => 'required',
-                'state' => 'required',
-                'country' => 'required',
-                'website' => 'required',
-                'message' => 'required',
-                'image' => 'required|mimes:jpg,png,jpeg,pdf,doc,docx,xls|max:1024',
+          //  $validated = $request->validate([
+                
                 /* 'uploadedImages' => [
                     'nullable',
                     function ($attribute, $value, $fail) {
@@ -82,7 +73,7 @@ class InquiryController extends Controller
                         }
                     },
                 ], */
-            ]);
+            //]);
 
             $inquiry = new Inquiry;
             $inquiry->name = $request->name;
@@ -100,20 +91,20 @@ class InquiryController extends Controller
             $inquiry->attachment = $_FILES['attachment']['name'];
             $result = $inquiry->save();
 
-            if ($request->hasFile('attachment')) {
+            // if ($request->hasFile('attachment')) {
 
-                //upload profile picture
-                $attachmentName = $inquiry->id . '_' . $request->attachment->getClientOriginalName();
-                $request->attachment->storeAs('public/inquiry_attachment/', $attachmentName);
+            //     //upload profile picture
+            //     $attachmentName = $inquiry->id . '_' . $request->attachment->getClientOriginalName();
+            //     $request->attachment->storeAs('public/inquiry_attachment/', $attachmentName);
 
-                $inquiry_data = Inquiry::find($inquiry->id);
-                $inquiry_data->attachment = $attachmentName;
-                $result = $inquiry_data->save();
-            }
+            //     $inquiry_data = Inquiry::find($inquiry->id);
+            //     $inquiry_data->attachment = $attachmentName;
+            //     $result = $inquiry_data->save();
+            // }
 
             if ($result) {
                 //SMTP configure for send email to user and admin
-               /*  
+               /*
                 QueueJob::dispatch($request->email); */
 
                 $request->session()->flash('success', 'Inquiry saved!! We will connect you shortly..');

@@ -3153,5 +3153,7 @@ top: calc(100% + 13px) !important;
 
 .submit_inquiry {
   border-radius: 30px !important;
+  display: flex;
+  margin: auto;
 }
 /* inquiry page css end*/
