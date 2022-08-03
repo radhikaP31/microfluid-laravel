@@ -46,9 +46,9 @@ class InquiryController extends Controller
     {
         if ($request->method() == 'POST') {
 
-          //  $validated = $request->validate([
-                
-                /* 'uploadedImages' => [
+            //  $validated = $request->validate([
+
+            /* 'uploadedImages' => [
                     'nullable',
                     function ($attribute, $value, $fail) {
                         foreach ($value as $image) {
@@ -74,17 +74,17 @@ class InquiryController extends Controller
                     },
                 ], */
             //]);
-
             $inquiry = new Inquiry;
             $inquiry->name = $request->name;
             $inquiry->email = $request->email;
             $inquiry->phone = $request->phone;
+            $inquiry->is_whatsapp_no = $request->is_whatsapp_no;
             $inquiry->company_name = $request->company_name;
             $inquiry->company_address = $request->company_address;
-            $inquiry->postal_code = $request->postal_code;
+            $inquiry->postal_code = $request->post_code;
             $inquiry->city = $request->city;
-            $inquiry->state = $request->state;
-            $inquiry->country = $request->country;
+            $inquiry->state_id = $request->state_id;
+            $inquiry->country_id = $request->country_id;
             $inquiry->website = $request->website;
             $inquiry->message = $request->message;
             $inquiry->is_whatsapp_no = $request->is_whatsapp_no;
@@ -115,6 +115,7 @@ class InquiryController extends Controller
                 return redirect()->route('inquiry');
             }
         } else {
+            dd('test');
             $common = new Common;
             return view('inquiry.inquiry', [
                 'country' => $common->getAllCountry(),

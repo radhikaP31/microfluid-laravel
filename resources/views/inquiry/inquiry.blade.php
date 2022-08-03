@@ -18,7 +18,7 @@
                 <div class="col-md-12">
                     <div class="form h-100">
                         <h2 class="primary-text header-font-size">Please describe your requirements. <br> Our Team will connect you shortly!!<br></h2>
-                        <form class="mb-5" method="post" id="contactForm" name="contactForm" novalidate="novalidate" action="/inquiry/add" enctype="multipart/form-data">
+                        <form method="post" action="/inquiry/add" enctype="multipart/form-data" id="contactForm" class="contactForm mb-5">
                             @csrf
                             <div class="row">
                                 <div class="col-md-6 form-group mb-3">
@@ -43,6 +43,8 @@
                                     @error('phone')
                                     <div class="text-red text-10">{{ $message }}</div>
                                     @enderror
+                                    <input type="checkbox" name="is_whatsapp_no" value="yes" />
+                                    <label for="" class="col-form-label">Is Whatsapp Number?</label>
                                 </div>
                                 <div class="col-md-6 form-group mb-3">
                                     <label for="" class="col-form-label">Company Name <span class="text-red">*</span></label>
@@ -124,7 +126,7 @@
                             <div class="row">
                                 <div class="col-md-12 form-group mb-3">
                                     <label for="message" class="col-form-label">Message <span class="text-red">*</span></label>
-                                    <textarea class="form-control" name="message" id="message" cols="30" rows="4" placeholder="Write your message"></textarea>
+                                    <textarea class="form-control" name="message" id="message" cols="30" rows="4" placeholder="Write your message">{{ old('message') }}</textarea>
                                     @error('message')
                                     <div class="text-red text-10">{{ $message }}</div>
                                     @enderror
