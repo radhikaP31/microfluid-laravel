@@ -74,6 +74,7 @@ class InquiryController extends Controller
                     },
                 ], */
             //]);
+
             $inquiry = new Inquiry;
             $inquiry->name = $request->name;
             $inquiry->email = $request->email;
@@ -91,24 +92,23 @@ class InquiryController extends Controller
             $inquiry->attachment = $_FILES['attachment']['name'];
             $result = $inquiry->save();
 
-            // if ($request->hasFile('attachment')) {
+            if ($request->hasFile('attachment')) {
 
-            //     //upload profile picture
-            //     $attachmentName = $inquiry->id . '_' . $request->attachment->getClientOriginalName();
-            //     $request->attachment->storeAs('public/inquiry_attachment/', $attachmentName);
-
-            //     $inquiry_data = Inquiry::find($inquiry->id);
-            //     $inquiry_data->attachment = $attachmentName;
-            //     $result = $inquiry_data->save();
-            // }
+                //upload profile picture
+                $attachmentName = $inquiry->id . '_' . $request->attachment->getClientOriginalName();
+                $request->attachment->storeAs('public/inquiry_attachment', $attachmentName); //storage/app/public/inquiry_attachment
+                $inquiry_data = Inquiry::find($inquiry->id);
+                $inquiry_data->attachment = $attachmentName;
+                $result = $inquiry_data->save();
+            }
 
             if ($result) {
                 //SMTP configure for send email to user and admin
                /*
                 QueueJob::dispatch($request->email); */
-
                 $request->session()->flash('success', 'Inquiry saved!! We will connect you shortly..');
                 return redirect()->route('home');
+
             } else {
 
                 $request->session()->flash('error', 'Inquiry not saved. Please check!!');

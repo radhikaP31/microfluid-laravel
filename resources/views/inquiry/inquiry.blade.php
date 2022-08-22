@@ -22,14 +22,14 @@
                             @csrf
                             <div class="row">
                                 <div class="col-md-6 form-group mb-3">
-                                    <label for="" class="col-form-label">Name <span class="text-red">*</span></span></label>
+                                    <label for="name" class="col-form-label">Name <span class="text-red">*</span></span></label>
                                     <input type="text" name="name" class="form-control" value="{{ old('name') }}" placeholder="Your Name" />
                                     @error('name')
                                     <div class="text-red text-10">{{ $message }}</div>
                                     @enderror
                                 </div>
                                 <div class="col-md-6 form-group mb-3">
-                                    <label for="" class="col-form-label">Email <span class="text-red">*</span></label>
+                                    <label for="email" class="col-form-label">Email <span class="text-red">*</span></label>
                                     <input type="text" name="email" value="{{ old('email') }}" class="form-control" placeholder="Your Email" />
                                     @error('email')
                                     <div class="text-red text-10">{{ $message }}</div>
@@ -38,7 +38,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6 form-group mb-3">
-                                    <label for="" class="col-form-label">Mobile No <span class="text-red">*</span></label>
+                                    <label for="phone" class="col-form-label">Mobile No <span class="text-red">*</span></label>
                                     <input type="text" name="phone" class="form-control" value="{{ old('phone') }}" placeholder="Your Mobile Number" />
                                     @error('phone')
                                     <div class="text-red text-10">{{ $message }}</div>
@@ -47,7 +47,7 @@
                                     <label for="" class="col-form-label">Is Whatsapp Number?</label>
                                 </div>
                                 <div class="col-md-6 form-group mb-3">
-                                    <label for="" class="col-form-label">Company Name <span class="text-red">*</span></label>
+                                    <label for="company_name" class="col-form-label">Company Name <span class="text-red">*</span></label>
                                     <input type="text" name="company_name" value="{{ old('company_name') }}" class="form-control" placeholder="Your Company Name" />
                                     @error('company_name')
                                     <div class="text-red text-10">{{ $message }}</div>
@@ -69,7 +69,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6 form-group mb-3">
-                                    <label for="" class="col-form-label">Country <span class="text-red">*</span></label>
+                                    <label for="country_id" class="col-form-label">Country <span class="text-red">*</span></label>
                                     <select class="custom-select country_id" name="country_id" id="country_id" onchange="selectState(this.value)">
                                         <option value="">Select a Country</option>
                                         @foreach($country as $value)
@@ -81,7 +81,7 @@
                                     @enderror
                                 </div>
                                 <div class="col-md-6 form-group mb-3">
-                                    <label for="" class="col-form-label">State <span class="text-red">*</span></label>
+                                    <label for="state_id" class="col-form-label">State <span class="text-red">*</span></label>
                                     <select class="custom-select state_id" name="state_id" id="state_id">
                                         <option value="">Select a State</option>
                                         @foreach($state as $value)
@@ -95,14 +95,14 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6 form-group mb-3">
-                                    <label for="" class="col-form-label">City <span class="text-red">*</span></label>
+                                    <label for="city" class="col-form-label">City <span class="text-red">*</span></label>
                                     <input type="text" name="city" class="form-control" value="{{ old('city') }}" placeholder="Your City Name" />
                                     @error('city')
                                     <div class="text-red text-10">{{ $message }}</div>
                                     @enderror
                                 </div>
                                 <div class="col-md-6 form-group mb-3">
-                                    <label for="" class="col-form-label">Post Code <span class="text-red">*</span></label>
+                                    <label for="post_code" class="col-form-label">Post Code <span class="text-red">*</span></label>
                                     <input type="text" name="post_code" class="form-control" value="{{ old('post_code') }}" placeholder="Your Post Code" />
                                     @error('post_code')
                                     <div class="text-red text-10">{{ $message }}</div>
@@ -112,34 +112,30 @@
                             <div class="row">
                                 <div class="col-md-12 form-group mb-3">
                                     <label for="attachment" class="col-form-label">Attachment </label>
-                                    <div class="input-group">
-                                        <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="attachment" aria-describedby="attachment" name=" attachment">
-                                            <label class="custom-file-label" for="attachment">Choose file</label>
-                                        </div>
-                                    </div>
+                                    <input class="form-control" type="file" id="attachment" name="attachment">
                                     @error('attachment')
-                                    <div class="text-red text-10">{{ $message }}</div>
-                                    @enderror
+                                    <div class=" text-red text-10">{{ $message }}
                                 </div>
+                                @enderror
                             </div>
-                            <div class="row">
-                                <div class="col-md-12 form-group mb-3">
-                                    <label for="message" class="col-form-label">Message <span class="text-red">*</span></label>
-                                    <textarea class="form-control" name="message" id="message" cols="30" rows="4" placeholder="Write your message">{{ old('message') }}</textarea>
-                                    @error('message')
-                                    <div class="text-red text-10">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 form-group">
-                                    <button type="submit" class="btn btn-primary primary-text rounded-0 py-2 px-4 submit_inquiry">Send Inquiry</button>
-                                </div>
-                            </div>
-                        </form>
                     </div>
+                    <div class="row">
+                        <div class="col-md-12 form-group mb-3">
+                            <label for="message" class="col-form-label">Message <span class="text-red">*</span></label>
+                            <textarea class="form-control" name="message" id="message" cols="30" rows="4" placeholder="Write your message">{{ old('message') }}</textarea>
+                            @error('message')
+                            <div class="text-red text-10">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <button type="submit" class="btn btn-primary primary-text rounded-0 py-2 px-4 submit_inquiry">Send Inquiry</button>
+                        </div>
+                    </div>
+                    </form>
                 </div>
+            </div>
             </div>
         </section><!-- End Inquiry Section -->
     </main><!-- End #main -->
