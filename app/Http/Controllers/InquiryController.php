@@ -104,8 +104,8 @@ class InquiryController extends Controller
 
             if ($result) {
                 //SMTP configure for send email to user and admin
-               /*
-                QueueJob::dispatch($request->email); */
+               /* 
+                QueueJob::dispatch($request->email); */ 
                 $request->session()->flash('success', 'Inquiry saved!! We will connect you shortly..');
                 return redirect()->route('home');
 
