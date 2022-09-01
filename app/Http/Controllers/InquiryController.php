@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\InquiryRequest;
+use App\Mail\InquiryMail;
 use App\Models\Inquiry;
 use App\Models\Common;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class InquiryController extends Controller
 {
@@ -88,13 +90,13 @@ class InquiryController extends Controller
             $inquiry->country_id = $request->country_id;
             $inquiry->website = $request->website;
             $inquiry->message = $request->message;
-            $inquiry->is_whatsapp_no = $request->is_whatsapp_no;
+            $inquiry->is_whatsapp_no = $request-> is_whatsapp_no ? 'yes' : 'no';
             $inquiry->attachment = $_FILES['attachment']['name'];
             $result = $inquiry->save();
 
             if ($request->hasFile('attachment')) {
 
-                //upload profile picture
+                //upload inquiry attachment
                 $attachmentName = $inquiry->id . '_' . $request->attachment->getClientOriginalName();
                 $request->attachment->storeAs('public/inquiry_attachment', $attachmentName); //storage/app/public/inquiry_attachment
                 $inquiry_data = Inquiry::find($inquiry->id);
@@ -104,18 +106,23 @@ class InquiryController extends Controller
 
             if ($result) {
                 //SMTP configure for send email to user and admin
-               /*
-                QueueJob::dispatch($request->email); */
-                $request->session()->flash('success', 'Inquiry saved!! We will connect you shortly..');
+                // There is problem in it. Its shows error of connetion problem
+               /*  $body = [
+                    'name' => $request->name,
+                    'url_a' => 'https://www.bacancytechnology.com/',
+                    'url_b' => 'https://www.bacancytechnology.com/tutorials/laravel',
+                ];
+
+                Mail::to($request->email)->send(new InquiryMail($body)); */
+
+                $request->session()->flash('success', 'Your Inquiry saved!! We will connect you shortly..');
                 return redirect()->route('home');
 
             } else {
-
-                $request->session()->flash('error', 'Inquiry not saved. Please check!!');
+                $request->session()->flash('error', 'Your Inquiry not saved. Please check!!');
                 return redirect()->route('inquiry');
             }
         } else {
-            dd('test');
             $common = new Common;
             return view('inquiry.inquiry', [
                 'country' => $common->getAllCountry(),

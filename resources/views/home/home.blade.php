@@ -1,16 +1,31 @@
 <x-app-layout>
 	<x-slot name="title" metaname="{{ __('tagstitle') }}" meta-content="{{ __('content') }}">
-            {{ __('Home | Microfluid Process Equipment') }}
-    </x-slot>
+		{{ __('Home | Microfluid Process Equipment') }}
+	</x-slot>
 
-    @if ($message = Session::get('success'))
+	<!-- @if ($message = Session::get('success'))
     <div class="alert alert-success alert-block container mb-3">
         <button type="button" class="close" data-dismiss="alert">×</button>
         <strong>{{ $message }}</strong>
     </div>
-    @endif
+    @endif -->
 
-    <!-- ======= Hero Section ======= -->
+
+	<script>
+		$(function() {
+
+			@if(Session::get('success'))
+			console.log('test');
+			swal({
+				icon: 'success',
+				title: 'Success!',
+				text: '{{ Session::get("success") }}'
+			});
+			@endif
+		});
+	</script>
+
+	<!-- ======= Hero Section ======= -->
 	<section id="hero" class="hero head_content">
 		<div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
 
@@ -75,34 +90,34 @@
 
 				<div class="row">
 					@if ($whatWeOfferData->count() > 0)
-						@foreach($whatWeOfferData as $key => $offer)
-							<div class="col-lg-3 col-md-6 align-items-stretch min-height310  " >
-								<div class="icon-box rounded shadow mb-5">
-									<div class="icon">
-										<img alt="{{ $offer->mstr_nm }}" src="{{ url($offer->mstr_img) }}">
-									</div>
-									<h4><a href="{{ $offer->mstr_link }}" class="service_name primary-text">{{ $offer->mstr_nm }}&nbsp;&nbsp;<i class="fa fa-arrow-right" style="font-size: 13px;"></i></a></h4>
-								</div>
+					@foreach($whatWeOfferData as $key => $offer)
+					<div class="col-lg-3 col-md-6 align-items-stretch min-height310  ">
+						<div class="icon-box rounded shadow mb-5">
+							<div class="icon">
+								<img alt="{{ $offer->mstr_nm }}" src="{{ url($offer->mstr_img) }}">
 							</div>
-						@endforeach
+							<h4><a href="{{ $offer->mstr_link }}" class="service_name primary-text">{{ $offer->mstr_nm }}&nbsp;&nbsp;<i class="fa fa-arrow-right" style="font-size: 13px;"></i></a></h4>
+						</div>
+					</div>
+					@endforeach
 					@endif
 					<br>
 				</div>
 			</div>
-						<div class="text-center">
+			<div class="text-center">
 				<a href="/products/1/1" class="btn btn-primary primary-text" style="border-radius: 30px;padding: 7px 20px 7px 20px;"><b>Read More</b></a>
 			</div>
 		</section><!-- End What we offer/services Section -->
 
-<!-- <hr style="border-width: 2px;background-color: var(--secondary_color);" class="container"> -->
+		<!-- <hr style="border-width: 2px;background-color: var(--secondary_color);" class="container"> -->
 
-				<!-- ======= Field of application Section ======= -->
+		<!-- ======= Field of application Section ======= -->
 		<section id="field-appilication" class="field-appilication" style="background: #fff !important">
 			<div class="container">
 
 				<div class="row">
 
-					<div class="col-lg-4 col-md-6 align-items-stretch min-height310 mt-4" >
+					<div class="col-lg-4 col-md-6 align-items-stretch min-height310 mt-4">
 						<div class="icon-box field-find-more section-bg">
 							<h4 class="primary-text header-font-size" style="text-align: left;padding-left: 7px;">Field of <br>Application</h4>
 							<hr style="width: 47%;margin-left: 6px;border-width: 4px;background-color: var(--secondary_color);">
@@ -111,22 +126,22 @@
 					</div>
 
 					@if ($fieldApplication->count() > 0)
-						@foreach($fieldApplication as $key => $field)
-							<div class="col-lg-4 col-md-6 align-items-stretch mt-4" >
-								<div class="field field-has-link field-has-icon field-has-content">
-										<div class="field-header">
-											<a target="_self" href="{{ $field->mstr_link }}"><img alt="{{ $field->mstr_nm }}" src="{{ url($field->mstr_img) }}"></a>
-										</div>
-										<div class="field-content">
-											<h3 class="field-title">
-												<span class="iconify field-icon" data-icon="{{ $field->mstr_icon }}"></span>{{ $field->mstr_nm }}
-											</h3><!-- <br> -->
-											<p class="field-desc text-black">{{ $field->mstr_desc }}</p>
-											<a class="read-more primary-text" target="_self" href="/industry/{{ $field->slug }}">Read More</a>
-										</div>
-								</div>
+					@foreach($fieldApplication as $key => $field)
+					<div class="col-lg-4 col-md-6 align-items-stretch mt-4">
+						<div class="field field-has-link field-has-icon field-has-content">
+							<div class="field-header">
+								<a target="_self" href="{{ $field->mstr_link }}"><img alt="{{ $field->mstr_nm }}" src="{{ url($field->mstr_img) }}"></a>
 							</div>
-						@endforeach
+							<div class="field-content">
+								<h3 class="field-title">
+									<span class="iconify field-icon" data-icon="{{ $field->mstr_icon }}"></span>{{ $field->mstr_nm }}
+								</h3><!-- <br> -->
+								<p class="field-desc text-black">{{ $field->mstr_desc }}</p>
+								<a class="read-more primary-text" target="_self" href="/industry/{{ $field->slug }}">Read More</a>
+							</div>
+						</div>
+					</div>
+					@endforeach
 					@endif
 				</div>
 				<br>
@@ -141,26 +156,26 @@
 		<!-- ======= About Us Section ======= -->
 		<section id="about-us" class="about-us about-us-banner" style="background: url( {{ url('images/about-banner.png') }}) no-repeat center top; height:26rem ; background-size: cover;padding: 0px;background-attachment: fixed;">
 			<div class="banner-opacity" style="position: absolute;z-index: 0;opacity: 0.7;width: 100%;height: 100%;    background: #C4C4C4 !important;"></div>
-				<div class="row col-md-12">
-					<div class="col-md-7">
-						<div class="about-section-title section-title">
-							<h2 class="primary-text header-font-size" style="text-align: left;top: 30px;left: 30px;">About Us</h2>
-							<p class="text-left body-font-size" style="padding-left: 30px;line-height: 28px;letter-spacing: 0.9px;">
-								<br><br>From last many years of now, <span class="primary-text"> Microfluid Process Equipment </span> has been persistently in its profession to provide best-in-class products and after sales service.<br><br>
-								<span class="primary-text"> Microfluid Process Equipment </span> have more than 25 years of experience in manufacturing, process industries and high pressure reciprocating pumps and homogenizers.
-							</p>
-						</div>
-						<div class="text-left" style="padding-left: 30px;padding-top: 16px;"><a href="#" class="btn primary-text about-read-more" style="border-radius: 30px;padding: 5px 20px 5px 20px;background: transparent;"><b>Read More</b></a></div>
+			<div class="row col-md-12">
+				<div class="col-md-7">
+					<div class="about-section-title section-title">
+						<h2 class="primary-text header-font-size" style="text-align: left;top: 30px;left: 30px;">About Us</h2>
+						<p class="text-left body-font-size" style="padding-left: 30px;line-height: 28px;letter-spacing: 0.9px;">
+							<br><br>From last many years of now, <span class="primary-text"> Microfluid Process Equipment </span> has been persistently in its profession to provide best-in-class products and after sales service.<br><br>
+							<span class="primary-text"> Microfluid Process Equipment </span> have more than 25 years of experience in manufacturing, process industries and high pressure reciprocating pumps and homogenizers.
+						</p>
 					</div>
-					<div class="col-md-5">
-
-						<iframe style="padding-top: 7%;height: 100%;width: 100%;" id="player" src="https://www.youtube.com/embed/r5MhAK8lAmU" allowfullscreen="true" scrolling="no" frameborder="0"></iframe>
-
-							<!-- <a target="_self" href="#"><img alt="Homogenizers" src="assets/img/application/homogenizers.jpeg" style="height: auto;width: 94%;padding-top: 33px;padding-left: 31%;"></a> -->
-					</div>
+					<div class="text-left" style="padding-left: 30px;padding-top: 16px;"><a href="#" class="btn primary-text about-read-more" style="border-radius: 30px;padding: 5px 20px 5px 20px;background: transparent;"><b>Read More</b></a></div>
 				</div>
+				<div class="col-md-5">
+
+					<iframe style="padding-top: 7%;height: 100%;width: 100%;" id="player" src="https://www.youtube.com/embed/r5MhAK8lAmU" allowfullscreen="true" scrolling="no" frameborder="0"></iframe>
+
+					<!-- <a target="_self" href="#"><img alt="Homogenizers" src="assets/img/application/homogenizers.jpeg" style="height: auto;width: 94%;padding-top: 33px;padding-left: 31%;"></a> -->
+				</div>
+			</div>
 		</section>
-	 <!-- End About Us Section -->
+		<!-- End About Us Section -->
 
 	</main><!-- End #main -->
 

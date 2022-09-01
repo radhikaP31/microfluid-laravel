@@ -3,13 +3,13 @@
         {{ __('Inquiry | Microfluid Process Equipment') }}
     </x-slot>
 
-    @if ($message = Session::get('success'))
+<!--     @if ($message = Session::get('success'))
     <div class="alert alert-success alert-block container mb-3">
         <button type="button" class="close" data-dismiss="alert">×</button>
         <strong>{{ $message }}</strong>
     </div>
-    @endif
-
+    @endif -->
+    
     {{ Breadcrumbs::render('inquiry') }}
     <main id="main">
         <!-- ======= Inquiry Section ======= -->
@@ -115,27 +115,27 @@
                                     <input class="form-control" type="file" id="attachment" name="attachment">
                                     @error('attachment')
                                     <div class=" text-red text-10">{{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
-                                @enderror
                             </div>
+                            <div class="row">
+                                <div class="col-md-12 form-group mb-3">
+                                    <label for="message" class="col-form-label">Message <span class="text-red">*</span></label>
+                                    <textarea class="form-control" name="message" id="message" cols="30" rows="4" placeholder="Write your message">{{ old('message') }}</textarea>
+                                    @error('message')
+                                    <div class="text-red text-10">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 form-group">
+                                    <button type="submit" class="btn btn-primary primary-text rounded-0 py-2 px-4 submit_inquiry">Send Inquiry</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12 form-group mb-3">
-                            <label for="message" class="col-form-label">Message <span class="text-red">*</span></label>
-                            <textarea class="form-control" name="message" id="message" cols="30" rows="4" placeholder="Write your message">{{ old('message') }}</textarea>
-                            @error('message')
-                            <div class="text-red text-10">{{ $message }}</div>
-                            @enderror
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 form-group">
-                            <button type="submit" class="btn btn-primary primary-text rounded-0 py-2 px-4 submit_inquiry">Send Inquiry</button>
-                        </div>
-                    </div>
-                    </form>
                 </div>
-            </div>
             </div>
         </section><!-- End Inquiry Section -->
     </main><!-- End #main -->
