@@ -13,7 +13,6 @@
 
 	<script>
 		$(function() {
-
 			@if(Session::get('success'))
 			console.log('test');
 			swal({
@@ -137,7 +136,7 @@
 									<span class="iconify field-icon" data-icon="{{ $field->mstr_icon }}"></span>{{ $field->mstr_nm }}
 								</h3><!-- <br> -->
 								<p class="field-desc text-black">{{ $field->mstr_desc }}</p>
-								<a class="read-more primary-text" target="_self" href="/industry/{{ $field->slug }}">Read More</a>
+								<a class="read-more primary-text" target="_self" href="/industry/{{ $field->slug }}">Read More »</a>
 							</div>
 						</div>
 					</div>

@@ -741,6 +741,10 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+
+.services {
+  padding: 60px 0px 20px 0px;
+}
 .services .icon-box {
   text-align: center;
   transition: all ease-in-out 0.3s;
@@ -748,7 +752,6 @@ section {
   min-height: 300px;
   border: 3px solid white;
 }
-
 .services .icon-box .icon {
   margin: 0 auto;
   display: flex;
@@ -800,6 +803,7 @@ section {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+  padding: 0px 14px;
 }
 
 .services .icon-box:hover {
@@ -957,7 +961,7 @@ a.list-group-item, button.list-group-item {
 --------------------------------------------------------------*/
 .product-cat{
   font-size: 18px;
-  font-weight: 700;
+  /* font-weight: 700; */
 }
 
 .product-list-group-item.active, .product-list-group-item.active:focus, .product-list-group-item.active:hover {
@@ -981,7 +985,7 @@ a.list-group-item, button.list-group-item {
     font-weight: 100;
     position: absolute;
     content: "\00BB";
-    color: black;
+    color: var(--primary_color);
     font-size: 33px;
     right: 0;
     top: 0;
@@ -1425,7 +1429,9 @@ li.nav-item {
   color: white !important;
 }
 */
-
+.field-appilication {
+  padding: 20px 0px 60px 0px;
+}
 .field-appilication .field-find-more{
   box-shadow: 3px 0 6px 0 rgb(0 0 0);
 }
@@ -1583,7 +1589,6 @@ li.nav-item {
   font-family: Roboto Slab;
   font-size: 15px;
   font-style: normal;
-  font-weight: 600;
   line-height: 24px;
   letter-spacing: 0.05em;
   text-align: left;
@@ -1639,9 +1644,9 @@ p {
 
 .breadcrumb-text{
   font-weight: lighter;
-  font-size: 35px;
+  font-size: 30px;
   /*letter-spacing: 1.3px;*/
-  width: 50%;
+  width: 42%;
   margin-left: 4rem;
   font-family: system-ui;
 }
@@ -2332,163 +2337,6 @@ top: calc(100% + 13px) !important;
   font-style: italic;
   margin: 15px 0 0 0;
   padding: 0;
-}
-
-/*--------------------------------------------------------------
-# Contact
---------------------------------------------------------------*/
-.contact .info-wrap {
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-}
-
-.contact .info {
-  background: #fff;
-}
-
-.contact .info i {
-  font-size: 20px;
-  color: #1bbd36;
-  float: left;
-  width: 44px;
-  height: 44px;
-  border: 1px solid #1bbd36;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  transition: all 0.3s;
-}
-
-.contact .info h4 {
-  padding: 0 0 0 60px;
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: #111;
-}
-
-.contact .info p {
-  padding: 0 0 0 60px;
-  margin-bottom: 0;
-  font-size: 14px;
-  color: #444444;
-}
-
-.contact .info:hover i {
-  background: #1bbd36;
-  color: #fff;
-}
-
-.contact .php-email-form {
-  width: 100%;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
-  padding: 30px;
-  background: #fff;
-}
-
-.contact .php-email-form .form-group {
-  padding-bottom: 8px;
-}
-
-.contact .php-email-form .validate {
-  display: none;
-  color: red;
-  margin: 0 0 15px 0;
-  font-weight: 400;
-  font-size: 13px;
-}
-
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .error-message br + br {
-  margin-top: 25px;
-}
-
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form input, .contact .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-  border-radius: 4px;
-}
-
-.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-  border-color: #1bbd36;
-}
-
-.contact .php-email-form input {
-  height: 44px;
-}
-
-.contact .php-email-form textarea {
-  padding: 10px 12px;
-}
-
-.contact .php-email-form button[type="submit"] {
-  background: #1bbd36;
-  border: 0;
-  padding: 10px 24px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 4px;
-}
-
-.contact .php-email-form button[type="submit"]:hover {
-  background: #2ae149;
-}
-
-@-webkit-keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 /*--------------------------------------------------------------
@@ -3183,3 +3031,167 @@ top: calc(100% + 13px) !important;
   margin: auto;
 }
 /* inquiry page css end*/
+
+/* contact page css start */
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact .info-wrap {
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.contact .info {
+  background: #fff;
+}
+
+.contact .info i {
+  font-size: 20px;
+  color: var(--primary_color);
+  float: left;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--primary_color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s;
+}
+
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #111;
+}
+
+.contact .info p {
+  padding: 0 0 0 60px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #444444;
+}
+
+.contact .info:hover i {
+  background: #ff4d00;
+  color: #fff;
+  border: 1px solid #ff4d00;
+}
+
+.contact .php-email-form {
+  width: 100%;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+  padding: 30px;
+  background: #fff;
+}
+
+.contact .php-email-form .form-group {
+  padding-bottom: 8px;
+}
+
+.contact .php-email-form .validate {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .error-message br+br {
+  margin-top: 25px;
+}
+
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: var(--primary_color);
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid var(--primary_color);
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
+  border-color: var(--primary_color);
+}
+
+.contact .php-email-form input {
+  height: 44px;
+}
+
+.contact .php-email-form textarea {
+  padding: 10px 12px;
+}
+
+.contact .php-email-form button[type="submit"] {
+  background: var(--primary_color);
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.contact .php-email-form button[type="submit"]:hover {
+  background: var(--primary_color);
+}
+
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* contact page css end */

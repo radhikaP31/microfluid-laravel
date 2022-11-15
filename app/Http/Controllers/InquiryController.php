@@ -109,8 +109,6 @@ class InquiryController extends Controller
                 // There is problem in it. Its shows error of connetion problem
                /*  $body = [
                     'name' => $request->name,
-                    'url_a' => 'https://www.bacancytechnology.com/',
-                    'url_b' => 'https://www.bacancytechnology.com/tutorials/laravel',
                 ];
 
                 Mail::to($request->email)->send(new InquiryMail($body)); */

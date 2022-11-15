@@ -64,4 +64,9 @@ Breadcrumbs::for('inquiry', function (BreadcrumbTrail $trail): void {
     $trail->push('Inquiry', route('inquiry'));
 });
 
+Breadcrumbs::for('contact', function (BreadcrumbTrail $trail): void {
+    $trail->parent('home');
+    $trail->push('Contact', route('contact'));
+});
+
 ?>
