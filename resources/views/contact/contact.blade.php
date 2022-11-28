@@ -18,19 +18,19 @@
                                 <div class="col-lg-4 info">
                                     <i class="icofont-google-map"></i>
                                     <h4 class="primary-text header-font-size">Location:</h4>
-                                    <p>Darshan Industrial Estate<br>Ahmedabad</p>
+                                    <p class="text-black">Darshan Industrial Estate<br>Ahmedabad</p>
                                 </div>
 
                                 <div class=" col-lg-4 info mt-4 mt-lg-0">
                                     <i class="icofont-envelope"></i>
                                     <h4 class="primary-text header-font-size">Email:</h4>
-                                    <p>sales@microfluidprocess.com</p>
+                                    <p class="text-black"><a class="text-black hover-mail" href="mailto:sales@microfluidprocess.com">sales@microfluidprocess.com</a></p>
                                 </div>
 
                                 <div class="col-lg-4 info mt-4 mt-lg-0">
                                     <i class="icofont-phone"></i>
                                     <h4 class="primary-text header-font-size">Call:</h4>
-                                    <p>+91 70168 65019<br>Parth Patel</p>
+                                    <p class="text-black">+91 70168 65019<br>Parth Patel</p>
                                 </div>
                             </div>
                         </div>

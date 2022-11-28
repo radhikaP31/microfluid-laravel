@@ -106,13 +106,10 @@ class InquiryController extends Controller
 
             if ($result) {
                 //SMTP configure for send email to user and admin
-                // There is problem in it. Its shows error of connetion problem
-               /*  $body = [
+                $body = [
                     'name' => $request->name,
                 ];
-
-                Mail::to($request->email)->send(new InquiryMail($body)); */
-
+                Mail::to($request->email)->send(new InquiryMail($body));
                 $request->session()->flash('success', 'Your Inquiry saved!! We will connect you shortly..');
                 return redirect()->route('home');
 

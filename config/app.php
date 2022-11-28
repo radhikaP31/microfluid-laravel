@@ -16,6 +16,7 @@ return [
     */
 
     'name' => env('APP_NAME', 'Microfluid Process Equipment'),
+    'full_name' => 'Microfluid Process Equipment',
 
     /*
     |--------------------------------------------------------------------------

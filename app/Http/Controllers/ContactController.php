@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactRequest;
+use App\Mail\ContactMail;
 use App\Models\Contact;
 use Illuminate\Http\Request;
-
-use function Psy\debug;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -38,6 +38,12 @@ class ContactController extends Controller
             $result = $contact->save();
 
             if ($result) {
+                //SMTP configure for send email to user and admin
+                $body = [
+                    'name' => $request->name,
+                ];
+                Mail::to($request->email)->send(new ContactMail($body));
+
                 $request->session()->flash('success', 'Your Contact Request is saved!! We will connect you shortly..');
                 return redirect()->route('home');
             } else {

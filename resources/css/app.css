@@ -2959,7 +2959,7 @@ top: calc(100% + 13px) !important;
   font-size: 14px;
 }
 
-.cursor-default > .w-5, .rounded-r-md > .w-5 {
+.cursor-default > .w-5, .rounded-r-md > .w-5, .rounded-l-md > .w-5 {
   height: 10px;
 }
 /*  industry page css start */

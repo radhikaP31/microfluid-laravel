@@ -164,7 +164,7 @@
 							<span class="primary-text"> Microfluid Process Equipment </span> have more than 25 years of experience in manufacturing, process industries and high pressure reciprocating pumps and homogenizers.
 						</p>
 					</div>
-					<div class="text-left" style="padding-left: 30px;padding-top: 16px;"><a href="#" class="btn primary-text about-read-more" style="border-radius: 30px;padding: 5px 20px 5px 20px;background: transparent;"><b>Read More</b></a></div>
+					<div class="text-left" style="padding-left: 30px;padding-top: 16px;"><a href=" <?php echo config('app.base_url') . '/about'; ?>" class="btn primary-text about-read-more" style="border-radius: 30px;padding: 5px 20px 5px 20px;background: transparent;"><b>Read More</b></a></div>
 				</div>
 				<div class="col-md-5">
 
