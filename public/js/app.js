@@ -2261,6 +2261,14 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
     } else {
       $('.back-to-top').fadeOut('slow');
     }
+
+    if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+      $('.back-to-top').css('background-color', '#ff4d00');
+    }
+
+    if ($(window).scrollTop() + $(window).height() < $(document).height() - 100) {
+      $('.back-to-top').css('background-color', '#022060');
+    }
   });
   $('.back-to-top').click(function () {
     $('html, body').animate({
@@ -2433,7 +2441,13 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
       productNav.removeClass('sticky_keynav');
     }
   }
-}(jQuery);
+}(jQuery); //Home page
+
+$('.round').click(function (e) {
+  e.preventDefault();
+  e.stopPropagation();
+  $('.arrow').toggleClass('bounceAlpha');
+});
 
 /***/ }),
 

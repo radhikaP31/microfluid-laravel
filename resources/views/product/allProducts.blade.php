@@ -58,10 +58,12 @@
             @foreach ($product_data as $key => $product)
             <div class="col-lg-4 col-md-6 align-items-stretch min-height310">
               <div class="icon-box rounded shadow mb-5">
-                <div class="icon">
-                  <img alt="{{ $product->p_name }}" src="{{ url($product->p_image) }}">
-                </div>
-                <h4><a href="/product/{{ $product->slug }}" class="service_name primary-text">{{ $product->p_name }}</a></h4>
+                <a href="/product/{{ $product->slug }}" class="service_name primary-text">
+                  <div class="icon">
+                    <img alt="{{ $product->p_name }}" src="{{ url($product->p_image) }}">
+                  </div>
+                  <h4>{{ $product->p_name }}</h4>
+                </a>
                 <p class="text-left">{{ substr($product->p_description, 0, 100) . ' ...' }}</p>
               </div>
             </div>

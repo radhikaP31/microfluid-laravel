@@ -91,11 +91,21 @@
 					@if ($whatWeOfferData->count() > 0)
 					@foreach($whatWeOfferData as $key => $offer)
 					<div class="col-lg-3 col-md-6 align-items-stretch min-height310  ">
-						<div class="icon-box rounded shadow mb-5">
+						<div class="icon-box service-box rounded shadow mb-5">
 							<div class="icon">
 								<img alt="{{ $offer->mstr_nm }}" src="{{ url($offer->mstr_img) }}">
 							</div>
-							<h4><a href="{{ $offer->mstr_link }}" class="service_name primary-text">{{ $offer->mstr_nm }}&nbsp;&nbsp;<i class="fa fa-arrow-right" style="font-size: 13px;"></i></a></h4>
+							<!-- <h4><a href="{{ $offer->mstr_link }}" class="service_name primary-text">{{ $offer->mstr_nm }}&nbsp;&nbsp;<i class="fa fa-arrow-right" style="font-size: 13px;"></i></a></h4> -->
+							<h4>
+								<a href="{{ $offer->mstr_link }}" class="service_name primary-text">{{ $offer->mstr_nm }}&nbsp;&nbsp;
+									<div class="round">
+										<div id="cta">
+											<span class="arrow primera next "></span>
+											<span class="arrow segunda next "></span>
+										</div>
+									</div>
+								</a>
+							</h4>
 						</div>
 					</div>
 					@endforeach

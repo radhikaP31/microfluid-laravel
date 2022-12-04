@@ -71,7 +71,6 @@
 <!-- <script src="assets/vendor/jquery/jquery.min.js"></script> -->
 <script src="{{ asset('files/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('files/jquery.easing/jquery.easing.min.js') }}"></script>
-<script src="{{ asset('files/php-email-form/validate.js') }}"></script>
 <script src="{{ asset('files/jquery-sticky/jquery.sticky.js') }}"></script>
 <script src="{{ asset('files/isotope-layout/isotope.pkgd.min.js') }}"></script>
 <script src="{{ asset('files/venobox/venobox.min.js') }}"></script>
