@@ -10,6 +10,8 @@ use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\IndustriesController;
 use App\Http\Controllers\InquiryController;
+use App\Http\Controllers\LoginController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -70,3 +72,9 @@ Route::controller(ContactController::class)->group(function () {
     Route::get('/contact', 'index')->name('contact'); //Display contact page
     Route::any('/contact/add', 'create')->name('contact_add'); //Create contact
 });
+
+//Admin Routes start
+Route::get('login', [LoginController::class, 'index'])->name('login');
+Route::post('verify', [LoginController::class, 'customLogin'])->name('login.verify');
+Route::get('signout', [LoginController::class, 'signOut'])->name('signout');
+//Admin Routes end
