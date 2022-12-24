@@ -130,7 +130,7 @@
 						<div class="icon-box field-find-more section-bg">
 							<h4 class="primary-text header-font-size" style="text-align: left;padding-left: 7px;">Field of <br>Application</h4>
 							<hr style="width: 47%;margin-left: 6px;border-width: 4px;background-color: var(--secondary_color);">
-							<h4 class="primary-text body-font-size" style="text-align: left;padding-left: 7px;"><a href="#" class="text-black">Find a right solutions for your industry!!</a></h4>
+							<h4 class="primary-text body-font-size" style="text-align: left;padding-left: 7px;"><a href="/industries" class="text-black">Find a right solutions for your industry!!</a></h4>
 						</div>
 					</div>
 

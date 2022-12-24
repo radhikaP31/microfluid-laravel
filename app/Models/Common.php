@@ -28,7 +28,7 @@ class Common extends Model
     */
     public function getIndependentDataByTypeCode($type_code=''){
 
-        $result = DB::table('independent_mst')->where('type_cd',$type_code)->orderBy('sequence')->get();
+        $result = DB::table('independent_mst')->where(['type_cd' => $type_code, 'status' => 'active', 'is_deleted' => 0])->orderBy('sequence')->get();
         return $result;
     }
 
@@ -56,7 +56,7 @@ class Common extends Model
     **/
     function getAboutUsInformation() {
 
-        $result = DB::table('web_about_info')->where('is_deleted',0)->orderBy('sequence')->get();
+        $result = DB::table('web_about_info')->where(['is_deleted' => 0, 'status' => 'active'])->orderBy('sequence')->get();
         return $result;
     }
 

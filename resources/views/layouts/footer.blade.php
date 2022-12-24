@@ -21,7 +21,7 @@
           <h4 class="products header-font-size">Products</h4>
           <ul>
             <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url'). '/products/1'; ?>">High Pressure Homogenizers</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url'). '/products/2'; ?>">Pumps</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url'). '/products/2'; ?>">Hygenic Pumps</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url'). '/products/1/8'; ?>">Homogenizer Spare Parts</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url'). '/products/6'; ?>">Sanitary Filters & strainers</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url'). '/products/8'; ?>">Hygenic Fittings</a></li>
@@ -37,13 +37,13 @@
           </ul>
           <div class="pt-3 social-links" style="line-height: 53px;">
             <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
             <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-            <a href="#" class="pinterest"><i class="bx bxl-pinterest"></i></a>
-            <a href="#" class="youtube"><i class="bx bxl-youtube"></i></a>
+            <!-- <a href="#" class="pinterest"><i class="bx bxl-pinterest"></i></a>
+            <a href="#" class="youtube"><i class="bx bxl-youtube"></i></a> -->
             <a href="https://api.whatsapp.com/send?phone=917016865019&amp;text=Hi, I want to business with you!!" target="_blank" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
-            <a href="#" class="skype"><i class="bx bxl-skype"></i></a>
+            <!-- <a href="#" class="skype"><i class="bx bxl-skype"></i></a> -->
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@
   <div class="d-md-flex primary-bg" style="padding: 10px 35px 10px 35px;">
 
     <div class="mr-md-auto text-center text-md-left container">
-      <p class="text-white" style="letter-spacing: 1.2px;">Download | Career | HR Policy | Terms & Conditions | Contact Us | Microfluid</p>
+      <p class="text-white" style="letter-spacing: 1.2px;">Download | Career <!-- | HR Policy | Terms & Conditions --> | Contact Us | Microfluid</p>
       <div class="copyright text-white">
         <p style="letter-spacing: 0.9px;">&copy; Copyright 2022 - All rights reserved by <strong><span>Microfluid Process Equipment</span></strong></p>
       </div>

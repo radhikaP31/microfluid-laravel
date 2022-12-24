@@ -25,9 +25,9 @@
             <x-nav-link :active="request()->routeIs('industries')">
               <a href="{{route('industries')}}">{{ __('Industries') }}</a>
             </x-nav-link>
-            <x-nav-link :active="request()->routeIs('blogs')" >
+            <!-- <x-nav-link :active="request()->routeIs('blogs')" >
               <a href="{{route('blogs')}}">{{ __('Blogs') }}</a>
-            </x-nav-link>
+            </x-nav-link> -->
             <x-nav-link :active="request()->routeIs('inquiry')">
               <a href="{{route('inquiry')}}">{{ __('Inquiry') }}</a>
             </x-nav-link>
@@ -38,7 +38,7 @@
       </nav><!-- .nav-menu -->
 
       <div class="header-social-links">
-        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+        <!-- <a href="#" class="twitter"><i class="icofont-twitter"></i></a> -->
         <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
         <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
         <a href="#" class="linkedin" style="margin-left: 4px;"><i class="icofont-linkedin"></i></i></a>
