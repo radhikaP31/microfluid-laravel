@@ -20,21 +20,21 @@
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="padding-bottom: 1%;">
         <h2 class="primary-text header-font-size">{{ $productData->p_name }}</h2>
       </div>
-      <div class="col-md-4" style="border-right: 1px solid black;">
+      <div class="col-md-5" style="border-right: 1px solid black;">
         @if ($productData->image->count() > 0)
         <!-- product image start 1 -->
-        @foreach($productData->image as $key => $image)
-        <!-- product image start 2 -->
-
-        <div class="my-product-slides">
-          <div class="image-number-text">1 / 2</div>
-          <img src="{{ url($image['img_path']) }}" class="product_active_img">
-        </div>
-
-        @endforeach
+			@foreach($productData->image as $key => $image)
+			<!-- product image start 2 -->
+				@php $count = 1; @endphp
+				<div class="my-product-slides">
+				<div class="image-number-text"> {{ $count }} / {{ $productData->image->count() }}</div>
+				<img src="{{ url($image['img_path']) }}" class="product_active_img">
+				</div>
+			@php $count++; @endphp
+			<!-- product image end 2 -->
+			@endforeach
         <!-- product image end 1 -->
         @endif
-        <!-- product image end 2 -->
 
         <a class="prev_arrow prev-product-img" data-slide_count="-1">
           <span class="iconify secondary-text" data-icon="ic:round-keyboard-double-arrow-left" data-width="32" data-height="32"></span>
@@ -46,31 +46,30 @@
         <div class="row col-md-12">
           @if ($productData->image->count() > 0)
           <!-- product image start 1 -->
-          @foreach($productData->image as $key => $image)
-          <!-- product image start 2 -->
           @php $count = 1; @endphp
-          <div class="col-md-4">
-            <img class="product-image product-cursor " src="{{ url($image['img_path']) }}" style="width: auto; height: 70px;" data-slide="<?= $count; ?>">
-          </div>
-
-          @php $count++; @endphp
-          @endforeach
+			@foreach($productData->image as $key => $image)
+				<!-- product image start 2 -->
+				<div class="col-md-4">
+					<img class="product-image product-cursor " src="{{ url($image['img_path']) }}" style="width: auto; height: 70px;" data-slide="<?= $count; ?>">
+				</div>
+				@php $count++; @endphp
+				<!-- product image end 2 -->
+			@endforeach
           <!-- product image end 1 -->
           @endif
-          <!-- product image end 2 -->
         </div>
       </div>
 
-      <div class="col-md-8">
+      <div class="col-md-7">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="    padding-bottom: 2%;">
           <p>{{ $productData->p_description }}</p>
         </div>
-        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="padding-bottom: 2%;">
+        <!-- <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="padding-bottom: 2%;">
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <a href="#" class="btn prod_desc_btn" data-toggle="modal" data-target="#req_quote">
               <img src="{{ url('images/icons/quote.png') }}" style="height: 96px; width: auto;" /><span class="header-font-size">Request Quote</span></a>
           </div>
-        </div>
+        </div> -->
       </div>
 
       <!-- product keys nav section start -->
@@ -78,7 +77,6 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-light secondary-page-menu col-md-12">
         <div class="" id="navbarNav">
           <ul class="navbar-nav">
-
             @if ($productData->key->count() > 0)
             <!-- product key start 1 -->
             @php $count = 1; @endphp
@@ -89,10 +87,9 @@
             </li>
             @php $count++; @endphp
             @endforeach
-            <!-- product key end 1 -->
-            @endif
             <!-- product key end 2 -->
-
+            @endif
+            <!-- product key end 1 -->
           </ul>
         </div>
       </nav>
@@ -104,21 +101,17 @@
         <!-- product feature start 2 -->
         <div id="{{ $product_key->tab_name }}" style=" padding-top: 2%;">
           <h4 class="primary-text header-font-size" style="text-align: left;padding-left: 7px;">{{ $product_key->key_name }}</h4>
-
           @foreach($navDetails[$product_key->tab_name] as $navKey => $navValue)
           <!-- <h2> {{ $navValue->name}} </h2> -->
           <div> @php echo $navValue->description @endphp </div>
           @endforeach
-
         </div>
         @endforeach
         <!-- product key end 1 -->
         @endif
         <!-- product key end 2 -->
-
       </div>
       <!-- product keys nav section end -->
-
       @endif
       <!-- end main if 1 -->
     </section><!-- End Product Section -->

@@ -799,15 +799,6 @@ section {
   transition: ease-in-out 0.3s;
 }
 
-.services .product-box h4 {
-  margin: 10px 0 15px 0px;
-  font-size: 1rem;;
-}
-
-.services .product-box h4:hover {
-  color: var(--secondary_color) !important;
-}
-
 .services .icon-box p {
   line-height: 24px;
   font-size: 14px;

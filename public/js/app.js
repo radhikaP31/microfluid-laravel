@@ -2389,17 +2389,17 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
   }); //about us page js end
   //products page js start
 
-  // $(".product-list-group a:first").addClass("active");
+  $(".product-list-group a:first").addClass("active");
   jQuery('.product-cat').click(function () {
     jQuery('.product-cat').removeClass('active');
     jQuery(this).addClass('active');
-    var type = jQuery(this).data('sc_cat');
+    var type = jQuery(this).data('sc_cat'); //console.log('.product-cat-filter-'+type);
 
     jQuery('.product-cat-filter').hide();
     jQuery('.product-cat-filter-' + type).show();
   }); //tab is selected and redirect to the category
 
-  /*  $('.product-list-group-item').on('click', function (e) {
+  $('.product-list-group-item').on('click', function (e) {
     // Save value in localstorage
     localStorage.setItem("activeTab", $(e.target).attr('href'));
     localStorage.setItem('productCatCD', $(e.target).attr('data-sc_cat'));
@@ -2412,7 +2412,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
     //if value is store in local storage then active tab and show product tab
     $('.product-list-group a[href="' + activeTab + '"]').tab('show');
     $(".product-cat-filter-" + productCatCD).css("display", "block");
-  } //products page js end */
+  } //products page js end
 
 
   window.onscroll = function () {
