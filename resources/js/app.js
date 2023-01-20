@@ -247,6 +247,30 @@ jQuery('.block-filter').click(function(){
     jQuery('.block-type-'+type).show();
 
 });
+//open image on click for testimonial section
+$(document).ready(function () {
+  // required elements
+  var imgPopup = $('.testimonial-img-popup');
+  var imgCont = $('.container-testimonial-img');
+  var popupImage = $('.testimonial-img-popup img');
+  var closeBtn = $('.testimonial-close-btn');
+
+  // handle events
+  imgCont.on('click', function () {
+    var img_src = $(this).children('img').attr('src');
+    imgPopup.children('img').attr('src', img_src);
+    imgPopup.addClass('opened');
+  });
+
+  $(imgPopup, closeBtn).on('click', function () {
+    imgPopup.removeClass('opened');
+    imgPopup.children('img').attr('src', '');
+  });
+
+  popupImage.on('click', function (e) {
+    e.stopPropagation();
+  });
+});
 //about us page js end
 
 //products page js start

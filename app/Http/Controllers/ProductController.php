@@ -23,7 +23,7 @@ class ProductController extends Controller
         }else{
           $product_tab = ProductCategory::where('is_deleted',0)->where('id',$id)->orderBy('sequence')->get(); //get category wise products product
           $product_data = Product::where('is_deleted',0)->where('category_id',$id)->orderBy('sequence')->get();
-        } 
+        }
 
         return view('product.allProducts', [
             'category_id' => $id,
@@ -41,19 +41,15 @@ class ProductController extends Controller
      */
     public function singleProduct($slug = null)
     {
-        
         if($slug == null){
             return redirect(route('home'));
         }
         $product_id = Product::select('id')->where('slug',$slug)->first()->id;
-
         $common = new Common();
         $productData = Product::with('image','key')->where('is_deleted',0)->where('id',$product_id)->orderBy('sequence')->first();
-
         //get product nav details
         $navDetails = [];
         foreach($productData->key as $key => $keyDetails){
-   
             $navDetails[$keyDetails->tab_name] = $common->getProductKeyDetailsByID($product_id,$keyDetails->db_table_name);
         }
 
@@ -61,6 +57,6 @@ class ProductController extends Controller
             'product_id' => $product_id,
             'productData' => $productData,
             'navDetails' => $navDetails,
-        ]);        
+        ]);
     }
 }

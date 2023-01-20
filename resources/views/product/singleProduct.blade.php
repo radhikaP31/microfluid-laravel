@@ -100,10 +100,10 @@
         @foreach($productData->key as $key => $product_key)
         <!-- product feature start 2 -->
         <div id="{{ $product_key->tab_name }}" style=" padding-top: 2%;">
-          <h4 class="primary-text header-font-size" style="text-align: left;padding-left: 7px;">{{ $product_key->key_name }}</h4>
+          <h4 class="primary-text header-font-size" style="text-align: left;">{{ $product_key->key_name }}</h4>
           @foreach($navDetails[$product_key->tab_name] as $navKey => $navValue)
           <!-- <h2> {{ $navValue->name}} </h2> -->
-          <div> @php echo $navValue->description @endphp </div>
+          <div class="col-md-12"> @php echo $navValue->description @endphp </div>
           @endforeach
         </div>
         @endforeach
