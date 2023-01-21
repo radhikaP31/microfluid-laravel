@@ -2386,27 +2386,14 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
     var type = jQuery(this).data('block_type');
     jQuery('.block-type').hide();
     jQuery('.block-type-' + type).show();
-  }); //open image on click for testimonial section
-
-  $(document).ready(function () {
-    // required elements
-    var imgPopup = $('.testimonial-img-popup');
-    var imgCont = $('.container-testimonial-img');
-    var popupImage = $('.testimonial-img-popup img');
-    var closeBtn = $('.testimonial-close-btn'); // handle events
-
-    imgCont.on('click', function () {
-      var img_src = $(this).children('img').attr('src');
-      imgPopup.children('img').attr('src', img_src);
-      imgPopup.addClass('opened');
-    });
-    $(imgPopup, closeBtn).on('click', function () {
-      imgPopup.removeClass('opened');
-      imgPopup.children('img').attr('src', '');
-    });
-    popupImage.on('click', function (e) {
-      e.stopPropagation();
-    });
+  });
+  $(".open-testimonial-image").on("click", function (event) {
+    var modalTitle = $(this).data('name');
+    var imageSrc = $(this).data('url');
+    console.log(modalTitle);
+    console.log(imageSrc);
+    $("#testimonialModalTitle").text(modalTitle);
+    $('#testimonialModalImage').attr('src', imageSrc);
   }); //about us page js end
   //products page js start
 
