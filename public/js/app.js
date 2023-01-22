@@ -2390,8 +2390,6 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
   $(".open-testimonial-image").on("click", function (event) {
     var modalTitle = $(this).data('name');
     var imageSrc = $(this).data('url');
-    console.log(modalTitle);
-    console.log(imageSrc);
     $("#testimonialModalTitle").text(modalTitle);
     $('#testimonialModalImage').attr('src', imageSrc);
   }); //about us page js end

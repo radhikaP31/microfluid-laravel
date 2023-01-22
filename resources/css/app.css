@@ -777,7 +777,7 @@ section {
 }
 .services .icon-box .icon img{
   height: auto;
-  width: 80%;
+  width: 100%;
   padding: 10px;
 }
 
@@ -806,7 +806,7 @@ section {
 
 .services .icon-box h4 {
   margin: 10px 0 15px -15px;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .services .icon-box h4 a {
@@ -1250,6 +1250,14 @@ a.list-group-item, button.list-group-item {
 
 li.nav-item {
     padding: 0px 3px;
+}
+
+.product-field-icon {
+  left: 0px;
+  width: auto;
+  height: 80%;
+  color: var(--secondary_color);
+  top: -1px;
 }
 
 /*--------------------------------------------------------------
@@ -1710,7 +1718,7 @@ li.nav-item {
     margin-bottom: 0;
     margin-top: 0;
     padding-top: 6px;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
     line-height: 30px;

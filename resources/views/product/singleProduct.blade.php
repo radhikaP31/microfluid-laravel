@@ -13,7 +13,7 @@
   {{ Breadcrumbs::render('product') }}
   <main id="main">
     <!-- ======= Product Section ======= -->
-    <section class="row col-md-12 product container-fluid" id="product" style="padding: 20px 5% 20px 5%;margin: 0px;">
+    <section class="row col-md-12 product" id="product" style="padding: 20px 5% 20px 5%;margin: 0px;">
 
       @if($productData->count() > 0)
       <!-- main if 1 -->
@@ -23,16 +23,16 @@
       <div class="col-md-5" style="border-right: 1px solid black;">
         @if ($productData->image->count() > 0)
         <!-- product image start 1 -->
-			@foreach($productData->image as $key => $image)
-			<!-- product image start 2 -->
-				@php $count = 1; @endphp
-				<div class="my-product-slides">
-				<div class="image-number-text"> {{ $count }} / {{ $productData->image->count() }}</div>
-				<img src="{{ url($image['img_path']) }}" class="product_active_img">
-				</div>
-			@php $count++; @endphp
-			<!-- product image end 2 -->
-			@endforeach
+        @foreach($productData->image as $key => $image)
+        <!-- product image start 2 -->
+        @php $count = 1; @endphp
+        <div class="my-product-slides">
+          <div class="image-number-text"> {{ $count }} / {{ $productData->image->count() }}</div>
+          <img src="{{ url($image['img_path']) }}" class="product_active_img">
+        </div>
+        @php $count++; @endphp
+        <!-- product image end 2 -->
+        @endforeach
         <!-- product image end 1 -->
         @endif
 
@@ -47,22 +47,22 @@
           @if ($productData->image->count() > 0)
           <!-- product image start 1 -->
           @php $count = 1; @endphp
-			@foreach($productData->image as $key => $image)
-				<!-- product image start 2 -->
-				<div class="col-md-4">
-					<img class="product-image product-cursor " src="{{ url($image['img_path']) }}" style="width: auto; height: 70px;" data-slide="<?= $count; ?>">
-				</div>
-				@php $count++; @endphp
-				<!-- product image end 2 -->
-			@endforeach
+          @foreach($productData->image as $key => $image)
+          <!-- product image start 2 -->
+          <div class="col-md-4">
+            <img class="product-image product-cursor " src="{{ url($image['img_path']) }}" style="width: auto; height: 70px;" data-slide="<?= $count; ?>">
+          </div>
+          @php $count++; @endphp
+          <!-- product image end 2 -->
+          @endforeach
           <!-- product image end 1 -->
           @endif
         </div>
       </div>
 
       <div class="col-md-7">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="    padding-bottom: 2%;">
-          <p>{{ $productData->p_description }}</p>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="padding-bottom: 2%;">
+          <p class="letter-spacing text-justify font-family-sans-serif">@php echo $productData->p_description @endphp</p>
         </div>
         <!-- <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="padding-bottom: 2%;">
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -99,11 +99,11 @@
         <!-- product feature start 1 -->
         @foreach($productData->key as $key => $product_key)
         <!-- product feature start 2 -->
-        <div id="{{ $product_key->tab_name }}" style=" padding-top: 2%;">
-          <h4 class="primary-text header-font-size" style="text-align: left;">{{ $product_key->key_name }}</h4>
+        <div class="col-md-12" id="{{ $product_key->tab_name }}" style="padding-top: 2%;">
+          <h4 class="primary-text header-font-size text-left">{{ $product_key->key_name }}</h4>
           @foreach($navDetails[$product_key->tab_name] as $navKey => $navValue)
           <!-- <h2> {{ $navValue->name}} </h2> -->
-          <div class="col-md-12"> @php echo $navValue->description @endphp </div>
+          @php echo $navValue->description @endphp
           @endforeach
         </div>
         @endforeach
