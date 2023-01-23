@@ -13,7 +13,7 @@
   {{ Breadcrumbs::render('product') }}
   <main id="main">
     <!-- ======= Product Section ======= -->
-    <section class="row col-md-12 product" id="product" style="padding: 20px 5% 20px 5%;margin: 0px;">
+    <section class="col-md-12 product row white-bg" id="product" style="padding: 20px 5% 20px 5%;margin: 0px;">
 
       @if($productData->count() > 0)
       <!-- main if 1 -->

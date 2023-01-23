@@ -1508,11 +1508,13 @@ li.nav-item {
 .nav-menu > ul > li >a {
   color: #fff;
   text-decoration: none;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.5px;
   display: inline-block;
   padding: 9px 14px;
   position: relative;
   margin-right: 6px;
+  font-family: sans-serif;
+  font-size: 18px;
 }
 .nav-menu > ul > li > a:after {
   background: none repeat scroll 0 0 transparent;
