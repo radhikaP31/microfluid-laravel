@@ -29,6 +29,9 @@ ex. mb-1, pb-1, mb-auto
   --secondary_color: #FF4D00;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Roboto", sans-serif;
   color: black;
@@ -635,9 +638,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-height: 500px) {
-  #hero {
-    /*height: 120vh;*/
-  }
+  /* #hero {
+    height: 120vh;
+  } */
 }
 
 /*--------------------------------------------------------------
@@ -819,12 +822,12 @@ section {
   margin-bottom: 0;
   padding: 0px 14px;
 }
-
+/* 
 .services .icon-box:hover {
-  /*border-color: #fff;
+  border-color: #fff;
   box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
-  border: 3px solid var(--primary_color) !important;*/
-}
+  border: 3px solid var(--primary_color) !important;
+} */
 
 a.service_name
 {

@@ -99,7 +99,7 @@
         <!-- product feature start 1 -->
         @foreach($productData->key as $key => $product_key)
         <!-- product feature start 2 -->
-        <div class="col-md-12" id="{{ $product_key->tab_name }}" style="padding-top: 2%;">
+        <div class="col-md-12" id="{{ $product_key->tab_name }}" style="padding-top: 2%;" >
           <h4 class="primary-text header-font-size text-left">{{ $product_key->key_name }}</h4>
           @foreach($navDetails[$product_key->tab_name] as $navKey => $navValue)
           <!-- <h2> {{ $navValue->name}} </h2> -->
