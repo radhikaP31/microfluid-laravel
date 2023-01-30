@@ -13,7 +13,7 @@
   {{ Breadcrumbs::render('product') }}
   <main id="main">
     <!-- ======= Product Section ======= -->
-    <section class="col-md-12 product row white-bg" id="product" style="padding: 20px 5% 20px 5%;margin: 0px;">
+    <section class="col-md-12 product row white-bg" id="product" style="padding: 20px 10% 20px 10%;margin: 0px;">
 
       @if($productData->count() > 0)
       <!-- main if 1 -->
@@ -99,7 +99,7 @@
         <!-- product feature start 1 -->
         @foreach($productData->key as $key => $product_key)
         <!-- product feature start 2 -->
-        <div class="col-md-12" id="{{ $product_key->tab_name }}" style="padding-top: 2%;" >
+        <div class="col-md-12" id="{{ $product_key->tab_name }}" style="padding-top: 2%;">
           <h4 class="primary-text header-font-size text-left">{{ $product_key->key_name }}</h4>
           @foreach($navDetails[$product_key->tab_name] as $navKey => $navValue)
           <!-- <h2> {{ $navValue->name}} </h2> -->

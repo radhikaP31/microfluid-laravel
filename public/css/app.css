@@ -55,11 +55,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-font-size{
-  font-size: 25px !important;
+  font-size: 30px !important;
   font-family: "Roboto slab", sans-serif;
 }
 .body-font-size{
   font-size: 16px;
+}
+.font-18  {
+  font-size: 18px;
 }
 .text-uppercase, .initialism {
     text-transform: uppercase;
@@ -758,18 +761,18 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
-
 .services {
   padding: 60px 0px 20px 0px;
 }
-.services .icon-box {
+.services .icon-box, .services .product-icon-box{
   text-align: center;
   transition: all ease-in-out 0.3s;
   background: #fff;
-  min-height: 300px;
+  min-height: 325px;
   border: 3px solid white;
+  max-height: 325px;
 }
-.services .icon-box .icon {
+.services .icon-box .icon, .services .product-icon-box .icon {
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -783,26 +786,30 @@ section {
   width: 100%;
   padding: 10px;
 }
-
-.services .icon-box img{
+.services .product-icon-box .icon img {
+  height: auto;
+  width: 100%;
+  padding: 13%;
+}
+.services .icon-box img, .services .product-icon-box img{
   transition: 0.5s all ease-in-out;
 }
-.services .icon-box:hover img {
+.services .icon-box:hover img, .services .product-icon-box:hover img {
   transform: scale(1.1);
 }
-.services .icon-box .icon i {
+.services .icon-box .icon i, .services .product-icon-box .icon i {
   font-size: 36px;
   transition: 0.5s;
   position: relative;
 }
 
-.services .icon-box .icon svg {
+.services .icon-box .icon svg, .services .product-icon-box .icon svg {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.services .icon-box .icon svg path {
+.services .icon-box .icon svg path,.services .product-icon-box .icon  {
   transition: 0.5s;
   fill: #f5f5f5;
 }
@@ -812,11 +819,15 @@ section {
   font-size: 1.5rem;
 }
 
-.services .icon-box h4 a {
+.services .product-icon-box h4 {
+  font-size: 18px;
+}
+
+.services .icon-box h4 a,.services .product-icon-box h4 a {
   transition: ease-in-out 0.3s;
 }
 
-.services .icon-box p {
+.services .icon-box p,.services .product-icon-box p {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
@@ -981,7 +992,7 @@ a.service_name
   width: 100%;
 }*/
 
-.services .icon-box:hover .service_name > i {
+.services .icon-box:hover .service_name > i, .services .product-icon-box:hover .service_name > i {
   background: var(--primary_color);
   color: white !important;
   border-radius: 25px;
@@ -1144,7 +1155,7 @@ a.list-group-item, button.list-group-item {
 # Products page
 --------------------------------------------------------------*/
 .product-cat{
-  font-size: 18px;
+  font-size: 20px;
   /* font-weight: 700; */
 }
 
@@ -1245,7 +1256,7 @@ a.list-group-item, button.list-group-item {
 
 .product_active_img{
   width:auto;
-  height:262px;
+  height:465px;
   margin: auto;
   display: flex;
 }

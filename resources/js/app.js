@@ -257,16 +257,15 @@ jQuery('.block-filter').click(function(){
 
 //products page js start
 
-$(".product-list-group a:first").addClass("active");
-jQuery('.product-cat').click(function(){
-    jQuery('.product-cat').removeClass('active');
-    jQuery(this).addClass('active');
-    let type = jQuery(this).data('sc_cat');
-    //console.log('.product-cat-filter-'+type);
-    jQuery('.product-cat-filter').hide();
-    jQuery('.product-cat-filter-'+type).show();
-
-});
+// $(".product-list-group a:first").addClass("active");
+// jQuery('.product-cat').click(function(){
+//     jQuery('.product-cat').removeClass('active');
+//     jQuery(this).addClass('active');
+//     let type = jQuery(this).data('sc_cat');
+//     //console.log('.product-cat-filter-'+type);
+//     jQuery('.product-cat-filter').hide();
+//     jQuery('.product-cat-filter-'+type).show();
+// });
 //tab is selected and redirect to the category
 $('.product-list-group-item').on('click', function(e) {
     // Save value in localstorage
