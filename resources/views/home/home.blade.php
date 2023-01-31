@@ -97,7 +97,7 @@
 							</div>
 							<!-- <h4><a href="{{ $offer->mstr_link }}" class="service_name primary-text">{{ $offer->mstr_nm }}&nbsp;&nbsp;<i class="fa fa-arrow-right" style="font-size: 13px;"></i></a></h4> -->
 							<h4>
-								<a href="{{ $offer->mstr_link }}" class="service_name primary-text">{{ $offer->mstr_nm }}&nbsp;&nbsp;
+								<a href="{{ $offer->mstr_link }}" class="service_name primary-text font-16">{{ $offer->mstr_nm }}&nbsp;&nbsp;
 									<div class="round">
 										<div id="cta">
 											<span class="arrow primera next "></span>

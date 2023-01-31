@@ -59,10 +59,22 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto slab", sans-serif;
 }
 .body-font-size{
-  font-size: 16px;
+  font-size: 16px !important;
 }
 .font-18  {
-  font-size: 18px;
+  font-size: 18px !important;
+}
+.font-16 {
+  font-size: 16px !important;
+}
+.font-size-20, .font-20 {
+  font-size: 20px !important;
+}
+.font-30 {
+  font-size: 30px !important;
+}
+.font-35 {
+  font-size: 35px !important;
 }
 .text-uppercase, .initialism {
     text-transform: uppercase;
@@ -88,10 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 .font-family-sans-serif {
   font-family: sans-serif;
   letter-spacing: 0.5px;
-  font-size: 15px;
-}
-.font-size-20 {
-  font-size: 20px !important;
+  font-size: 18px;
 }
 .modal {
   background: rgb(0 0 0 / 40%); /* The color depends on your template */
@@ -1119,6 +1128,13 @@ a.list-group-item, button.list-group-item {
   font-size: 20px;
   /* font-weight: 700; */
 }
+.product-application-img {
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  transform: scale(1.5);
+  margin: 10px;
+}
 
 .product-list-group-item.active, .product-list-group-item.active:focus, .product-list-group-item.active:hover {
     z-index: 1;
@@ -1284,8 +1300,8 @@ li.nav-item {
 }
 
 #footer .footer-top {
-  padding: 60px 0 0 0;
-  background: #f9f9f9;
+  padding: 2% 0 0 0;
+  background: #e1e3e5;
 }
 
 #footer .footer-top .footer-contact {
@@ -1528,7 +1544,8 @@ li.nav-item {
   position: relative;
   margin-right: 6px;
   font-family: sans-serif;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: bold;
 }
 .nav-menu > ul > li > a:after {
   background: none repeat scroll 0 0 transparent;
@@ -1734,7 +1751,7 @@ li.nav-item {
     margin-bottom: 0;
     margin-top: 0;
     padding-top: 6px;
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     font-style: normal;
     font-weight: 400;
     line-height: 30px;

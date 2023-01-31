@@ -13,12 +13,12 @@
   {{ Breadcrumbs::render('product') }}
   <main id="main">
     <!-- ======= Product Section ======= -->
-    <section class="col-md-12 product row white-bg" id="product" style="padding: 20px 10% 20px 10%;margin: 0px;">
+    <section class="product row white-bg" id="product" style="padding: 20px 10% 20px 10%;margin: 0px;">
 
       @if($productData->count() > 0)
       <!-- main if 1 -->
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="padding-bottom: 1%;">
-        <h2 class="primary-text header-font-size">{{ $productData->p_name }}</h2>
+        <h2 class="primary-text header-font-size font-35">{{ $productData->p_name }}</h2>
       </div>
       <div class="col-md-5" style="border-right: 1px solid black;">
         @if ($productData->image->count() > 0)
@@ -62,7 +62,7 @@
 
       <div class="col-md-7">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="padding-bottom: 2%;">
-          <p class="letter-spacing text-justify font-family-sans-serif">@php echo $productData->p_description @endphp</p>
+          <p class="letter-spacing text-justify font-family-sans-serif font-18">@php echo $productData->p_description @endphp</p>
         </div>
         <!-- <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="padding-bottom: 2%;">
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -73,7 +73,7 @@
       </div>
 
       <!-- product keys nav section start -->
-      <hr style="width: 100%;border-top: 1px solid var(--secondary_color);margin-bottom: 0px;">
+      <!-- <hr style="width: 100%;border-top: 1px solid var(--secondary_color);margin-bottom: 0px;"> -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light secondary-page-menu col-md-12">
         <div class="" id="navbarNav">
           <ul class="navbar-nav">
