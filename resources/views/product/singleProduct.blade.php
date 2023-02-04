@@ -11,26 +11,22 @@
   @endif
 
   {{ Breadcrumbs::render('product') }}
-  <main id="main">
+  <main id="main" class="all-product-main">
     <!-- ======= Product Section ======= -->
-    <section class="product row white-bg" id="product" style="padding: 20px 10% 20px 10%;margin: 0px;">
-
+    <section class="product row white-bg" id="product">
       @if($productData->count() > 0)
       <!-- main if 1 -->
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="padding-bottom: 1%;">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="padding-bottom: 3%;">
         <h2 class="primary-text header-font-size font-35">{{ $productData->p_name }}</h2>
       </div>
-      <div class="col-md-5" style="border-right: 1px solid black;">
+      <div class="col-md-5 product-img">
         @if ($productData->image->count() > 0)
         <!-- product image start 1 -->
         @foreach($productData->image as $key => $image)
         <!-- product image start 2 -->
-        @php $count = 1; @endphp
         <div class="my-product-slides">
-          <div class="image-number-text"> {{ $count }} / {{ $productData->image->count() }}</div>
           <img src="{{ url($image['img_path']) }}" class="product_active_img">
         </div>
-        @php $count++; @endphp
         <!-- product image end 2 -->
         @endforeach
         <!-- product image end 1 -->
@@ -43,14 +39,15 @@
           <span class="iconify secondary-text" data-icon="ic:round-keyboard-double-arrow-right" data-width="32" data-height="32"></span>
         </a>
 
-        <div class="row col-md-12">
+        <div class="col-md-12">
           @if ($productData->image->count() > 0)
           <!-- product image start 1 -->
           @php $count = 1; @endphp
           @foreach($productData->image as $key => $image)
           <!-- product image start 2 -->
-          <div class="col-md-4">
-            <img class="product-image product-cursor " src="{{ url($image['img_path']) }}" style="width: auto; height: 70px;" data-slide="<?= $count; ?>">
+          <div class="col-md-3" style="width:auto;">
+            <img class="product-image product-cursor " src="{{ url($image['img_path']) }}" style="width: auto; height: 70px;
+    padding-bottom: 6px" data-slide="<?= $count; ?>">
           </div>
           @php $count++; @endphp
           <!-- product image end 2 -->
@@ -62,7 +59,7 @@
 
       <div class="col-md-7">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="padding-bottom: 2%;">
-          <p class="letter-spacing text-justify font-family-sans-serif font-18">@php echo $productData->p_description @endphp</p>
+          <p class="letter-spacing text-justify font-family-sans-serif font-16">@php echo $productData->p_description @endphp</p>
         </div>
         <!-- <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="padding-bottom: 2%;">
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -99,8 +96,8 @@
         <!-- product feature start 1 -->
         @foreach($productData->key as $key => $product_key)
         <!-- product feature start 2 -->
-        <div class="col-md-12" id="{{ $product_key->tab_name }}" style="padding-top: 2%;">
-          <h4 class="primary-text header-font-size text-left">{{ $product_key->key_name }}</h4>
+        <div class="col-md-12" id="{{ $product_key->tab_name }}" style="padding-top: 4%;">
+          <h4 class="primary-text header-font-size text-left mb-3">{{ $product_key->key_name }}</h4>
           @foreach($navDetails[$product_key->tab_name] as $navKey => $navValue)
           <!-- <h2> {{ $navValue->name}} </h2> -->
           @php echo $navValue->description @endphp
@@ -118,7 +115,7 @@
   </main><!-- End #main -->
 </x-app-layout>
 
-<script type="text/javascript">
+<script type=" text/javascript">
   //product page js start
   let slideIndex = 1;
   showSlides(slideIndex);
@@ -149,6 +146,5 @@
     }
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active_product";
-  }
-  //product page js end
+  } //product page js end 
 </script>

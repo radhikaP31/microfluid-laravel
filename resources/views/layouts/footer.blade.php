@@ -7,33 +7,33 @@
           <ul>
             <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url'); ?>">Home</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/about'; ?>">About Us</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url'). '/products/1'; ?>">Products</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url'). '/industries'; ?>">Industries</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/products/1'; ?>">Products</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/industries'; ?>">Industries</a></li>
             <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Service</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Clients</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Blogs</a></li> -->
-            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url'). '/inquiry'; ?>">Inquiry</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url'). '/contact'; ?>">Contact</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/inquiry'; ?>">Inquiry</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/contact'; ?>">Contact</a></li>
           </ul>
         </div>
 
         <div class="col-lg-4 col-md-6 footer-links">
           <h4 class="products header-font-size">Products</h4>
           <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url'). '/products/1'; ?>">High Pressure Homogenizers</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url'). '/products/2'; ?>">Hygenic Pumps</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url'). '/products/1/8'; ?>">Homogenizer Spare Parts</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url'). '/products/6'; ?>">Sanitary Filters & strainers</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url'). '/products/8'; ?>">Hygenic Fittings</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url'). '/products/1'; ?>">Read More...</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/products/1'; ?>">High Pressure Homogenizers</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/products/2'; ?>">Hygenic Pumps</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/products/1/8'; ?>">Homogenizer Spare Parts</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/products/6'; ?>">Sanitary Filters & strainers</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/products/8'; ?>">Hygenic Fittings</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/products/1'; ?>">Read More...</a></li>
           </ul>
         </div>
 
         <div class="col-lg-4 col-md-6 footer-newsletter footer-links">
-          <h4 class="primary-text contact-us header-font-size">Contact Us</h4>
+          <h4 class="text-white contact-us header-font-size">Contact Us</h4>
           <ul>
-            <li><span class="primary-text" style="margin-right: 4%;"><i class="fa fa-phone fa-rotate-90"></i> +91 70168 65019 </span></li>
-            <li><span class="primary-text" style="letter-spacing: 1px;"><i class="fa fa-envelope"></i>&nbsp;<a class="primary-text hover-mail" href="mailto:sales@microfluidprocess.com">sales@microfluidprocess.com</a> </span></li>
+            <li><span class="text-white" style="margin-right: 4%;"><i class="fa fa-phone fa-rotate-90"></i> +91 70168 65019 </span></li>
+            <li><span class="text-white" style="letter-spacing: 1px;"><i class="fa fa-envelope"></i>&nbsp;<a class="text-white hover-mail" href="mailto:sales@microfluidprocess.com">sales@microfluidprocess.com</a> </span></li>
           </ul>
           <div class="pt-3 social-links" style="line-height: 53px;">
             <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -50,18 +50,14 @@
     </div>
   </div>
 
-  <div class="d-md-flex primary-bg" style="padding: 10px 35px 10px 35px;">
+  <div class="d-md-flex primary-bg" style="padding: 10px 35px 0px 35px;">
 
     <div class="mr-md-auto text-center text-md-left container">
       <p class="text-white" style="letter-spacing: 1.2px;">Download | Career <!-- | HR Policy | Terms & Conditions --> | Contact Us | Microfluid</p>
       <div class="copyright text-white">
         <p style="letter-spacing: 0.9px;">&copy; Copyright 2022 - All rights reserved by <strong><span>Microfluid Process Equipment</span></strong></p>
       </div>
-      <div class="credits text-white">
-        <p style="letter-spacing: 0.9px;margin-bottom: 0px;">Designed by Parth & Managed by Radhika</p>
-      </div>
     </div>
-
   </div>
 </footer>
 

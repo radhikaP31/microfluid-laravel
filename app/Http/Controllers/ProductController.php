@@ -8,6 +8,8 @@ use App\Models\Common;
 use App\Models\ProductCategory;
 use App\Models\ProductSubCategory;
 
+use function Psy\debug;
+
 class ProductController extends Controller
 {
     /**
@@ -18,17 +20,18 @@ class ProductController extends Controller
     public function allProduct($id=null, $sub_cat_id=null)
     {
         if($sub_cat_id){
-          $product_tab = ProductSubCategory::where('id',$sub_cat_id)->orderBy('sequence')->get(); //get sub category wise products product
+          $product_tab = ProductSubCategory::where(['id' => $sub_cat_id,'is_deleted' => 0])->orderBy('sequence')->get(); //get sub category wise products product
           $product_data = Product::where('is_deleted',0)->where('category_id',$id)->where('sub_cat_id',$sub_cat_id)->orderBy('sequence')->get();
         }else{
           $product_tab = ProductCategory::where('is_deleted',0)->where('id',$id)->orderBy('sequence')->get(); //get category wise products product
           $product_data = Product::where('is_deleted',0)->where('category_id',$id)->orderBy('sequence')->get();
         }
-
+        // dd(ProductCategory::with('subCategory')->where('is_deleted', 0)->orderBy('sequence')->toSql());
+        // die;
         return view('product.allProducts', [
             'category_id' => $id,
             'sub_cat_id' => $sub_cat_id,
-            'allCategory' => ProductCategory::with('subCategory')->where('is_deleted',0)->orderBy('sequence')->get(),
+            'allCategory' => ProductCategory::with('subCategory')->where(['is_deleted'=>0])->orderBy('sequence')->get(),
             'productData' => $product_tab,
             'product_data' => $product_data,
         ]);

@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
 /*Where property is one of:
 
 m - for classes that set margin
@@ -33,7 +34,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: black;
 }
 
@@ -45,9 +46,13 @@ a:hover {
   color: var(--primary_color);
   text-decoration: none;
 }
-
+.heading-black {
+  color: #000000;
+}
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .letter-spacing{
@@ -56,16 +61,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-font-size{
   font-size: 30px !important;
-  font-family: "Roboto slab", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .body-font-size{
   font-size: 16px !important;
 }
-.font-18  {
-  font-size: 18px !important;
-}
 .font-16 {
   font-size: 16px !important;
+}
+.font-18  {
+  font-size: 18px !important;
 }
 .font-size-20, .font-20 {
   font-size: 20px !important;
@@ -98,9 +103,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Calibri;
 }
 .font-family-sans-serif {
-  font-family: sans-serif;
-  letter-spacing: 0.5px;
-  font-size: 18px;
+  font-family: "Open Sans";
+  letter-spacing: 1px;
+  font-size: 16px;
+  line-height: 1.7;
 }
 .modal {
   background: rgb(0 0 0 / 40%); /* The color depends on your template */
@@ -222,6 +228,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header .logo img {
   max-height: 60px;
+  max-width: unset;
 }
 
 /*--------------------------------------------------------------
@@ -777,9 +784,9 @@ section {
   text-align: center;
   transition: all ease-in-out 0.3s;
   background: #fff;
-  min-height: 325px;
+  min-height: 300px;
   border: 3px solid white;
-  max-height: 325px;
+  max-height: 300px;
 }
 .services .icon-box .icon, .services .product-icon-box .icon {
   margin: 0 auto;
@@ -1163,6 +1170,17 @@ a.list-group-item, button.list-group-item {
 /*--------------------------------------------------------------
 # Products page
 --------------------------------------------------------------*/
+.product {
+  padding: 10px 0;
+  margin: 0px 5% 0px 5%;
+  padding: 1% 2% 1% 2%;
+}
+.all-product-main {
+  background: #e7e7e7;
+}
+.product-icon-box:hover {
+  box-shadow: 0 0 5px #e7e7e7;
+}
 .product-cat{
   font-size: 20px;
   /* font-weight: 700; */
@@ -1178,7 +1196,7 @@ a.list-group-item, button.list-group-item {
 .product-list-group-item.active, .product-list-group-item.active:focus, .product-list-group-item.active:hover {
     z-index: 1;
     background-color: #fff !important;
-    color: var(--secondary_color) !important;
+    color: var(--primary_color) !important;
     border-color: var(--secondary_color) !important;
 }
 
@@ -1216,7 +1234,12 @@ a.list-group-item, button.list-group-item {
 .my-product-slides {
   display: none;
 }
-
+.product-application {
+  margin-top: 3%;
+}
+.product-application p {
+  padding-top: 10%;
+}
 /* Add a pointer when hovering over the thumbnail images */
 .product-cursor {
   cursor: pointer;
@@ -1261,18 +1284,26 @@ a.list-group-item, button.list-group-item {
 }
 
 /* Add a transparency effect for thumnbail images */
-.product-image {
+/* .product-image {
   opacity: 0.6;
+} */
+.product-img {
+  height: 500px;
+  width: 500px;
+  min-height: 484px;
+  min-width: 484px;
+  border: 1px solid #e7e7e7;
 }
 
-.active_product,.product-image:hover {
+.active_product{
   opacity: 1;
+  padding-bottom: 5px !important;
   border-bottom: 1px solid var(--secondary_color);
 }
 
 .product_active_img{
   width:auto;
-  height:465px;
+  height:410px;
   margin: auto;
   display: flex;
 }
@@ -1343,9 +1374,9 @@ li.nav-item {
 
 #footer .footer-top {
   padding: 2% 0 0 0;
-  background: #e1e3e5;
+  background: var(--primary_color);
+  border-bottom: 1px solid #ff4d00;
 }
-
 #footer .footer-top .footer-contact {
   margin-bottom: 30px;
 }
@@ -1366,12 +1397,12 @@ li.nav-item {
   line-height: 24px;
   margin-bottom: 0;
   font-family: "Roboto", sans-serif;
-  color: var(--primary_color);
+  color: white;
 }
 
 #footer .footer-top h4 {
   /*font-weight: bold;*/
-  color: var(--primary_color);
+  color: white;
   position: relative;
   padding-bottom: 20px;
   letter-spacing: 0.9px;
@@ -1425,7 +1456,7 @@ li.nav-item {
 }
 
 #footer .footer-top .footer-links ul a {
-  color: var(--primary_color);
+  color: white;
   transition: 0.3s;
   display: inline-block;
   line-height: 0;
@@ -1433,7 +1464,7 @@ li.nav-item {
 
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: var(--primary_color);
+  color: white;
   padding-left: 5px;
   /*font-weight: 600;*/
 }
@@ -1445,7 +1476,6 @@ li.nav-item {
 
 #footer .footer-newsletter h4 {
   /*font-weight: bold;*/
-  color: var(--primary_color);
   position: relative;
   padding-bottom: 20px;
 }
@@ -1494,8 +1524,8 @@ li.nav-item {
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: var(--primary_color);
-  color: #fff;
+  background: #fff;
+  color: var(--primary_color);
   line-height: 1;
   padding: 9px 0;
   margin-right: 4px;
@@ -1507,7 +1537,7 @@ li.nav-item {
 }
 
 #footer .social-links a:hover {
-  background: #e2e2e2;
+  background: #fff;
   color: var(--secondary_color);
   text-decoration: none;
   font-size: 25px;
