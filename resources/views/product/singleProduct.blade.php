@@ -17,7 +17,7 @@
       @if($productData->count() > 0)
       <!-- main if 1 -->
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="padding-bottom: 3%;">
-        <h2 class="primary-text header-font-size font-35">{{ $productData->p_name }}</h2>
+        <h2 class="primary-text header-font-size font-30" style="font-weight:bolder;">{{ $productData->p_name }}</h2>
       </div>
       <div class="col-md-5 product-img">
         @if ($productData->image->count() > 0)
@@ -59,7 +59,7 @@
 
       <div class="col-md-7">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="padding-bottom: 2%;">
-          <p class="letter-spacing text-justify font-family-sans-serif font-16">@php echo $productData->p_description @endphp</p>
+          <p class="letter-spacing text-justify font-family-sans-serif font-16 text-gray">@php echo $productData->p_description @endphp</p>
         </div>
         <!-- <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="padding-bottom: 2%;">
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -79,9 +79,11 @@
             @php $count = 1; @endphp
             @foreach($productData->key as $key => $product_key)
             <!-- product key start 2 -->
+            @foreach($navDetails[$product_key->tab_name] as $navKey => $navValue)
             <li class="nav-item active">
-              <a class="nav-link product-feature" href="#{{ $product_key->tab_name }}"><?= $product_key->key_name; ?></a>
+              <a class="nav-link font-17" href="#{{ $navValue->key_name }}"><?= $navValue->name; ?></a>
             </li>
+            @endforeach
             @php $count++; @endphp
             @endforeach
             <!-- product key end 2 -->
@@ -96,13 +98,12 @@
         <!-- product feature start 1 -->
         @foreach($productData->key as $key => $product_key)
         <!-- product feature start 2 -->
-        <div class="col-md-12" id="{{ $product_key->tab_name }}" style="padding-top: 4%;">
-          <h4 class="primary-text header-font-size text-left mb-3">{{ $product_key->key_name }}</h4>
-          @foreach($navDetails[$product_key->tab_name] as $navKey => $navValue)
-          <!-- <h2> {{ $navValue->name}} </h2> -->
+        @foreach($navDetails[$product_key->tab_name] as $navKey => $navValue)
+        <div class="col-md-12" id="{{ $navValue->key_name }}" style="padding-top: 4%;">
+          <h4 class="primary-text product-header-font-size text-left mb-3">{{ $navValue->name }}</h4>
           @php echo $navValue->description @endphp
-          @endforeach
         </div>
+          @endforeach
         @endforeach
         <!-- product key end 1 -->
         @endif

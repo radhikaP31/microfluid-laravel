@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap);
 /*Where property is one of:
 
 m - for classes that set margin
@@ -34,7 +34,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   color: black;
 }
 
@@ -50,24 +50,35 @@ a:hover {
   color: #000000;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-
+.text-gray {
+  color: #505050;
+}
 .letter-spacing{
   letter-spacing: 0.6px;
 }
-
 .header-font-size{
   font-size: 30px !important;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
-.body-font-size{
+.product-header-font-size {
+  font-size: 24px !important;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.text-10, .font-10 {
+  font-size: 10px;
+}
+.font-15 {
+  font-size: 15px !important;
+}
+.font-16, .body-font-size {
   font-size: 16px !important;
 }
-.font-16 {
-  font-size: 16px !important;
+.font-17 {
+  font-size: 17px !important;
 }
 .font-18  {
   font-size: 18px !important;
@@ -103,9 +114,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Calibri;
 }
 .font-family-sans-serif {
-  font-family: "Open Sans";
+  font-family: "Source Sans Pro";
   letter-spacing: 1px;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.7;
 }
 .modal {
@@ -1175,8 +1186,13 @@ a.list-group-item, button.list-group-item {
   margin: 0px 5% 0px 5%;
   padding: 1% 2% 1% 2%;
 }
+.product-chart-table .thead-light th {
+  color: #ffffff;
+  background-color: #022060;
+  border-color: #022060;
+}
 .all-product-main {
-  background: #e7e7e7;
+  background: #f8f9fa;
 }
 .product-icon-box:hover {
   box-shadow: 0 0 5px #e7e7e7;
@@ -1187,8 +1203,8 @@ a.list-group-item, button.list-group-item {
 }
 .product-application-img {
   border-radius: 50%;
-  height: 80px;
-  width: 80px;
+  height: 90px;
+  width: 90px;
   transform: scale(1.5);
   margin: 10px;
 }
@@ -1346,11 +1362,6 @@ a.list-group-item, button.list-group-item {
   border-bottom: 1px solid var(--secondary_color);
   left: 0px;
 }
-
-.product-feature {
-  font-size: 15px;
-}
-
 li.nav-item {
     padding: 0px 3px;
 }
@@ -1587,11 +1598,8 @@ li.nav-item {
 .padding0{
   padding: 0px !important;
 }
-.text-10{
-  font-size: 10px;
-}
 .hover-mail:hover{
-  font-weight: 600;
+  text-decoration: underline;
 }
 
 /*nav bar css start*/
@@ -1610,14 +1618,14 @@ li.nav-item {
 .nav-menu > ul > li >a {
   color: #fff;
   text-decoration: none;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.75px;
   display: inline-block;
   padding: 9px 14px;
   position: relative;
   margin-right: 6px;
-  font-family: sans-serif;
-  font-size: 16px;
-  font-weight: bold;
+  font-family: 'Source Sans Pro';
+  font-size: 17px;
+  font-weight: normal;
 }
 .nav-menu > ul > li > a:after {
   background: none repeat scroll 0 0 transparent;
