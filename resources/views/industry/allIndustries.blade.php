@@ -34,11 +34,11 @@
                     <a target="_self" href="{{ $field->mstr_link }}"><img alt="{{ $field->mstr_nm }}" src="{{ url($field->mstr_img) }}"></a>
                   </div>
                   <div class="field-content">
-                    <h3 class="field-title">
+                    <h3 class="field-title font-size-20 font-family-sans-serif primary-text">
                       <span class="iconify field-icon" data-icon="{{ $field->mstr_icon }}"></span>{{ $field->mstr_nm }}
                     </h3><!-- <br> -->
-                    <p class="field-desc text-black">{{ $field->mstr_desc }}</p>
-                    <a class="read-more primary-text" target="_self" href="/industry/{{ $field->slug }}">Read More</a>
+                    <p class="field-desc font-family-sans-serif">{{ $field->mstr_desc }}</p>
+                    <a class="font-family-sans-serif" target="_self" href="/industry/{{ $field->slug }}">Read More</a>
                   </div>
                 </div>
               </div>

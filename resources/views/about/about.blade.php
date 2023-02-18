@@ -19,7 +19,7 @@
           <div class="about-list-group">
             @if ($aboutUsInformation->count() > 0)
             @foreach($aboutUsInformation as $key => $about)
-            <a href="javascript:void(0)" class="list-group-item text-black block-filter" data-block_type="{{ $about->tab_name }}">{{ $about->name }}</a>
+            <a href="javascript:void(0)" class="list-group-item text-black block-filter font-size-20" data-block_type="{{ $about->tab_name }}">{{ $about->name }}</a>
             @endforeach
             @endif
           </div>
@@ -55,7 +55,7 @@
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="testimonialModalTitle"></h5>
+            <h5 class="modal-title font-20" id="testimonialModalTitle"></h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>

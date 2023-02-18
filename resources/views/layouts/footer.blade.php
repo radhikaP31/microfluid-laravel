@@ -23,7 +23,7 @@
             <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/products/1'; ?>">High Pressure Homogenizers</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/products/2'; ?>">Hygenic Pumps</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/products/1/8'; ?>">Homogenizer Spare Parts</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/products/6'; ?>">Sanitary Filters & strainers</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/products/6'; ?>">Sanitary Filters & Strainers</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/products/8'; ?>">Hygenic Fittings</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/products/1'; ?>">Read More...</a></li>
           </ul>

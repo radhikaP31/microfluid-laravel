@@ -114,7 +114,7 @@
 				</div>
 			</div>
 			<div class="text-center">
-				<a href="/products/1/1" class="btn btn-primary primary-text" style="border-radius: 30px;padding: 7px 20px 7px 20px;"><b>Read More</b></a>
+				<a href="/products/1/1" class="btn btn-primary font-16 primary-text" style="border-radius: 30px;padding: 7px 20px 7px 20px;"><b>Read More</b></a>
 			</div>
 		</section><!-- End What we offer/services Section -->
 
@@ -129,7 +129,7 @@
 					<div class="col-lg-4 col-md-6 align-items-stretch min-height310 mt-4">
 						<div class="icon-box field-find-more section-bg">
 							<h4 class="primary-text header-font-size" style="text-align: left;padding-left: 7px;">Field of <br>Application</h4>
-							<hr style="width: 47%;margin-left: 6px;border-width: 4px;background-color: var(--secondary_color);">
+							<hr style="width: 47%;margin-left: 6px;border-width: 4px;border-top: solid var(--secondary_color);">
 							<h4 class="primary-text body-font-size" style="text-align: left;padding-left: 7px;"><a href="/industries" class="text-black">Find a right solutions for your industry!!</a></h4>
 						</div>
 					</div>
@@ -142,11 +142,11 @@
 								<a target="_self" href="{{ $field->mstr_link }}"><img alt="{{ $field->mstr_nm }}" src="{{ url($field->mstr_img) }}"></a>
 							</div>
 							<div class="field-content">
-								<h3 class="field-title">
+								<h3 class="field-title font-size-20 font-family-sans-serif primary-text">
 									<span class="iconify field-icon" data-icon="{{ $field->mstr_icon }}"></span>{{ $field->mstr_nm }}
 								</h3><!-- <br> -->
-								<p class="field-desc text-black">{{ $field->mstr_desc }}</p>
-								<a class="read-more primary-text" target="_self" href="/industry/{{ $field->slug }}">Read More »</a>
+								<p class="field-desc font-family-sans-serif">{{ $field->mstr_desc }}</p>
+								<a class="font-family-sans-serif" target="_self" href="/industry/{{ $field->slug }}">Read More »</a>
 							</div>
 						</div>
 					</div>
@@ -155,31 +155,26 @@
 				</div>
 				<br>
 				<div class="text-center">
-					<a href="/industries" class="btn btn-primary primary-text" style="border-radius: 30px;padding: 7px 20px 7px 20px;"><b>Read More</b></a>
+					<a href="/industries" class="btn btn-primary font-16 primary-text" style="border-radius: 30px;padding: 7px 20px 7px 20px;"><b>Read More</b></a>
 				</div>
 			</div>
 		</section><!-- End Field of application Section -->
-
 		<!-- <hr style="border-width: 2px;background-color: var(--secondary_color);" class="container"> -->
-
 		<!-- ======= About Us Section ======= -->
-		<section id="about-us" class="about-us about-us-banner" style="background: url( {{ url('images/about-banner.png') }}) no-repeat center top; height:26rem ; background-size: cover;padding: 0px;background-attachment: fixed;">
-			<div class="banner-opacity" style="position: absolute;z-index: 0;opacity: 0.7;width: 100%;height: 100%;    background: #C4C4C4 !important;"></div>
+		<section id="home-about-us" class="home-about-us">
 			<div class="row col-md-12">
 				<div class="col-md-7">
 					<div class="about-section-title section-title">
 						<h2 class="primary-text header-font-size" style="text-align: left;top: 30px;left: 30px;">About Us</h2>
-						<p class="text-left body-font-size" style="padding-left: 30px;line-height: 28px;letter-spacing: 0.9px;">
-							<br><br>From last many years of now, <span class="primary-text"> Microfluid Process Equipment </span> has been persistently in its profession to provide best-in-class products and after sales service.<br><br>
+						<p class="text-left font-16 letter-spacing text-justify font-family-sans-serif" style="padding-left: 30px;">
+							<br>From last many years of now, <span class="primary-text"> Microfluid Process Equipment </span> has been persistently in its profession to provide best-in-class products and after sales service.<br><br>
 							<span class="primary-text"> Microfluid Process Equipment </span> have more than 25 years of experience in manufacturing, process industries and high pressure reciprocating pumps and homogenizers.
 						</p>
 					</div>
-					<div class="text-left" style="padding-left: 30px;padding-top: 16px;"><a href=" <?php echo config('app.base_url') . '/about'; ?>" class="btn primary-text about-read-more" style="border-radius: 30px;padding: 5px 20px 5px 20px;background: transparent;"><b>Read More</b></a></div>
+					<div class="text-left" style="padding-left: 30px;padding-top: 16px;"><a href="<?php echo config('app.base_url') . '/about'; ?>" class="btn btn-primary font-16 primary-text about-read-more"><b>Read More</b></a></div>
 				</div>
 				<div class="col-md-5">
-
 					<iframe style="padding-top: 7%;height: 100%;width: 100%;" id="player" src="https://www.youtube.com/embed/r5MhAK8lAmU" allowfullscreen="true" scrolling="no" frameborder="0"></iframe>
-
 					<!-- <a target="_self" href="#"><img alt="Homogenizers" src="assets/img/application/homogenizers.jpeg" style="height: auto;width: 94%;padding-top: 33px;padding-left: 31%;"></a> -->
 				</div>
 			</div>

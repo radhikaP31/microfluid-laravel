@@ -2,7 +2,7 @@
 
 <!-- ======= Breadcrumbs ======= -->
 <section id="breadcrumbs" class="breadcrumbs" style="padding: 0px;height: 100%;background-image: url({{url('images/breadcrumb/breadcrumb_img.png') }});background-size: cover;">
-  <div class="opacity-breadcrumbs" style="position: absolute;z-index: 0;opacity: 0.7;width: 100%;height: 100%;background: white;"></div>
+  <div class="opacity-breadcrumbs" style="position: absolute;z-index: 0;opacity: 0.8;width: 100%;height: 100%;background: white;"></div>
   <div class="col-md-12 d-flex justify-content-between align-items-center" style="bottom: -4%;height: auto; min-height: 8em;">
     <h3 class="text-left primary-text breadcrumb-text">{{ __('Microfluid is one of the leading manufacturer of process equipment ') }}</h3>
   </div>

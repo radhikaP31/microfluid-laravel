@@ -678,7 +678,7 @@ h1, h2, h3, h4, h5, h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 2% 0;
   overflow: hidden;
 }
 
@@ -789,9 +789,6 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
-.services {
-  padding: 60px 0px 20px 0px;
-}
 .services .icon-box, .services .product-icon-box{
   text-align: center;
   transition: all ease-in-out 0.3s;
@@ -990,6 +987,15 @@ a.service_name
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
+.vision-mission {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  height: 100%;
+}
+
 .about-us .content h2 {
   font-weight: 700;
   font-size: 42px;
@@ -1640,7 +1646,6 @@ li.nav-item {
 /*--------------------------------------------------------------
 # field of appilication
 --------------------------------------------------------------*/
-
 /*.field-appilication .field-find-more:hover {
   background: var(--primary_color) !important;
 }
@@ -1648,9 +1653,6 @@ li.nav-item {
   color: white !important;
 }
 */
-.field-appilication {
-  padding: 20px 0px 60px 0px;
-}
 .field-appilication .field-find-more{
   box-shadow: 3px 0 6px 0 rgb(0 0 0);
 }
@@ -1763,7 +1765,7 @@ li.nav-item {
   }
 
   .field-has-icon .field-title {
-      padding-left: 30px;
+      padding-left: 36px;
       transition: .4s padding;
   }
   .field-title {
@@ -1784,38 +1786,19 @@ li.nav-item {
 
 .field-title {
     padding-left: 56px;
-    color: var(--primary_color);
     display: block;
-    font-family: Roboto;
     margin-bottom: 0;
     margin-top: 0;
     padding-top: 6px;
-    font-size: 1.9rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px;
-    letter-spacing: 0.02em;
     text-align: center;
 }
 
 .field-desc{
-  font-family: Roboto Slab;
-  font-size: 15px;
   font-style: normal;
   font-weight: normal;
-  line-height: 24px;
-  letter-spacing: 0.05em;
   text-align: left;
 }
 
-.read-more{
-  font-family: Roboto Slab;
-  font-size: 15px;
-  font-style: normal;
-  line-height: 24px;
-  letter-spacing: 0.05em;
-  text-align: left;
-}
 .field:hover .field-icon{
   position: absolute;
     left: 0px;
@@ -1847,13 +1830,28 @@ li.nav-item {
     bottom: 15px;
     left: calc(2% - 15px);
 }
-.about-read-more{
-  border: 1px solid var(--primary_color);
+.home-about-us {
+  position: relative;
+}
+.home-about-us::before {
+  content: "";
+  background-image: url('/images/about-banner.png');
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.about-read-more {
   color: var(--primary_color) !important;
   background: transparent !important;
+  border-radius: 30px;
+  padding: 7px 20px 7px 20px;
 }
 .about-read-more:hover {
-  border: 1px solid var(--primary_color);
   background: var(--primary_color) !important;
   color: white !important;
 }
@@ -1898,11 +1896,10 @@ p {
   height: 69px;
  /* padding-top: 10px !important;*/
   border-bottom: 1px solid var(--primary_color);
-
 }
 
 .sticky .nav-menu .drop-down ul{
-top: calc(100% + 13px) !important;
+  top: calc(100% + 13px) !important;
 }
 
 .sticky > .nav-menu{
@@ -3228,7 +3225,6 @@ top: calc(100% + 13px) !important;
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
-  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
@@ -3243,6 +3239,9 @@ top: calc(100% + 13px) !important;
   height: auto;
 }
 
+.custom-select{
+  font-size: 16px;
+}
 .form-control:focus , .custom-select:focus {
   box-shadow: none;
   border-bottom: 1px solid var(--primary_color) !important;

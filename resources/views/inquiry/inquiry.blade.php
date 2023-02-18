@@ -14,7 +14,7 @@
     <main id="main">
         <!-- ======= Inquiry Section ======= -->
         <section class="container inquiry_form container-fluid" id="inquiry_form">
-            <div class="row align-items-stretch no-gutters contact-wrap">
+            <div class="row align-items-stretch contact-wrap">
                 <div class="col-md-12">
                     <div class="form h-100">
                         <h2 class="primary-text header-font-size">Please describe your requirements. <br> Our Team will connect you shortly!!<br></h2>
@@ -130,7 +130,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12 form-group">
-                                    <button type="submit" class="btn btn-primary primary-text rounded-0 py-2 px-4 submit_inquiry">Send Inquiry</button>
+                                    <button type="submit" class="btn btn-primary font-16 primary-text submit_inquiry">Send Inquiry</button>
                                 </div>
                             </div>
                         </form>
