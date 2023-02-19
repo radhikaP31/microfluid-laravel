@@ -31,8 +31,8 @@
                         <a href="javascript:void(0)" class="text-black">{{ $about->name }}</a>
                       </li>
                 @endforeach
-              @endif         
-            </ul>  
+              @endif
+            </ul>
           </nav> -->
         </div>
         <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 container about-us-blocks " style="margin: unset;">

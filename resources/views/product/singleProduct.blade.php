@@ -147,5 +147,5 @@
     }
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active_product";
-  } //product page js end 
+  } //product page js end
 </script>

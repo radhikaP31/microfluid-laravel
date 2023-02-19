@@ -29,7 +29,7 @@
               </div>
 
               <h2 class="entry-title">
-                <a href="/blog/{{$blog->slug}}">{{ $blog->title }}</a>
+                <a href="<?php echo config('app.base_url') . '/blog/' . $blog->slug; ?>">{{ $blog->title }}</a>
               </h2>
 
               <div class="entry-meta">
@@ -85,7 +85,7 @@
                 @forelse($recentBlogData as $blog)
                 <div class="post-item clearfix">
                   <img src="{{ url($blog->image) }}" alt="{{ $blog->title }}">
-                  <h4><a href="/blog/{{$blog->slug}}">{{ $blog->title }}</a></h4>
+                  <h4><a href="<?php echo config('app.base_url') . '/blog/' . $blog->slug; ?>">{{ $blog->title }}</a></h4>
                   <time>{{ date_format(date_create($blog->created_at),'M j, Y')}}</time>
                 </div>
                 @empty

@@ -14,8 +14,8 @@ class LoginController extends Controller
     public function index()
     {
         return view('admin.auth.login');
-    }  
-      
+    }
+
     public function customLogin(Request $request)
     {
         $request->validate([
@@ -31,7 +31,7 @@ class LoginController extends Controller
             'username' => 'The provided credentials do not match our records.',
         ])->onlyInput('username');
     }
-    
+
     public function dashboard()
     {
         if(Auth::check()){

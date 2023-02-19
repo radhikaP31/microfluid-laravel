@@ -26,7 +26,7 @@ class BlogsController extends Controller
             'recentBlogData' => $recentBlogData,
         ]);
       }else{
-        $blogData = Blog::where('is_deleted',0)->orderBy('sequence')->paginate(2); 
+        $blogData = Blog::where('is_deleted',0)->orderBy('sequence')->paginate(2);
         return view('blog.allBlogs', [
             'blogData' => $blogData,
             'tagsData' => $tagsData,

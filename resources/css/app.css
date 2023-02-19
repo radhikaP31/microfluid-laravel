@@ -1043,7 +1043,7 @@ a.service_name
 }
 .list-group {
     padding-left: 0;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 .cms-right-menu .list-group a.list-group-item.active {
     background: var(--primary_color);
@@ -3211,6 +3211,11 @@ p {
   border: none !important;
   border-bottom: 1px solid #ccc !important;
   border-radius: 0;
+  box-shadow: unset;
+}
+.col-form-label{
+  font-size: 15px;
+  font-weight: unset;
 }
 
 .form-control[type=file]:not(:disabled):not([readonly]) {
@@ -3230,7 +3235,6 @@ p {
   color: #212529;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ced4da !important;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

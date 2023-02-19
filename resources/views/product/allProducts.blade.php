@@ -20,14 +20,14 @@
           <div class="list-group product-list-group">
             @if ($allCategory->count() > 0)
             @foreach($allCategory as $key => $category)
-            <a href="/products/{{$category->id}}" class="product-list-group-item list-group-item text-black product-cat letter-spacing <?php if (request()->id == $category->id) {echo "active";} ?>" data-sc_cat="{{$category->c_code}}">{{$category->c_name}}</a>
+            <a href="<?php echo config('app.base_url') . '/products/' . $category->id; ?>" class="product-list-group-item list-group-item text-black product-cat letter-spacing <?php if (request()->id == $category->id) {echo "active";} ?>" data-sc_cat="{{$category->c_code}}">{{$category->c_name}}</a>
             <!-- Product sub category sidebar section start-->
-            <div class="list-group product-cat-filter product-cat-filter-{{$category->c_code}}" data-sc_cat="{{$category->c_code;}} {{request()->id}}" style="<?php if (request()->id != $category->id) {echo "display: none;";} ?>">
+            <div class="list-group product-cat-filter product-cat-filter-{{$category->c_code}}" data-sc_cat="{{$category->c_code;}} {{request()->id}}" style="<?php if (request()->id != $category->id) {"display: none;";} ?>">
               @if($category->subCategory->count() > 0)
               @foreach($category->subCategory as $key => $subcategory)
-                @if($subcategory->is_deleted == 0)
-                  <a href="/products/{{$category->id}}/{{$subcategory->id}}" class="product-item list-group-item text-black body-font-size">{{$subcategory->sc_name}}</a>
-                @endif
+              @if($subcategory->is_deleted == 0)
+              <a href="<?php echo config('app.base_url') . '/products/' . $category->id . '/' . $subcategory->id; ?>" class="product-item list-group-item text-black body-font-size">{{$subcategory->sc_name}}</a>
+              @endif
               @endforeach
               @endif
             </div>
@@ -58,7 +58,7 @@
             @foreach ($product_data as $key => $product)
             <div class=" col-lg-4 col-md-6 align-items-stretch">
               <div class="product-icon-box rounded mb-5 product-box">
-                <a href="/product/{{ $product->slug }}" class="service_name primary-text">
+                <a href="<?php echo config('app.base_url') . '/product/' . $product->slug; ?>" class="service_name primary-text">
                   <div class="icon">
                     <img alt="{{ $product->p_name }}" src="{{ url($product->p_image) }}">
                   </div>

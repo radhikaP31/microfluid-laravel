@@ -16,21 +16,16 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{ asset('images/favicon/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
-
     <title>{{$title}}</title>
-
     @include('layouts.header')
-    
 </head>
 
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-gray-100">
         @include('layouts.headerscroll')
-
         <!-- Page Content -->
             {{ $slot }}
     </div>
     @include('layouts.footer')
 </body>
-
 </html>

@@ -75,7 +75,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="text-center"><button type="submit" class="btn btn-primary primary-text rounded-0 py-2 px-4 submit_inquiry">Send Message</button></div>
+                            <div class="text-center mt-3"><button type="submit" class="btn btn-primary primary-text rounded-0 py-2 px-4 submit_inquiry">Send Message</button></div>
                         </form>
                     </div>
                 </div>

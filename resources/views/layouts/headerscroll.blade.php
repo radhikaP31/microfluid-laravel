@@ -1,7 +1,7 @@
 <header id="header" class="header">
   <!-- email, contact info -->
   <div class="container d-flex align-items-center top-container" style="height:68px;padding-left: 0%;padding-right: 0%;margin-bottom: 0%;">
-    <a href="index.php" class="logo mr-auto"><img src="{{ asset('images/Logo.png') }}" alt="" class="img-fluid"></a>
+    <a href="<?php echo config('app.base_url'); ?>" class="logo mr-auto"><img src="{{ asset('images/Logo.png') }}" alt="" class="img-fluid"></a>
     <span class="primary-text font-18" style="margin-right: 4%;"><i class="fa fa-phone fa-rotate-90"></i> +91 70168 65019 </span>
     <span class="primary-text font-18" style="margin-right: 4%;width: 25%;letter-spacing: 1px;"><i class="fa fa-envelope"></i>&nbsp;<a class="primary-text hover-mail" href="mailto:sales@microfluidprocess.com">sales@microfluidprocess.com</a> </span>
     <a href="<?php echo config('app.base_url') . '/inquiry'; ?>" class="btn btn-primary primary-text get_quote font-18" style="border-radius: 30px;">Get a Fair Quote</a>
@@ -10,7 +10,7 @@
   <div class="container-fluid d-flex align-items-center padding0 primary-bg header" id="myHeader">
 
     <nav class="nav-menu d-none d-lg-block">
-      <div class="list-logo" style="margin-left:5%;top: 4px;"><a href="index.php" class="logo mr-auto"><img src="{{ asset('images/Logo.png') }}" alt="" class="img-fluid"></a>
+      <div class="list-logo" style="margin-left:5%;top: 4px;"><a href="<?php echo config('app.base_url'); ?>" class="logo mr-auto"><img src="{{ asset('images/Logo.png') }}" alt="" class="img-fluid"></a>
       </div>
       <ul>
         <x-nav-link :active="request()->routeIs('home')">

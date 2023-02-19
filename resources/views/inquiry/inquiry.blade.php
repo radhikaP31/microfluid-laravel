@@ -3,13 +3,13 @@
         {{ __('Inquiry | Microfluid Process Equipment') }}
     </x-slot>
 
-<!--     @if ($message = Session::get('success'))
+    <!--     @if ($message = Session::get('success'))
     <div class="alert alert-success alert-block container mb-3">
         <button type="button" class="close" data-dismiss="alert">×</button>
         <strong>{{ $message }}</strong>
     </div>
     @endif -->
-    
+
     {{ Breadcrumbs::render('inquiry') }}
     <main id="main">
         <!-- ======= Inquiry Section ======= -->
@@ -17,7 +17,7 @@
             <div class="row align-items-stretch contact-wrap">
                 <div class="col-md-12">
                     <div class="form h-100">
-                        <h2 class="primary-text header-font-size">Please describe your requirements. <br> Our Team will connect you shortly!!<br></h2>
+                        <h2 class="primary-text header-font-size mb-3">Please describe your requirements. <br> Our Team will connect you shortly!!<br></h2>
                         <form method="post" action="/inquiry/add" enctype="multipart/form-data" id="contactForm" class="contactForm mb-5">
                             @csrf
                             <div class="row">
@@ -128,7 +128,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row mt-3">
                                 <div class="col-md-12 form-group">
                                     <button type="submit" class="btn btn-primary font-16 primary-text submit_inquiry">Send Inquiry</button>
                                 </div>

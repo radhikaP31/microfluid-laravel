@@ -19,7 +19,7 @@ class HomeController extends Controller
         return view('home.home', [
             'whatWeOfferData' => $common->getIndependentDataByTypeCode('WTOFR'),
             'fieldApplication' => $common->getIndependentDataByTypeCode('FOA')
-        ]);        
+        ]);
     }
 
 }

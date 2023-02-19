@@ -25,11 +25,11 @@
             <article class="entry">
 
               <div class="entry-img">
-              <img src="{{ url($blog->image) }}" alt="{{ $blog->title }}" class="img-fluid" style="height: 200px;width: auto;">
+                <img src="{{ url($blog->image) }}" alt="{{ $blog->title }}" class="img-fluid" style="height: 200px;width: auto;">
               </div>
 
               <h2 class="entry-title">
-                <a href="/blog/{{$blog->slug}}">{{ $blog->title }}</a>
+                <a href="<?php echo config('app.base_url') . '/blog/' . $blog->slug; ?>">{{ $blog->title }}</a>
               </h2>
 
               <div class="entry-meta">
@@ -43,7 +43,7 @@
                   {{ substr($blog->description, 0, 100) . ' ...' }}
                 </p>
                 <div class="read-more">
-                  <a href="/blog/{{$blog->slug}}">Read More</a>
+                  <a href="<?php echo config('app.base_url') . '/blog/' . $blog->slug; ?>">Read More</a>
                 </div>
               </div>
 
@@ -86,13 +86,13 @@
               <div class="sidebar-item recent-posts">
 
                 @forelse($recentBlogData as $blog)
-                  <div class="post-item clearfix">
-                    <img src="{{ url($blog->image) }}" alt="{{ $blog->title }}">
-                    <h4><a href="/blog/{{$blog->slug}}">{{ $blog->title }}</a></h4>
-                    <time>{{ date_format(date_create($blog->created_at),'M j, Y')}}</time>
-                  </div>
+                <div class="post-item clearfix">
+                  <img src="{{ url($blog->image) }}" alt="{{ $blog->title }}">
+                  <h4><a href="<?php echo config('app.base_url') . '/blog/' . $blog->slug; ?>">{{ $blog->title }}</a></h4>
+                  <time>{{ date_format(date_create($blog->created_at),'M j, Y')}}</time>
+                </div>
                 @empty
-                  <h2>No recent blogs!!</h2>
+                <h2>No recent blogs!!</h2>
                 @endforelse
 
               </div><!-- End sidebar recent posts-->
