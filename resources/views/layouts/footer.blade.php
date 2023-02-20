@@ -36,13 +36,13 @@
             <li><span class="text-white" style="letter-spacing: 1px;"><i class="fa fa-envelope"></i>&nbsp;<a class="text-white hover-mail" href="mailto:sales@microfluidprocess.com">sales@microfluidprocess.com</a> </span></li>
           </ul>
           <div class="pt-3 social-links" style="line-height: 53px;">
+            <a href="https://api.whatsapp.com/send?phone=917016865019&amp;text=Hi, I want to business with you!!" target="_blank" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
             <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
             <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
             <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
             <!-- <a href="#" class="pinterest"><i class="bx bxl-pinterest"></i></a>
             <a href="#" class="youtube"><i class="bx bxl-youtube"></i></a> -->
-            <a href="https://api.whatsapp.com/send?phone=917016865019&amp;text=Hi, I want to business with you!!" target="_blank" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
             <!-- <a href="#" class="skype"><i class="bx bxl-skype"></i></a> -->
           </div>
         </div>

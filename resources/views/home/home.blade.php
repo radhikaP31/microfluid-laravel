@@ -2,15 +2,12 @@
 	<x-slot name="title" metaname="{{ __('tagstitle') }}" meta-content="{{ __('content') }}">
 		{{ __('Home | Microfluid Process Equipment') }}
 	</x-slot>
-
 	<!-- @if ($message = Session::get('success'))
     <div class="alert alert-success alert-block container mb-3">
         <button type="button" class="close" data-dismiss="alert">×</button>
         <strong>{{ $message }}</strong>
     </div>
     @endif -->
-
-
 	<script>
 		$(function() {
 			@if(Session::get('success'))
@@ -25,57 +22,28 @@
 	</script>
 
 	<!-- ======= Hero Section ======= -->
-	<section id="hero" class="hero head_content">
-		<div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-
-			<div class="carousel-inner" role="listbox">
-
-				<!-- Slide 1 -->
-				<div class="carousel-item active" style="background-image: url( {{url('images/slide/slide-1.jpg') }})">
-					<div class="carousel-container">
-						<div class="carousel-content animate__animated animate__fadeInUp">
-						</div>
-					</div>
-				</div>
-
-				<!-- Slide 2 -->
-				<!-- <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg);">
-					<div class="carousel-container">
-						<div class="carousel-content animate__animated animate__fadeInUp">
-							<h2>Lorem Ipsum Dolor</h2>
-							<p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-							<div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
-						</div>
-					</div>
-				</div> -->
-
-				<!-- Slide 3 -->
-				<!-- <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg);">
-					<div class="carousel-container">
-						<div class="carousel-content animate__animated animate__fadeInUp">
-							<h2>Sequi ea ut et est quaerat</h2>
-							<p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-							<div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
-						</div>
-					</div>
-				</div> -->
-
+	<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active" data-interval="1000">
+				<img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp" class="d-block w-100" alt="...">
 			</div>
-
-			<a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
-				<span class="carousel-control-prev-icon icofont-simple-left" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-
-			<a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
-				<span class="carousel-control-next-icon icofont-simple-right" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
-
-			<ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
-
+			<div class="carousel-item" data-interval="2000">
+				<img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(22).webp" class="d-block w-100" alt="...">
+			</div>
+			<div class="carousel-item">
+				<img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(23).webp" class="d-block w-100" alt="...">
+			</div>
 		</div>
-	</section><!-- End Hero -->
+		<a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+	<!-- End Hero -->
 
 	<main id="main">
 

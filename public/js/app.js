@@ -2243,17 +2243,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
     });
   } else if ($(".mobile-nav, .mobile-nav-toggle").length) {
     $(".mobile-nav, .mobile-nav-toggle").hide();
-  } // Intro carousel
+  } // Back to top button
 
-
-  var heroCarousel = $("#heroCarousel");
-  var heroCarouselIndicators = $("#hero-carousel-indicators");
-  heroCarousel.find(".carousel-inner").children(".carousel-item").each(function (index) {
-    index === 0 ? heroCarouselIndicators.append("<li data-target='#heroCarousel' data-slide-to='" + index + "' class='active'></li>") : heroCarouselIndicators.append("<li data-target='#heroCarousel' data-slide-to='" + index + "'></li>");
-  });
-  heroCarousel.on('slid.bs.carousel', function (e) {
-    $(this).find('.carousel-content ').addClass('animate__animated animate__fadeInDown');
-  }); // Back to top button
 
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
@@ -2275,39 +2266,6 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
       scrollTop: 0
     }, 1500, 'easeInOutExpo');
     return false;
-  }); // Porfolio isotope and filter
-
-  $(window).on('load', function () {
-    var portfolioIsotope = $('.portfolio-container').isotope({
-      itemSelector: '.portfolio-item'
-    });
-    $('#portfolio-flters li').on('click', function () {
-      $("#portfolio-flters li").removeClass('filter-active');
-      $(this).addClass('filter-active');
-      portfolioIsotope.isotope({
-        filter: $(this).data('filter')
-      });
-      aos_init();
-    }); // Initiate venobox (lightbox feature used in portofilo)
-
-    $(document).ready(function () {
-      $('.venobox').venobox();
-    });
-  }); // Skills section
-
-  $('.skills-content').waypoint(function () {
-    $('.progress .progress-bar').each(function () {
-      $(this).css("width", $(this).attr("aria-valuenow") + '%');
-    });
-  }, {
-    offset: '80%'
-  }); // Portfolio details carousel
-
-  $(".portfolio-details-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    items: 1
   }); // Init AOS
 
   function aos_init() {
@@ -2319,37 +2277,6 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
   $(window).on('load', function () {
     aos_init();
-  });
-  $('.client-container').slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [{
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
-      }
-    }, {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    }, {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    } // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-    ]
   }); //Set height for div
 
   var height = $('.fixed-top').outerHeight();

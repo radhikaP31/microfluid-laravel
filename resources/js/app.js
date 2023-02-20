@@ -10,13 +10,10 @@ require('./bootstrap');
       var target = $(this.hash);
       if (target.length) {
         e.preventDefault();
-
         var scrollto = target.offset().top - scrolltoOffset;
-
         if ($(this).attr("href") == '#header') {
           scrollto = 0;
         }
-
         $('html, body').animate({
           scrollTop: scrollto
         }, 1500, 'easeInOutExpo');
@@ -83,20 +80,6 @@ require('./bootstrap');
   } else if ($(".mobile-nav, .mobile-nav-toggle").length) {
     $(".mobile-nav, .mobile-nav-toggle").hide();
   }
-
-  // Intro carousel
-  var heroCarousel = $("#heroCarousel");
-  var heroCarouselIndicators = $("#hero-carousel-indicators");
-  heroCarousel.find(".carousel-inner").children(".carousel-item").each(function(index) {
-    (index === 0) ?
-    heroCarouselIndicators.append("<li data-target='#heroCarousel' data-slide-to='" + index + "' class='active'></li>"):
-      heroCarouselIndicators.append("<li data-target='#heroCarousel' data-slide-to='" + index + "'></li>");
-  });
-
-  heroCarousel.on('slid.bs.carousel', function(e) {
-    $(this).find('.carousel-content ').addClass('animate__animated animate__fadeInDown');
-  });
-
   // Back to top button
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
@@ -118,46 +101,6 @@ require('./bootstrap');
     }, 1500, 'easeInOutExpo');
     return false;
   });
-
-  // Porfolio isotope and filter
-  $(window).on('load', function() {
-    var portfolioIsotope = $('.portfolio-container').isotope({
-      itemSelector: '.portfolio-item'
-    });
-
-    $('#portfolio-flters li').on('click', function() {
-      $("#portfolio-flters li").removeClass('filter-active');
-      $(this).addClass('filter-active');
-
-      portfolioIsotope.isotope({
-        filter: $(this).data('filter')
-      });
-      aos_init();
-    });
-
-    // Initiate venobox (lightbox feature used in portofilo)
-    $(document).ready(function() {
-      $('.venobox').venobox();
-    });
-  });
-
-  // Skills section
-  $('.skills-content').waypoint(function() {
-    $('.progress .progress-bar').each(function() {
-      $(this).css("width", $(this).attr("aria-valuenow") + '%');
-    });
-  }, {
-    offset: '80%'
-  });
-
-  // Portfolio details carousel
-  $(".portfolio-details-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    items: 1
-  });
-
   // Init AOS
   function aos_init() {
     AOS.init({
@@ -168,43 +111,6 @@ require('./bootstrap');
   $(window).on('load', function() {
     aos_init();
   });
-
-
-$('.client-container').slick({
-  dots: true,
-  infinite: false,
-  speed: 300,
-  slidesToShow: 4,
-  slidesToScroll: 4,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-});
 
 //Set height for div
 var height =  $('.fixed-top').outerHeight();
@@ -290,20 +196,16 @@ window.onscroll = function() {
 
 var header = document.getElementById("myHeader");
 var sticky = header.offsetTop;
-
 function myFunction() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
-
   } else {
     header.classList.remove("sticky");
   }
 }
 
 //product page js
-
 var productNav = $('.secondary-page-menu');
-
 function keyNavbar() {
   if (window.pageYOffset > sticky) {
     productNav.addClass('sticky_keynav');
@@ -311,7 +213,6 @@ function keyNavbar() {
     productNav.removeClass('sticky_keynav');
   }
 }
-
 })(jQuery);
 
 //Home page
