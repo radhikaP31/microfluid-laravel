@@ -204,6 +204,17 @@ function myFunction() {
   }
 }
 
+  $(document).ready(function () {
+    $('.carousel').slick({
+      slidesToShow: 1,
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      infinite: true,
+      speed: 300,
+    });
+  });
+
 //product page js
 var productNav = $('.secondary-page-menu');
 function keyNavbar() {

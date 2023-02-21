@@ -2362,8 +2362,18 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
     } else {
       header.classList.remove("sticky");
     }
-  } //product page js
+  }
 
+  $(document).ready(function () {
+    $('.carousel').slick({
+      slidesToShow: 1,
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      infinite: true,
+      speed: 300
+    });
+  }); //product page js
 
   var productNav = $('.secondary-page-menu');
 

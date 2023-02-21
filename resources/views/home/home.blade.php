@@ -22,31 +22,16 @@
 	</script>
 
 	<!-- ======= Hero Section ======= -->
-	<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
-		<div class="carousel-inner">
-			<div class="carousel-item active" data-interval="1000">
-				<img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp" class="d-block w-100" alt="...">
-			</div>
-			<div class="carousel-item" data-interval="2000">
-				<img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(22).webp" class="d-block w-100" alt="...">
-			</div>
-			<div class="carousel-item">
-				<img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(23).webp" class="d-block w-100" alt="...">
-			</div>
+	<div class="wrapper">
+		<div class="carousel">
+			<div class="slide"><img src="{{ asset('images/slide/slide-1.png') }}"></div>
+			<div class="slide"><img src="{{ asset('images/slide/slide-2.png') }}"></div>
+			<div class="slide"><img src="{{ asset('images/slide/slide-3.png') }}"></div>
 		</div>
-		<a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
 	</div>
 	<!-- End Hero -->
 
 	<main id="main">
-
 		<!-- ======= What we offer/services Section ======= -->
 		<section id="what-we-offer services" class="what-we-offer services section-bg">
 			<div class="container">
