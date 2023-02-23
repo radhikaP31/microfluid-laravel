@@ -33,10 +33,10 @@
 
 	<main id="main">
 		<!-- ======= What we offer/services Section ======= -->
-		<section id="what-we-offer services" class="what-we-offer services section-bg">
+		<section id="what-we-offer services" class="what-we-offer services white-bg">
 			<div class="container">
 
-				<div class="section-title">
+				<div class="section-title text-center">
 					<h2 class="primary-text header-font-size">What We Offer</strong></h2>
 				</div>
 
@@ -52,7 +52,7 @@
 							<h4>
 								<a href="<?php echo config('app.base_url') . $offer->mstr_link; ?>" class="service_name primary-text font-16">{{ $offer->mstr_nm }}&nbsp;&nbsp;
 									<div class="round">
-										<div id="cta">
+										<div class="cta">
 											<span class="arrow primera next "></span>
 											<span class="arrow segunda next "></span>
 										</div>
@@ -80,7 +80,7 @@
 				<div class="row">
 
 					<div class="col-lg-4 col-md-6 align-items-stretch min-height310 mt-4">
-						<div class="icon-box field-find-more section-bg">
+						<div class="icon-box field-find-more white-bg">
 							<h4 class="primary-text header-font-size" style="text-align: left;padding-left: 7px;">Field of <br>Application</h4>
 							<hr style="width: 47%;margin-left: 6px;border-width: 4px;border-top: solid var(--secondary_color);">
 							<h4 class="primary-text body-font-size" style="text-align: left;padding-left: 7px;"><a href="<?php echo config('app.base_url') . '/industries'; ?>" class="text-black">Find a right solutions for your industry!!</a></h4>
@@ -117,7 +117,7 @@
 		<section id="home-about-us" class="home-about-us">
 			<div class="row col-md-12">
 				<div class="col-md-7">
-					<div class="about-section-title section-title">
+					<div class="about-section-title section-title text-center">
 						<h2 class="primary-text header-font-size" style="text-align: left;top: 30px;left: 30px;">About Us</h2>
 						<p class="text-left font-16 letter-spacing text-justify font-family-sans-serif" style="padding-left: 30px;">
 							<br>From last many years of now, <span class="primary-text"> Microfluid Process Equipment </span> has been persistently in its profession to provide best-in-class products and after sales service.<br><br>

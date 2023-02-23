@@ -7,7 +7,7 @@
         <section class="container contact container-fluid" id="contact">
             <div class="container">
                 <div class="col-md-12 content">
-                    <div class="section-title">
+                    <div class="section-title text-center">
                         <h2 class="primary-text header-font-size">Login</strong></h2>
                     </div>
                     <div class=" col-lg-10">

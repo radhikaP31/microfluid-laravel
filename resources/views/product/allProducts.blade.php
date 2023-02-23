@@ -20,7 +20,7 @@
           <div class="list-group product-list-group">
             @if ($allCategory->count() > 0)
             @foreach($allCategory as $key => $category)
-            <a href="<?php echo config('app.base_url') . '/products/' . $category->id; ?>" class="product-list-group-item list-group-item text-black product-cat letter-spacing <?php if (request()->id == $category->id) {echo "active";} ?>" data-sc_cat="{{$category->c_code}}">{{$category->c_name}}</a>
+            <a href="<?php echo config('app.base_url') . '/products/' . $category->id; ?>" class="product-list-group-item list-group-item text-black font-20 product-cat letter-spacing <?php if (request()->id == $category->id) {echo "active";} ?>" data-sc_cat="{{$category->c_code}}">{{$category->c_name}}</a>
             <!-- Product sub category sidebar section start-->
             <div class="list-group product-cat-filter product-cat-filter-{{$category->c_code}}" data-sc_cat="{{$category->c_code;}} {{request()->id}}" style="<?php if (request()->id != $category->id) {"display: none;";} ?>">
               @if($category->subCategory->count() > 0)
@@ -57,14 +57,14 @@
             @if ($product_data && $product_data->count() > 0)
             @foreach ($product_data as $key => $product)
             <div class=" col-lg-4 col-md-6 align-items-stretch">
-              <div class="product-icon-box rounded mb-5 product-box">
+              <div class="product-icon-box font-18 rounded mb-5 product-box">
                 <a href="<?php echo config('app.base_url') . '/product/' . $product->slug; ?>" class="service_name primary-text">
                   <div class="icon">
                     <img alt="{{ $product->p_name }}" src="{{ url($product->p_image) }}">
                   </div>
                   <div>
                     <div style="height:47px;">
-                      <h4 class="heading-black" style=" padding-top: 8px;">{{ $product->p_name }}</h4>
+                      <h4 class="text-black" style=" padding-top: 8px;">{{ $product->p_name }}</h4>
                     </div>
                   </div>
                 </a>

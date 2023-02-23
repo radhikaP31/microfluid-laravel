@@ -20,7 +20,7 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-4 col-md-6 align-items-stretch min-height310 mt-4">
-                <div class="icon-box field-find-more section-bg">
+                <div class="icon-box field-find-more white-bg">
                   <h4 class="primary-text header-font-size" style="text-align: left;padding-left: 7px;">Field of <br>Application</h4>
                   <hr style="width: 47%;margin-left: 6px;border-width: 4px;border-top: solid var(--secondary_color);">
                   <h4 class="primary-text body-font-size" style="text-align: left;padding-left: 7px;">Find a right solutions for your industry!!</h4>

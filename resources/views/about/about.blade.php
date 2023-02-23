@@ -39,7 +39,7 @@
           @if ($aboutUsInformation->count() > 0)
           @foreach($aboutUsInformation as $key => $about_details)
           <div class="block-type {{ 'block-type-'.$about_details->tab_name }}" data-block_type="{{ $about_details->tab_name }}" style="display: none;">
-            <div class="section-title ">
+            <div class="section-title">
               <h2 class="primary-text header-font-size text-center mb-4 ">{{ $about_details->name }}
               </h2>
             </div>
