@@ -11,11 +11,22 @@ use function Psy\debug;
 
 class LoginController extends Controller
 {
+    /**
+     * login view
+     *
+     * @return \Illuminate\View\View
+     */
     public function index()
     {
         return view('admin.auth.login');
     }
 
+    /**
+     * login
+     * @param Array $request
+     *
+     * @return \Illuminate\View\View
+     */
     public function customLogin(Request $request)
     {
         $request->validate([
@@ -32,6 +43,11 @@ class LoginController extends Controller
         ])->onlyInput('username');
     }
 
+    /**
+     * dashboard
+     *
+     * @return \Illuminate\View\View
+     */
     public function dashboard()
     {
         if(Auth::check()){
@@ -41,6 +57,11 @@ class LoginController extends Controller
         return redirect("login")->withSuccess('You are not allowed to access');
     }
 
+    /**
+     * sign out
+     *
+     * @return \Illuminate\View\View
+     */
     public function signOut() {
         FacadesSession::flush();
         Auth::logout();

@@ -1,4 +1,4 @@
-<footer id="footer">
+<footer class="footer">
   <div class="footer-top">
     <div class="container">
       <div class="row">
@@ -29,7 +29,7 @@
           </ul>
         </div>
 
-        <div class="col-lg-4 col-md-6 footer-newsletter footer-links">
+        <div class="col-lg-4 col-md-6 footer-links">
           <h4 class="text-white contact-us header-font-size">Contact Us</h4>
           <ul>
             <li><span class="text-white" style="margin-right: 4%;"><i class="fa fa-phone fa-rotate-90"></i> +91 70168 65019 </span></li>

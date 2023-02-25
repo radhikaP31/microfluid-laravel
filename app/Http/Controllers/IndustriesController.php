@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Common;
 
 class IndustriesController extends Controller
 {
   /**
    * get all blog data
+   * @param string $slug
    *
    * @return \Illuminate\View\View
    */
@@ -16,13 +16,15 @@ class IndustriesController extends Controller
   {
     $common = new Common;
     if ($slug) {
-      return view('industry.singleIndustry', [
-        'fieldApplication' => $common->getIndependentDataBylug($slug)->first()
-      ]);
+      $viewName = 'industry.singleIndustry';
+      $fieldApplication = $common->getIndependentDataBylug($slug)->first();
     } else {
-      return view('industry.allIndustries', [
-        'fieldApplication' => $common->getIndependentDataByTypeCode('FOA')
-      ]);
+      $viewName = 'industry.allIndustries';
+      $fieldApplication = $common->getIndependentDataByTypeCode('FOA');
     }
+
+    return view($viewName, [
+      'fieldApplication' => $fieldApplication,
+    ]);
   }
 }

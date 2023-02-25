@@ -14,7 +14,7 @@
   <main id="main">
     <!-- <hr style="margin: 2% 10%;background: #b5b5b5;" /> -->
     <!-- ======= Blog Section ======= -->
-    <section id="blog" class="blog">
+    <section class="blog">
       <div class="container">
 
         <div class="row">

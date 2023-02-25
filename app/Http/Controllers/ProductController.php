@@ -14,10 +14,12 @@ class ProductController extends Controller
 {
     /**
      * get all product data
+     * @param int id
+     * @param int sub_cat_id
      *
      * @return \Illuminate\View\View
      */
-    public function allProduct($id=null, $sub_cat_id=null)
+    public function allProduct($id=0, $sub_cat_id=0)
     {
         if($sub_cat_id){
           $product_tab = ProductSubCategory::where(['id' => $sub_cat_id,'is_deleted' => 0])->orderBy('sequence')->get(); //get sub category wise products product
@@ -26,8 +28,7 @@ class ProductController extends Controller
           $product_tab = ProductCategory::where('is_deleted',0)->where('id',$id)->orderBy('sequence')->get(); //get category wise products product
           $product_data = Product::where('is_deleted',0)->where('category_id',$id)->orderBy('sequence')->get();
         }
-        // dd(ProductCategory::with('subCategory')->where('is_deleted', 0)->orderBy('sequence')->toSql());
-        // die;
+
         return view('product.allProducts', [
             'category_id' => $id,
             'sub_cat_id' => $sub_cat_id,
@@ -39,6 +40,7 @@ class ProductController extends Controller
 
     /**
      * get single product data by given id
+     * @param int $slug
      *
      * @return \Illuminate\View\View
      */

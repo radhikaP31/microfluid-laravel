@@ -13,8 +13,9 @@ class InquiryController extends Controller
 {
     /**
      * get all state data for ajax request
-     * @param $country_id integer
-     * return array
+     * @param integer $country_id
+     *
+     * @return array optionHtml
      */
     public function getAllState($country_id=0){
         $common = new Common;
@@ -95,7 +96,6 @@ class InquiryController extends Controller
             $result = $inquiry->save();
 
             if ($request->hasFile('attachment')) {
-
                 //upload inquiry attachment
                 $attachmentName = $inquiry->id . '_' . $request->attachment->getClientOriginalName();
                 $request->attachment->storeAs('public/inquiry_attachment', $attachmentName); //storage/app/public/inquiry_attachment

@@ -5,14 +5,13 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ContactRequest;
 use App\Mail\ContactMail;
 use App\Models\Contact;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
     /**
      * contact page form
-     * return array
+     * @return array
      */
     public function index()
     {
@@ -22,7 +21,8 @@ class ContactController extends Controller
     }
 
     /**
-     * create Inquiry.
+     * create Inquiry
+     * @param Array $request
      *
      * @return \Illuminate\View\View
      */

@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Common;
-use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -21,5 +19,4 @@ class HomeController extends Controller
             'fieldApplication' => $common->getIndependentDataByTypeCode('FOA')
         ]);
     }
-
 }

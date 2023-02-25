@@ -1,12 +1,9 @@
-<footer id="footer">
+<footer class="footer">
     <div class="d-md-flex primary-bg" style="padding: 10px 35px 10px 35px;">
         <div class="mr-md-auto text-center text-md-left container">
             <p class="text-white" style="letter-spacing: 1.2px;">Download | Career | HR Policy | Terms & Conditions | Contact Us | Microfluid</p>
             <div class="copyright text-white">
                 <p style="letter-spacing: 0.9px;">&copy; Copyright 2022 - All rights reserved by <strong><span>Microfluid Process Equipment</span></strong></p>
-            </div>
-            <div class="credits text-white">
-                <p style="letter-spacing: 0.9px;margin-bottom: 0px;">Designed by Parth & Managed by Radhika</p>
             </div>
         </div>
     </div>
