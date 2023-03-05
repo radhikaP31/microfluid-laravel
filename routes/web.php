@@ -10,8 +10,7 @@ use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\IndustriesController;
 use App\Http\Controllers\InquiryController;
-use App\Http\Controllers\LoginController;
-
+use App\Http\Controllers\Auth\LoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -74,7 +73,10 @@ Route::controller(ContactController::class)->group(function () {
 });
 
 //Admin Routes start
+Route::get('dashboard', [LoginController::class, 'dashboard']); 
 Route::get('login', [LoginController::class, 'index'])->name('login');
-Route::post('verify', [LoginController::class, 'customLogin'])->name('login.verify');
+Route::post('custom-login', [LoginController::class, 'customLogin'])->name('login.verify'); 
+Route::get('registration', [LoginController::class, 'registration'])->name('register-user');
+Route::post('custom-registration', [LoginController::class, 'customRegistration'])->name('register.custom'); 
 Route::get('signout', [LoginController::class, 'signOut'])->name('signout');
 //Admin Routes end
