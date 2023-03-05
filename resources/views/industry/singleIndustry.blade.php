@@ -17,13 +17,12 @@
     <section id="industry" class="industry">
       <div class="container">
         <div class="row">
-          <h2 class="primary-text header-font-size">{{ $fieldApplication->mstr_nm}}</h2>
+          <h2 class="primary-text header-font-size font-30 mb-3">{{ $fieldApplication->mstr_nm}}</h2>
         </div>
         <div class="col-md-12 row">
           <div class="col-md-8">
-            {{ $fieldApplication->mstr_desc }}
-            <br><br>
-            @php echo $fieldApplication->section_desc @endphp
+            <p class="text-gray letter-spacing text-justify font-family-sans-serif">{{ $fieldApplication->mstr_desc }}</p>
+              @php echo $fieldApplication->section_desc @endphp
           </div>
           <div class="col-md-4">
             <img alt="{{ $fieldApplication->mstr_nm }}" src="{{ url($fieldApplication->mstr_img) }}" style="border-radius: 8px;" />
