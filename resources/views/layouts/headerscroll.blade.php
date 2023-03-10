@@ -4,7 +4,7 @@
     <a href="<?php echo config('app.base_url'); ?>" class="logo mr-auto"><img src="{{ asset('images/Logo.png') }}" alt="" class="img-fluid"></a>
     <span class="primary-text font-18" style="margin-right: 4%;"><i class="fa fa-phone fa-rotate-90"></i> +91 70168 65019 </span>
     <span class="primary-text font-18" style="margin-right: 4%;width: 25%;letter-spacing: 1px;"><i class="fa fa-envelope"></i>&nbsp;<a class="primary-text hover-mail" href="mailto:sales@microfluidprocess.com">sales@microfluidprocess.com</a> </span>
-    <a href="<?php echo config('app.base_url') . '/inquiry'; ?>" class="btn btn-primary primary-text get_quote font-18" style="border-radius: 30px;">Get a Fair Quote</a>
+    <a href="#" class="btn btn-primary primary-text get_quote font-18" data-toggle="modal" data-target="#getQuoteModal" style="border-radius: 30px;">Get a Fair Quote</a>
   </div>
 
   <div class="container-fluid d-flex align-items-center padding0 primary-bg header" id="myHeader">
@@ -25,12 +25,12 @@
         <x-nav-link :active="request()->routeIs('industries')">
           <a href="{{route('industries')}}">{{ __('Industries') }}</a>
         </x-nav-link>
-        <!-- <x-nav-link :active="request()->routeIs('blogs')" >
+        {{-- <x-nav-link :active="request()->routeIs('blogs')" >
               <a href="{{route('blogs')}}">{{ __('Blogs') }}</a>
-            </x-nav-link> -->
+        </x-nav-link>
         <x-nav-link :active="request()->routeIs('inquiry')">
           <a href="{{route('inquiry')}}">{{ __('Inquiry') }}</a>
-        </x-nav-link>
+        </x-nav-link> --}}
         <x-nav-link :active="request()->routeIs('contact')">
           <a href="{{route('contact')}}">{{ __('Contact') }}</a>
         </x-nav-link>
@@ -43,10 +43,69 @@
       <a href="#" class="facebook font-17"><i class="icofont-facebook"></i></a>
       <a href="#" class="linkedin font-17"><i class="icofont-linkedin"></i></i></a>
       <a href="#" class="instagram font-17"><i class="icofont-instagram"></i></a>
-
     </div>
-
   </div>
+
+  <!-- Get in Touch Modal start -->
+  <div class="modal fade-in" id="getQuoteModal" tabindex="-1" role="dialog" aria-labelledby="getQuoteModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title font-20"> Get a Fair Quote</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form method="post" action="/contact/add" enctype="multipart/form-data" id="contactForm" class="contactForm mb-5">
+            @csrf
+            <div class="row">
+              <div class="col-md-6 form-group mb-3">
+                <label for="name" class="col-form-label">Name <span class="text-red">*</span></span></label>
+                <input type="text" name="name" class="form-control" value="{{ old('name') }}" placeholder="Your Name" />
+                @error('name')
+                <div class="text-red text-10">{{ $message }}</div>
+                @enderror
+              </div>
+              <div class="col-md-6 form-group mb-3">
+                <label for="email" class="col-form-label">Email <span class="text-red">*</span></label>
+                <input type="text" name="email" value="{{ old('email') }}" class="form-control" placeholder="Your Email" />
+                @error('email')
+                <div class="text-red text-10">{{ $message }}</div>
+                @enderror
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 form-group mb-3">
+                <label for="subject" class="col-form-label">Subject <span class="text-red">*</span></label>
+                <input type="text" name="subject" class="form-control" value="{{ old('subject') }}" placeholder="Your Subject" />
+                @error('subject')
+                <div class="text-red text-10">{{ $message }}</div>
+                @enderror
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 form-group mb-3">
+                <label for="message" class="col-form-label">Message <span class="text-red">*</span></label>
+                <textarea class="form-control" name="message" id="message" cols="30" rows="4" placeholder="Write your message">{{ old('message') }}</textarea>
+                @error('message')
+                <div class="text-red text-10">{{ $message }}</div>
+                @enderror
+              </div>
+            </div>
+            <div class="text-center mt-3"><button type="submit" class="btn btn-primary primary-text rounded-0 py-2 px-4 submit_inquiry">Send Message</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    @if($errors->any())
+    $('#getQuoteModal').modal('show');
+    @endif
+  </script>
+  <!-- Get in Touch Modal end -->
+
 </header>
 
 <div class="header_space"></div>

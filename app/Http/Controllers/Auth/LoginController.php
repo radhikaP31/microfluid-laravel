@@ -32,16 +32,17 @@ class LoginController extends Controller
     public function customLogin(Request $request)
     {
         $request->validate([
-            'email' => 'required',
+            'username' => 'required',
             'password' => 'required',
         ]);
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->only('username', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('dashboard')
-            ->withSuccess('Signed in');
+            $request->session()->flash('success', 'You are login successfully.. Welcome!!');
+            return redirect()->route('dashboard');
         }
 
-        return redirect("login")->withSuccess('Login details are not valid');
+        $request->session()->flash('error', 'Login details are not valid!!');
+        return redirect()->route('login');
     }
 
     /**

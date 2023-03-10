@@ -56,4 +56,4 @@
             </div>
         </section><!-- End Contact Section -->
     </main><!-- End #main -->
-    </x-app-layout>
+</x-admiin-layout>

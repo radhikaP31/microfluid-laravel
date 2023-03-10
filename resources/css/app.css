@@ -415,9 +415,7 @@ p {
 # Header Social Links
 --------------------------------------------------------------*/
 .header-social-links {
-  padding-left: 14px;
-  margin-left: 20px;
-  border-left: 1px solid #c4c4c4;
+  padding-right: 15px;
 }
 .header-social-links a {
   color: white;
@@ -901,6 +899,7 @@ button.list-group-item {
   height: 410px;
   margin: auto;
   display: flex;
+  max-width: -webkit-fill-available;
 }
 .prod_desc_btn {
   box-shadow: 0 -2px 0 0 rgb(24 24 24 / 15%) inset;
@@ -915,6 +914,13 @@ button.list-group-item {
 }
 .swal2-icon.swal2-success [class^=swal2-success-line] {
   background-color: var(--secondary_color) !important;
+}
+.centrifugal-table>tbody>tr>td {
+  border: unset;
+  border-bottom: 1px solid #505050;
+}
+.centrifugal-table>tbody>tr>td:first-child {
+  border-right: 1px solid #505050;
 }
 @media (min-width: 1200px) {
   [data-page="product"] .secondary-page-menu {
@@ -1255,11 +1261,8 @@ li.nav-item {
 .sticky .nav-menu .drop-down ul {
   top: calc(100% + 13px) !important;
 }
-.sticky>.nav-menu {
-  margin-left: 23%;
-}
-.nav-menu {
-  margin-left: 23%;
+.nav-menu, .sticky>.nav-menu {
+  margin: auto;
 }
 .sticky>.nav-menu>ul>li>a,
 .sticky>.header-social-links>a>* {

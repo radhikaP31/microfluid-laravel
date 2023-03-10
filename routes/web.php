@@ -45,13 +45,13 @@ Route::controller(ProductController::class)->group(function ($slug = null) {
     Route::get('/product/{slug?}', 'singleProduct')->name('product'); //Display single product data
 });
 
-Route::controller(BlogsController::class)->group(function () {
+/* Route::controller(BlogsController::class)->group(function () {
     Route::get('/blogs', 'getBlog')->name('blogs'); //Display all blogs data
 });
 
 Route::controller(BlogsController::class)->group(function ($id = null) {
     Route::get('/blog/{slug?}', 'getBlog')->name('blog'); //Display single blog data
-});
+}); */
 
 Route::controller(IndustriesController::class)->group(function () {
     Route::get('/industries', 'getIndustry')->name('industries'); //Display all industry data
@@ -61,11 +61,11 @@ Route::controller(IndustriesController::class)->group(function ($slug = '') {
     Route::get('/industry/{slug?}', 'getIndustry')->name('industry'); //Display display single industry data
 });
 
-Route::controller(InquiryController::class)->group(function () {
+/* Route::controller(InquiryController::class)->group(function () {
     Route::any('/inquiry/selectState/{countryId}','getAllState')->name('ajax.selectState');
     Route::get('/inquiry', 'add')->name('inquiry'); //Display inquiry form
     Route::any('/inquiry/add', 'create')->name('inquiry_add'); //Create inquiry
-});
+}); */
 
 Route::controller(ContactController::class)->group(function () {
     Route::get('/contact', 'index')->name('contact'); //Display contact page
@@ -73,7 +73,7 @@ Route::controller(ContactController::class)->group(function () {
 });
 
 //Admin Routes start
-Route::get('dashboard', [LoginController::class, 'dashboard']); 
+Route::get('dashboard', [LoginController::class, 'dashboard'])->name('dashboard'); 
 Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::post('custom-login', [LoginController::class, 'customLogin'])->name('login.verify'); 
 Route::get('registration', [LoginController::class, 'registration'])->name('register-user');

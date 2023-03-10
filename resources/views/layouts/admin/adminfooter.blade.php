@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="col-md-12 footer padding0">
     <div class="d-md-flex primary-bg" style="padding: 10px 35px 10px 35px;">
         <div class="mr-md-auto text-center text-md-left container">
             <p class="text-white" style="letter-spacing: 1.2px;">Download | Career | HR Policy | Terms & Conditions | Contact Us | Microfluid</p>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Common;
 use App\Models\ProductCategory;
+use App\Models\ProductDownload;
 use App\Models\ProductSubCategory;
 
 use function Psy\debug;
@@ -51,7 +52,9 @@ class ProductController extends Controller
         }
         $product_id = Product::select('id')->where('slug',$slug)->first()->id;
         $common = new Common();
-        $productData = Product::with('image','key')->where('is_deleted',0)->where('id',$product_id)->orderBy('sequence')->first();
+        $productData = Product::with(['image','key' => function($query) {
+            $query->orderBy('sequence','Asc');
+        }])->where('is_deleted',0)->where('id',$product_id)->orderBy('sequence')->first();
         //get product nav details
         $navDetails = [];
         foreach($productData->key as $key => $keyDetails){

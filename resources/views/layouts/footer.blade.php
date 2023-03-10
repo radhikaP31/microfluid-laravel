@@ -12,7 +12,7 @@
             <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Service</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Clients</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Blogs</a></li> -->
-            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/inquiry'; ?>">Inquiry</a></li>
+            <!-- <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/inquiry'; ?>">Inquiry</a></li> -->
             <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/contact'; ?>">Contact</a></li>
           </ul>
         </div>
