@@ -98,7 +98,7 @@ class InquiryController extends Controller
             if ($request->hasFile('attachment')) {
                 //upload inquiry attachment
                 $attachmentName = $inquiry->id . '_' . $request->attachment->getClientOriginalName();
-                $request->attachment->storeAs('public/inquiry_attachment', $attachmentName); //storage/app/public/inquiry_attachment
+                $request->attachment->storeAs('public/attachment/inquiry', $attachmentName); //storage/app/public/attachment/inquiry
                 $inquiry_data = Inquiry::find($inquiry->id);
                 $inquiry_data->attachment = $attachmentName;
                 $result = $inquiry_data->save();

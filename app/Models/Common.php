@@ -43,7 +43,7 @@ class Common extends Model
     }
 
     /**Function to get clients from web_clients table
-    * @return array  
+    * @return array
     **/
     function getOurClients() {
 
@@ -52,7 +52,7 @@ class Common extends Model
     }
 
     /**Function to get All About us information from web_about_info table
-    * @return array  
+    * @return array
     **/
     function getAboutUsInformation() {
 
@@ -62,16 +62,16 @@ class Common extends Model
 
     /**Function to get products from web_products,web_product_image table
     * @params $product_id type integer
-    * @return array  
+    * @return array
     **/
     function getProductKeyDetailsByID($product_id=0, $tableName='') {  
 
         $result = DB::table($tableName)->where('is_deleted',0)->where('product_id',$product_id)->orderBy('sequence')->get();
-        return $result; 
+        return $result;
     }
 
     /**Function to get countries from web_country table
-     * @return array  
+     * @return array
      **/
     function getAllCountry()
     {
@@ -79,9 +79,19 @@ class Common extends Model
         return $result;
     }
 
+    /**Function to get country code from web_country table
+     * @return array
+     **/
+    function getAllCountryCode()
+    {
+        $result = DB::table('web_country')->select(['phonecode','isd_code'])->distinct()->where('is_deleted', 0)->where('phonecode', '!=', 0)->orderBy('phonecode','asc')->get();
+
+        return $result;
+    }
+
     /**Function to get states from web_state table
      * @params $product_id type integer
-     * @return array  
+     * @return array
      **/
     function getAllState($country_id = '')
     {

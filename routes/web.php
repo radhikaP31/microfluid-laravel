@@ -64,12 +64,12 @@ Route::controller(IndustriesController::class)->group(function ($slug = '') {
 /* Route::controller(InquiryController::class)->group(function () {
     Route::any('/inquiry/selectState/{countryId}','getAllState')->name('ajax.selectState');
     Route::get('/inquiry', 'add')->name('inquiry'); //Display inquiry form
-    Route::any('/inquiry/add', 'create')->name('inquiry_add'); //Create inquiry
+    Route::post('/inquiry/add', 'create')->name('inquiry_add'); //Create inquiry
 }); */
 
 Route::controller(ContactController::class)->group(function () {
     Route::get('/contact', 'index')->name('contact'); //Display contact page
-    Route::any('/contact/add', 'create')->name('contact_add'); //Create contact
+    Route::post('/contact/add', 'create')->name('contact_add'); //Create contact
 });
 
 //Admin Routes start

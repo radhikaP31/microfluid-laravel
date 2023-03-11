@@ -8,7 +8,6 @@
   </div>
 
   <div class="container-fluid d-flex align-items-center padding0 primary-bg header" id="myHeader">
-
     <nav class="nav-menu d-none d-lg-block">
       <div class="list-logo" style="margin-left:5%;top: 4px;"><a href="<?php echo config('app.base_url'); ?>" class="logo mr-auto"><img src="{{ asset('images/Logo.png') }}" alt="" class="img-fluid"></a>
       </div>
@@ -99,13 +98,11 @@
       </div>
     </div>
   </div>
-  <script>
+<!--   <script>
     @if($errors->any())
     $('#getQuoteModal').modal('show');
     @endif
-  </script>
+  </script> -->
   <!-- Get in Touch Modal end -->
-
 </header>
-
 <div class="header_space"></div>

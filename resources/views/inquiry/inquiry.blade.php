@@ -18,7 +18,7 @@
                 <div class="col-md-12">
                     <div class="form h-100">
                         <h2 class="primary-text header-font-size mb-3">Please describe your requirements. <br> Our Team will connect you shortly!!<br></h2>
-                        <form method="post" action="/inquiry/add" enctype="multipart/form-data" id="contactForm" class="contactForm mb-5">
+                        <form method="post" action="{{ route('inquiry_add') }}" enctype="multipart/form-data" id="contactForm" class="contactForm mb-5">
                             @csrf
                             <div class="row">
                                 <div class="col-md-6 form-group mb-3">
