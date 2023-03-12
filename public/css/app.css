@@ -787,7 +787,7 @@ button.list-group-item {
 /*--------------------------------------------------------------
 # Products page
 --------------------------------------------------------------*/
-.product {
+.product, .contact {
   padding: 10px 0;
   margin: 0px 5% 0px 5%;
   padding: 1% 2% 1% 2%;
@@ -797,7 +797,7 @@ button.list-group-item {
   background-color: #022060;
   border-color: #022060;
 }
-.all-product-main {
+.all-product-main, .contact-us-page {
   background: #f8f9fa;
 }
 .product-icon-box:hover {
@@ -1525,10 +1525,9 @@ li.nav-item {
   margin: auto;
   padding-left: 0px;
 }
-.form-control,
-.custom-select {
+.form-control, .custom-select {
   border: none !important;
-  border-bottom: 1px solid #ccc !important;
+  border: 1px solid #ccc !important;
   border-radius: 0;
   box-shadow: unset;
 }
@@ -1561,8 +1560,7 @@ li.nav-item {
 .custom-select {
   font-size: 16px;
 }
-.form-control:focus,
-.custom-select:focus {
+.form-control:focus, .custom-select:focus {
   box-shadow: none;
   border-bottom: 1px solid var(--primary_color) !important;
 }
@@ -1574,17 +1572,19 @@ li.nav-item {
 /* contact page css start */
 .contact .info-wrap {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+  padding: 3%;
+  height: 300px;
 }
 .contact .info {
   background: #fff;
 }
 .contact .info i {
-  font-size: 20px;
-  color: var(--primary_color);
+  font-size: 15px;
+  color: #fff;
+  background: var(--primary_color);
   float: left;
-  width: 44px;
-  height: 44px;
+  width: 25px;
+  height: 25px;
   border: 1px solid var(--primary_color);
   display: flex;
   justify-content: center;
@@ -1594,21 +1594,10 @@ li.nav-item {
 }
 .contact .info h4 {
   padding: 0 0 0 60px;
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: #111;
 }
 .contact .info p {
   padding: 0 0 0 60px;
   margin-bottom: 0;
-  font-size: 14px;
-  color: #444444;
-}
-.contact .info:hover i {
-  background: #ff4d00;
-  color: #fff;
-  border: 1px solid #ff4d00;
 }
 @-webkit-keyframes animate-loading {
   0% {

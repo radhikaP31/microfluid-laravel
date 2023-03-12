@@ -56,39 +56,41 @@
           </button>
         </div>
         <div class="modal-body">
-          <form method="post" action="/contact/add" enctype="multipart/form-data" id="contactForm" class="contactForm mb-5">
+          <form method="post" action="{{ route('quote_add') }}" enctype="multipart/form-data" id="contactForm" class="contactForm mb-5">
             @csrf
             <div class="row">
               <div class="col-md-6 form-group mb-3">
-                <label for="name" class="col-form-label">Name <span class="text-red">*</span></span></label>
-                <input type="text" name="name" class="form-control" value="{{ old('name') }}" placeholder="Your Name" />
+                <input type="text" name="name" class="form-control" value="{{ old('name') }}" placeholder="Your Name*" />
                 @error('name')
-                <div class="text-red text-10">{{ $message }}</div>
+                <div class="text-red text-10">{{ $errors->first('name') }}</div>
                 @enderror
               </div>
               <div class="col-md-6 form-group mb-3">
-                <label for="email" class="col-form-label">Email <span class="text-red">*</span></label>
-                <input type="text" name="email" value="{{ old('email') }}" class="form-control" placeholder="Your Email" />
+                <input type="text" name="email" value="{{ old('email') }}" class="form-control" placeholder="Your Email*" />
                 @error('email')
-                <div class="text-red text-10">{{ $message }}</div>
+                <div class="text-red text-10">{{ $errors->first('email') }}</div>
+                @enderror
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 form-group mb-3">
+                <input type="text" name="contact_number" class="form-control" value="{{ old('contact_number') }}" placeholder="Your Contact Number*" />
+                @error('contact_number')
+                <div class="text-red text-10 is-invalid">{{ $errors->first('contact_number') }}</div>
+                @enderror
+              </div>
+              <div class="col-md-6 form-group mb-3">
+                <input type="text" name="company_name" value="{{ old('company_name') }}" class="form-control" placeholder="Your Company Name*" />
+                @error('company_name')
+                <div class="text-red text-10 is-invalid">{{ $errors->first('company_name') }}</div>
                 @enderror
               </div>
             </div>
             <div class="row">
               <div class="col-md-12 form-group mb-3">
-                <label for="subject" class="col-form-label">Subject <span class="text-red">*</span></label>
-                <input type="text" name="subject" class="form-control" value="{{ old('subject') }}" placeholder="Your Subject" />
-                @error('subject')
-                <div class="text-red text-10">{{ $message }}</div>
-                @enderror
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12 form-group mb-3">
-                <label for="message" class="col-form-label">Message <span class="text-red">*</span></label>
-                <textarea class="form-control" name="message" id="message" cols="30" rows="4" placeholder="Write your message">{{ old('message') }}</textarea>
+                <textarea class="form-control" name="message" id="message" cols="30" rows="4" placeholder="Write your Message Here*">{{ old('message') }}</textarea>
                 @error('message')
-                <div class="text-red text-10">{{ $message }}</div>
+                <div class="text-red text-10">{{ $errors->first('message') }}</div>
                 @enderror
               </div>
             </div>
@@ -98,11 +100,11 @@
       </div>
     </div>
   </div>
-<!--   <script>
-    @if($errors->any())
+  <script>
+    @if($errors->has('name') ||$errors->has('email') || $errors->has('contact_number') || $errors->has('company_name') || $errors->has('message'))
     $('#getQuoteModal').modal('show');
     @endif
-  </script> -->
+  </script>
   <!-- Get in Touch Modal end -->
 </header>
 <div class="header_space"></div>

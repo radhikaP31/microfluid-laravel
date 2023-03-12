@@ -41,57 +41,57 @@
                             @csrf
                             <div class="row">
                                 <div class="col-md-6 form-group mb-3">
-                                    <input type="text" name="name" class="form-control" value="{{ old('name') }}" placeholder="Your Name*" />
-                                    @error('name')
-                                    <div class="text-red text-10 is-invalid">{{ $message }}</div>
+                                    <input type="text" name="contact[name]" class="form-control" value="{{ old('contact.name') }}" placeholder="Your Name*" />
+                                    @error('contact.name')
+                                    <div class="text-red text-10 is-invalid">{{ $errors->first('contact.name') }}</div>
                                     @enderror
                                 </div>
                                 <div class="col-md-6 form-group mb-3">
-                                    <input type="text" name="email" value="{{ old('email') }}" class="form-control" placeholder="Your Email*" />
-                                    @error('email')
-                                    <div class="text-red text-10 is-invalid">{{ $message }}</div>
+                                    <input type="text" name="contact[email]" value="{{ old('contact.email') }}" class="form-control" placeholder="Your Email*" />
+                                    @error('contact.email')
+                                    <div class="text-red text-10 is-invalid">{{ $errors->first('contact.email') }}</div>
                                     @enderror
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-2 form-group mb-3">
-                                    <select class="custom-select country_code" name="country_code">
+                                    <select class="custom-select country_code" name="contact[country_code]">
                                         <option value="">ISD Code</option>
                                         @foreach($country_code as $value)
-                                        <option value="{{ $value->isd_code }}" {{ (old("country_code") == $value->isd_code ? "selected":"") }}>{{ $value->isd_code }}</option>
+                                        <option value="{{ $value->isd_code }}" {{ (old("contact.country_code") == $value->isd_code ? "selected":"") }}>{{ $value->isd_code }}</option>
                                         @endforeach
                                     </select>
-                                    @error('country_code')
-                                    <div class="text-red text-10 is-invalid">{{ $message }}</div>
+                                    @error('contact.country_code')
+                                    <div class="text-red text-10 is-invalid">{{ $errors->first('contact.country_code') }}</div>
                                     @enderror
                                 </div>
                                 <div class="col-md-4 form-group mb-3">
-                                    <input type="text" name="contact_no" class="form-control" value="{{ old('contact_no') }}" placeholder="Your Contact Number*" />
-                                    @error('contact_no')
-                                    <div class="text-red text-10 is-invalid">{{ $message }}</div>
+                                    <input type="text" name="contact[contact_no]" class="form-control" value="{{ old('contact.contact_no') }}" placeholder="Your Contact Number*" />
+                                    @error('contact.contact_no')
+                                    <div class="text-red text-10 is-invalid">{{ $errors->first('contact.contact_no') }}</div>
                                     @enderror
                                 </div>
                                 <div class="col-md-6 form-group mb-3">
-                                    <input type="text" name="company_name" value="{{ old('company_name') }}" class="form-control" placeholder="Your Company Name*" />
-                                    @error('company_name')
-                                    <div class="text-red text-10 is-invalid">{{ $message }}</div>
+                                    <input type="text" name="contact[company_name]" value="{{ old('contact.company_name') }}" class="form-control" placeholder="Your Company Name*" />
+                                    @error('contact.company_name')
+                                    <div class="text-red text-10 is-invalid">{{ $errors->first('contact.company_name') }}</div>
                                     @enderror
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 form-group mb-3">
-                                    <input class="form-control" type="file" id="attachment" name="attachment">
-                                    @error('attachment')
-                                    <div class=" text-red text-10 is-invalid">{{ $message }}
+                                    <input class="form-control" type="file" id="attachment" name="contact[attachment]">
+                                    @error('contact.attachment')
+                                    <div class=" text-red text-10 is-invalid">{{ $errors->first('contact.attachment') }}
                                     </div>
                                     @enderror
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 form-group mb-3">
-                                    <textarea class="form-control" name="message" id="message" cols="30" rows="4" placeholder="Write your message">{{ old('message') }}</textarea>
-                                    @error('message')
-                                    <div class="text-red text-10 is-invalid">{{ $message }}</div>
+                                    <textarea class="form-control" name="contact[message]" id="message" cols="30" rows="4" placeholder="Write your Message Here*">{{ old('contact.message') }}</textarea>
+                                    @error('contact.message')
+                                    <div class="text-red text-10 is-invalid">{{ $errors->first('contact.message') }}</div>
                                     @enderror
                                 </div>
                             </div>

@@ -70,6 +70,7 @@ Route::controller(IndustriesController::class)->group(function ($slug = '') {
 Route::controller(ContactController::class)->group(function () {
     Route::get('/contact', 'index')->name('contact'); //Display contact page
     Route::post('/contact/add', 'create')->name('contact_add'); //Create contact
+    Route::post('/contact/quoteAdd', 'quoteAdd')->name('quote_add'); //Request quote
 });
 
 //Admin Routes start
