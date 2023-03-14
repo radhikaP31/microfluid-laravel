@@ -2258,7 +2258,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
     }
 
     if ($(window).scrollTop() + $(window).height() < $(document).height() - 100) {
-      $('.back-to-top').css('background-color', '#022060');
+      $('.back-to-top').css('background-color', '#023f88');
     }
   });
   $('.back-to-top').click(function () {

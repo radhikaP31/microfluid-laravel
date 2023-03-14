@@ -26,7 +26,7 @@ ex. mb-1, pb-1, mb-auto
 --------------------------------------------------------------*/
 
 :root {
-  --primary_color: #022060;
+  --primary_color: #023f88;
   --secondary_color: #FF4D00;
 }
 html {
@@ -232,11 +232,8 @@ p {
 .header .logo a {
   color: #111;
 }
-.header .logo a span {
-  color: #1bbd36;
-}
 .header .logo img {
-  max-height: 60px;
+  max-height: 70px;
   max-width: unset;
 }
 
@@ -794,8 +791,8 @@ button.list-group-item {
 }
 .product-chart-table .thead-light th {
   color: #ffffff;
-  background-color: #022060;
-  border-color: #022060;
+  background-color: var(--primary_color);
+  border-color: var(--primary_color);
 }
 .all-product-main, .contact-us-page {
   background: #f8f9fa;
@@ -1255,7 +1252,7 @@ li.nav-item {
   width: 100%;
   background: white !important;
   color: var(--primary_color);
-  height: 69px;
+  height: 77px;
   border-bottom: 1px solid var(--primary_color);
 }
 .sticky .nav-menu .drop-down ul {
@@ -1270,7 +1267,7 @@ li.nav-item {
 }
 .sticky>.nav-menu .active>a:after {
   background: none repeat scroll 0 0 transparent;
-  bottom: -13px;
+  bottom: -17px;
   content: "";
   display: block;
   height: 4px;

@@ -91,7 +91,7 @@ require('./bootstrap');
       $('.back-to-top').css('background-color','#ff4d00');
     }
     if($(window).scrollTop() + $(window).height() < $(document).height() - 100) {
-      $('.back-to-top').css('background-color','#022060');
+      $('.back-to-top').css('background-color','#023f88');
     }
   });
 
