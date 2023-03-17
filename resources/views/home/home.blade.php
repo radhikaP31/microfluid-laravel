@@ -89,7 +89,7 @@
 					<div class="col-lg-4 col-md-6 align-items-stretch mt-4">
 						<div class="field field-has-link field-has-icon field-has-content">
 							<div class="field-header">
-								<a target="_self" href="<?php echo config('app.base_url') . $field->mstr_link; ?>"><img alt="{{ $field->mstr_nm }}" src="{{ url($field->mstr_img) }}"></a>
+								<a target="_self" href="<?php echo config('app.base_url') . '/industry/' . $field->slug; ?>"><img alt="{{ $field->mstr_nm }}" src="{{ url($field->mstr_img) }}"></a>
 							</div>
 							<div class="field-content">
 								<h3 class="field-title font-size-20 font-family-sans-serif primary-text">
@@ -122,10 +122,6 @@
 						</p>
 					</div>
 					<div class="text-left" style="padding-left: 30px;padding-top: 16px;"><a href="<?php echo config('app.base_url') . '/about'; ?>" class="btn btn-primary font-16 primary-text about-read-more"><b>Read More</b></a></div>
-				</div>
-				<div class="col-md-5">
-					<iframe style="padding-top: 7%;height: 100%;width: 100%;" id="player" src="https://www.youtube.com/embed/r5MhAK8lAmU" allowfullscreen="true" scrolling="no" frameborder="0"></iframe>
-					<!-- <a target="_self" href="#"><img alt="Homogenizers" src="assets/img/application/homogenizers.jpeg" style="height: auto;width: 94%;padding-top: 33px;padding-left: 31%;"></a> -->
 				</div>
 			</div>
 		</section>

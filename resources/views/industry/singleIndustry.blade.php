@@ -11,27 +11,21 @@
   @endif
 
   {{ Breadcrumbs::render('industry') }}
-  <main id="main">
-    <!-- <hr style="margin: 2% 10%;background: #b5b5b5;" /> -->
+  <main id="main" class="industry-page">
     <!-- ======= Industry Section ======= -->
-    <section id="industry" class="industry">
-      <div class="container">
-        <div class="row">
-          <h2 class="primary-text header-font-size font-30 mb-3">{{ $fieldApplication->mstr_nm}}</h2>
+    <section id="industry" class="industry-section row white-bg">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="padding-bottom: 3%;">
+        <h2 class="primary-text header-font-size font-30" style="font-weight:bolder;">{{ $fieldApplication->mstr_nm}}</h2>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-md-7">
+          <p class="text-gray letter-spacing text-justify font-family-sans-serif">{{ $fieldApplication->mstr_desc }}</p>
+          @php echo $fieldApplication->section_desc @endphp
         </div>
-        <div class="col-md-12 row">
-          <div class="col-md-8">
-            <p class="text-gray letter-spacing text-justify font-family-sans-serif">{{ $fieldApplication->mstr_desc }}</p>
-              @php echo $fieldApplication->section_desc @endphp
-          </div>
-          <div class="col-md-4">
-            <img alt="{{ $fieldApplication->mstr_nm }}" src="{{ url($fieldApplication->mstr_img) }}" style="border-radius: 8px;" />
-          </div>
+        <div class="col-md-5">
+          <img alt="{{ $fieldApplication->mstr_nm }}" src="{{ url($fieldApplication->mstr_img) }}" class="field-image"/>
         </div>
       </div>
     </section><!-- End Industry Section -->
   </main><!-- End #main -->
 </x-app-layout>
-<style>
-
-</style>

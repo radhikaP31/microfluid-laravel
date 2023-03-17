@@ -784,7 +784,7 @@ button.list-group-item {
 /*--------------------------------------------------------------
 # Products page
 --------------------------------------------------------------*/
-.product, .contact {
+.product, .contact, .industry-section {
   padding: 10px 0;
   margin: 0px 5% 0px 5%;
   padding: 1% 2% 1% 2%;
@@ -794,7 +794,7 @@ button.list-group-item {
   background-color: var(--primary_color);
   border-color: var(--primary_color);
 }
-.all-product-main, .contact-us-page {
+.all-product-main, .contact-us-page, .industry-page {
   background: #f8f9fa;
 }
 .product-icon-box:hover {
@@ -957,7 +957,7 @@ li.nav-item {
 .footer .footer-top {
   padding: 2% 0 0 0;
   background: var(--primary_color);
-  border-bottom: 1px solid #ff4d00;
+  border-bottom: 2px solid #ff4d00;
 }
 .footer .footer-top h4 {
   color: white;
@@ -993,7 +993,7 @@ li.nav-item {
 }
 .footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: var(--secondary_color);
+  color: #fff;
   font-size: 18px;
   line-height: 1;
 }
@@ -1055,7 +1055,7 @@ li.nav-item {
   padding: 9px 14px;
   position: relative;
   margin-right: 6px;
-  font-size: 17px;
+  font-size: 20px;
 }
 .nav-menu>ul>li>a:after {
   background: none repeat scroll 0 0 transparent;
@@ -1097,7 +1097,7 @@ li.nav-item {
   padding: 70px 20px 20px 20px;
   transition: all ease-in-out 0.3s;
   background: #fff;
-  min-height: 250px;
+  min-height: 248px;
 }
 .field-appilication .icon-box h4 {
   margin: 15px 0 15px 0;
@@ -1130,8 +1130,45 @@ li.nav-item {
   background: #fff;
   overflow: hidden;
   position: relative;
-  height: 250px;
+  height: 248px;
   box-shadow: 3px 0 6px 0 rgb(0 0 0 / 100%);
+}
+.section-field {
+      background: #fff;
+        overflow: hidden;
+        position: relative;
+        height: 248px;
+}
+.section-background {
+  background-color: #00000087;
+  height: 248px;
+  opacity: 0;
+  position: absolute;
+  transition: all .2s ease;
+  width: 100%;
+}
+.section-text {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+.industry-title-text {
+  font-weight: 600;
+  position: relative;
+  text-align: center;
+  top: 120px;
+  transform: translateY(-50%);
+  margin-bottom: 1em;
+  width: 100%;
+}
+.section-field:hover .section-background,
+.section-field:hover .section-text {
+  opacity: 1;
 }
 @media (min-width: 768px) {
   .field:focus .field-content,
@@ -1267,7 +1304,7 @@ li.nav-item {
 }
 .sticky>.nav-menu .active>a:after {
   background: none repeat scroll 0 0 transparent;
-  bottom: -17px;
+  bottom: -15px;
   content: "";
   display: block;
   height: 4px;
@@ -1280,7 +1317,7 @@ li.nav-item {
 }
 .sticky>.nav-menu>ul>li>a:after {
   background: none repeat scroll 0 0 transparent;
-  bottom: -13px;
+  bottom: -15px;
   content: "";
   display: block;
   height: 4px;
@@ -1503,7 +1540,7 @@ li.nav-item {
 /*  industry page css start */
 .field-application-desc td {
   text-align: left;
-  width: 33%;
+  width: 50%;
   overflow: hidden;
   display: inline-block;
   white-space: nowrap;
@@ -1515,6 +1552,15 @@ li.nav-item {
   font-size: 30px;
   border-radius: 25px;
   color: var(--primary_color)
+}
+.field-image {
+  border-radius: 8px;
+  height: auto;
+  width: -webkit-fill-available;
+}
+.field-header img {
+  height: auto;
+  width: 100%;
 }
 /* inquiry page css start*/
 .inquiry_form {

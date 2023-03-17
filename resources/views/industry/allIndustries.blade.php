@@ -20,7 +20,7 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-4 col-md-6 align-items-stretch min-height310 mt-4">
-                <div class="icon-box field-find-more white-bg">
+                <div class="icon-box white-bg">
                   <h4 class="primary-text header-font-size" style="text-align: left;padding-left: 7px;">Field of <br>Application</h4>
                   <hr style="width: 47%;margin-left: 6px;border-width: 4px;border-top: solid var(--secondary_color);">
                   <h4 class="primary-text body-font-size" style="text-align: left;padding-left: 7px;">Find a right solutions for your industry!!</h4>
@@ -29,24 +29,23 @@
               @if ($fieldApplication->count() > 0)
               @foreach($fieldApplication as $key => $field)
               <div class="col-lg-4 col-md-6 align-items-stretch mt-4">
-                <div class="field field-has-link field-has-icon field-has-content">
+                <div class="section-field">
                   <div class="field-header">
-                    <a target="_self" href="<?php echo config('app.base_url') . $field->mstr_link; ?>"><img alt="{{ $field->mstr_nm }}" src="{{ url($field->mstr_img) }}"></a>
+                    <a target="_self" href="<?php echo config('app.base_url') . '/industry/' . $field->slug; ?>">
+                    <div class="section-background"></div>
+                      <img alt="{{ $field->mstr_nm }}" src="{{ url($field->mstr_img) }}">
+                      <div class="section-text">
+                        <h3 class="industry-title-text font-size-20 font-family-sans-serif text-white">{{ $field->mstr_nm }}</h3>
+                      </div>
+                    </a>
                   </div>
-                  <div class="field-content">
-                    <h3 class="field-title font-size-20 font-family-sans-serif primary-text">
-                      <span class="iconify field-icon" data-icon="{{ $field->mstr_icon }}"></span>{{ $field->mstr_nm }}
-                    </h3><!-- <br> -->
-                    <p class="field-desc font-family-sans-serif">{{ $field->mstr_desc }}</p>
-                    <a class="font-family-sans-serif" target="_self" href="<?php echo config('app.base_url') . '/industry/' . $field->slug; ?>">Read More</a>
                   </div>
                 </div>
+                @endforeach
+                @endif
               </div>
-              @endforeach
-              @endif
+              <br>
             </div>
-            <br>
-          </div>
         </section>
       </div>
     </section><!-- End Industries Section -->
