@@ -38,7 +38,7 @@
 
     <div class="header-social-links">
       <!-- <a href="#" class="twitter"><i class="icofont-twitter"></i></a> -->
-      <a href="https://api.whatsapp.com/send?phone=917016865019&amp;text=Hi, I want to business with you!!" target="_blank" class="whatsapp"><i class="bx bxl-whatsapp font-20"></i></a>
+      <a href="https://api.whatsapp.com/send?phone=917016865019&amp;text=Hi, I want to business with you!!" target="_blank" class="whatsapp font-17"><i class="bx bxl-whatsapp"></i></a>
       <a href="#" class="facebook font-17"><i class="icofont-facebook"></i></a>
       <a href="#" class="linkedin font-17"><i class="icofont-linkedin"></i></i></a>
       <a href="#" class="instagram font-17"><i class="icofont-instagram"></i></a>
@@ -101,7 +101,7 @@
     </div>
   </div>
   <script>
-    @if($errors->has('name') ||$errors->has('email') || $errors->has('contact_number') || $errors->has('company_name') || $errors->has('message'))
+    @if($errors -> has('name') || $errors -> has('email') || $errors -> has('contact_number') || $errors -> has('company_name') || $errors -> has('message'))
     $('#getQuoteModal').modal('show');
     @endif
   </script>

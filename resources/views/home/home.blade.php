@@ -67,7 +67,7 @@
 				</div>
 			</div>
 			<div class="text-center">
-				<a href="<?php echo config('app.base_url') . '/products/1/1'; ?>" class="btn btn-primary font-16 primary-text" style="border-radius: 30px;padding: 7px 20px 7px 20px;"><b>Read More</b></a>
+				<a href="<?php echo config('app.base_url') . '/product/1/1'; ?>" class="btn btn-primary font-16 primary-text" style="border-radius: 30px;padding: 7px 20px 7px 20px;"><b>Read More</b></a>
 			</div>
 		</section><!-- End What we offer/services Section -->
 

@@ -7,7 +7,7 @@
           <ul>
             <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url'); ?>">Home</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/about'; ?>">About Us</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/products/1'; ?>">Products</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/product/1'; ?>">Products</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/industries'; ?>">Industries</a></li>
             <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Service</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Clients</a></li>
@@ -20,12 +20,12 @@
         <div class="col-lg-4 col-md-6 footer-links">
           <h4 class="products header-font-size">Products</h4>
           <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/products/1'; ?>">High Pressure Homogenizers</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/products/2'; ?>">Hygenic Pumps</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/products/1/8'; ?>">Homogenizer Spare Parts</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/products/6'; ?>">Sanitary Filters & Strainers</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/products/8'; ?>">Hygenic Fittings</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/products/1'; ?>">Read More...</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/product/1'; ?>">High Pressure Homogenizers</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/product/2'; ?>">Hygenic Pumps</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/product/1/8'; ?>">Homogenizer Spare Parts</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/product/6'; ?>">Sanitary Filters & Strainers</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/product/8'; ?>">Hygenic Fittings</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/product/1'; ?>">Read More...</a></li>
           </ul>
         </div>
 
@@ -53,9 +53,16 @@
   <div class="d-md-flex primary-bg" style="padding: 10px 35px 0px 35px;">
 
     <div class="mr-md-auto text-center text-md-left container">
-      <p class="text-white" style="letter-spacing: 1.2px;">Download | Career <!-- | HR Policy | Terms & Conditions --> | Contact Us | Microfluid</p>
+      <p class="text-white" style="letter-spacing: 1.2px;">
+        <a class="text-white">Download</a> |
+        <a class="text-white">Career</a> |
+        <!-- <a class="text-white">HR Policy</a> |
+        <a class="text-white">Terms & Conditions</a> | -->
+        <a href="{{route('contact')}}" class="text-white">Contact Us</a> |
+        <a href="{{route('home')}}" class="text-white">Microfluid</a>
+      </p>
       <div class="copyright text-white">
-        <p style="letter-spacing: 0.9px;">&copy; Copyright 2022 - All rights reserved by <strong><span>Microfluid Process Equipment</span></strong></p>
+        <p style="letter-spacing: 0.9px;">&copy; Copyright <?php echo date('Y') ?> - All rights reserved by <strong><span>Microfluid Process Equipment</span></strong></p>
       </div>
     </div>
   </div>
