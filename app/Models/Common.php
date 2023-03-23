@@ -89,6 +89,18 @@ class Common extends Model
         return $result;
     }
 
+    /**Function to get country code from web_country table
+     * 
+     * @param $tableName string
+     * @return array
+     **/
+    function getAllDataWithDeleted($tableName = 'web_country',$orderBy = 'id',$order = 'asc')
+    {
+        $result = DB::table($tableName)->select('*')->orderBy($orderBy, $order)->get();
+
+        return $result;
+    }
+
     /**Function to get states from web_state table
      * @params $product_id type integer
      * @return array

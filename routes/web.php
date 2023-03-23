@@ -11,6 +11,8 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\IndustriesController;
 use App\Http\Controllers\InquiryController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\MasterController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -80,4 +82,11 @@ Route::post('custom-login', [LoginController::class, 'customLogin'])->name('logi
 Route::get('registration', [LoginController::class, 'registration'])->name('register-user');
 Route::post('custom-registration', [LoginController::class, 'customRegistration'])->name('register.custom'); 
 Route::get('signout', [LoginController::class, 'signOut'])->name('signout');
+
+Route::controller(MasterController::class)->group(function () {
+    Route::get('/common-type', 'index')->name('common_type_list'); //Display contact page
+    Route::post('/common-type/add', 'create')->name('common_type_add'); //Create common-type
+    Route::post('/common-type/edit/{id}', 'create')->name('common_type_edit'); //Edit common-type
+    Route::post('/common-type/delete/{id}', 'delete')->name('common_type_delete'); //Delete common-type
+});
 //Admin Routes end
