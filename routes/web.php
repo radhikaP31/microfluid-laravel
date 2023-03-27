@@ -33,7 +33,7 @@ Route::controller(AboutController::class)->group(function () {
 });
 
 Route::controller(ProductController::class)->group(function () {
-    Route::get('/product/{id?}/{sub_cat_id?}', 'allProduct')->name('products'); //Display product data
+    Route::get('/product/{id?}/{sub_cat_id?}', 'allProduct')->name('product'); //Display product data
 });
 
 /* Route::controller(ProductController::class)->group(function ($id = 1) {
@@ -43,8 +43,8 @@ Route::controller(ProductController::class)->group(function () {
 Route::get('/product/{product:slug?}', [ProductController::class, 'singleProduct'])
         ->name('product'); */
 
-Route::controller(ProductControlbler::class)->group(function ($slug = null) {
-    Route::get('/products/{slug?}', 'singleProduct')->name('product'); //Display single product data
+Route::controller(ProductController::class)->group(function ($slug = null) {
+    Route::get('/products/{slug?}', 'singleProduct')->name('products'); //Display single product data
 });
 
 /* Route::controller(BlogsController::class)->group(function () {

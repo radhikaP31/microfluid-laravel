@@ -9,8 +9,6 @@ use App\Models\ProductCategory;
 use App\Models\ProductDownload;
 use App\Models\ProductSubCategory;
 
-use function Psy\debug;
-
 class ProductController extends Controller
 {
     /**

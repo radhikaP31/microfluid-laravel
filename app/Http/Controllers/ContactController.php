@@ -10,9 +10,6 @@ use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Request as HttpRequest;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator as FacadesValidator;
-
-use function Psy\debug;
-
 class ContactController extends Controller
 {
     /**
