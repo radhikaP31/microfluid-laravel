@@ -13,7 +13,7 @@
   {{ Breadcrumbs::render('industry') }}
   <main id="main" class="industry-page">
     <!-- ======= Industry Section ======= -->
-    <section id="industry" class="industry-section row white-bg">
+    <section id="industry" class="industry-section row">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="padding-bottom: 3%;">
         <h2 class="primary-text header-font-size font-30" style="font-weight:bolder;">{{ $fieldApplication->mstr_nm}}</h2>
       </div>
@@ -23,7 +23,7 @@
           @php echo $fieldApplication->section_desc @endphp
         </div>
         <div class="col-md-5">
-          <img alt="{{ $fieldApplication->mstr_nm }}" src="{{ url($fieldApplication->mstr_img) }}" class="field-image"/>
+          <img alt="{{ $fieldApplication->mstr_nm }}" src="{{ url($fieldApplication->mstr_img) }}" class="field-image" />
         </div>
       </div>
     </section><!-- End Industry Section -->
