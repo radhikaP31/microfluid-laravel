@@ -26,7 +26,7 @@ class ContactController extends Controller
 
     /**
      * create Inquiry
-     * @param Array $request
+     * @param object $request
      *
      * @return \Illuminate\View\View
      */
@@ -77,7 +77,7 @@ class ContactController extends Controller
 
     /**
      * create Quote Inquiry
-     * @param Array $request
+     * @param object $request
      *
      * @return \Illuminate\View\View
      */

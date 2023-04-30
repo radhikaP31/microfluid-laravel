@@ -113,4 +113,16 @@ class Common extends Model
             return DB::table('web_states')->where('is_deleted', 0)->orderBy('name')->get();
         }
     }
+
+    /** get table data
+     * 
+     * @param int $id
+     */
+    public function getDataOfId($tableName = '', $id = 0) {
+        if (empty($id) || $id == '' || $id == 0) {
+            return;
+        }
+
+        return DB::table($tableName)->where('id', $id)->get();
+    }
 }
