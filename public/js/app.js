@@ -2332,21 +2332,14 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
   // });
   //tab is selected and redirect to the category
 
-  $('.product-list-group-item').on('click', function (e) {
+  $('.product-list-group-item , .product-item').on('click', function (e) {
     // Save value in localstorage
     localStorage.setItem("activeTab", $(e.target).attr('href'));
     localStorage.setItem('productCatCD', $(e.target).attr('data-sc_cat'));
   }); // get value of localstorage
 
   var activeTab = localStorage.getItem('activeTab');
-  var productCatCD = localStorage.getItem('productCatCD');
-
-  if (activeTab) {
-    //if value is store in local storage then active tab and show product tab
-    $('.product-list-group a[href="' + activeTab + '"]').tab('show');
-    $(".product-cat-filter-" + productCatCD).css("display", "block");
-  } //products page js end
-
+  var productCatCD = localStorage.getItem('productCatCD'); //products page js end
 
   window.onscroll = function () {
     myFunction();

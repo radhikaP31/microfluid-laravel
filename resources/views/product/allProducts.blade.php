@@ -22,11 +22,11 @@
             @foreach($allCategory as $key => $category)
             <a href="<?php echo config('app.base_url') . '/product/' . $category->id; ?>" class="product-list-group-item list-group-item font-20 product-cat letter-spacing <?php if (request()->id == $category->id) {echo "active";} ?>" data-sc_cat="{{$category->c_code}}">{{$category->c_name}}</a>
             <!-- Product sub category sidebar section start-->
-            <div class="list-group product-cat-filter product-cat-filter-{{$category->c_code}}" data-sc_cat="{{$category->c_code;}} {{request()->id}}" style="<?php if (request()->id != $category->id) {"display: none;";} ?>">
+            <div class="list-group product-cat-filter product-cat-filter-{{$category->c_code}}" data-sc_cat="{{$category->c_code;}}" style="<?php if (request()->id != $category->id) {"display: none;";} ?>">
               @if($category->subCategory->count() > 0)
               @foreach($category->subCategory as $key => $subcategory)
               @if($subcategory->is_deleted == 0)
-              <a href="<?php echo config('app.base_url') . '/product/' . $category->id . '/' . $subcategory->id; ?>" class="product-item list-group-item body-font-size">{{$subcategory->sc_name}}</a>
+              <a href="<?php echo config('app.base_url') . '/product/' . $category->id . '/' . $subcategory->id; ?>" class="product-item list-group-item body-font-size" data-sc_cat="{{$category->c_code;}}" >{{$subcategory->sc_name}}</a>
               @endif
               @endforeach
               @endif

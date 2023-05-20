@@ -811,14 +811,15 @@ button.list-group-item {
 .product-list-group-item.active:focus,
 .product-list-group-item.active:hover {
   z-index: 1;
-  background-color: #fff !important;
+  background-color: #ffffff !important;
   color: var(--primary_color) !important;
   border-color: var(--secondary_color) !important;
+  margin: 1px;
 }
 .product-item {
   border: unset;
 }
-.product-list-group-item.active:after {
+/* .product-list-group-item.active:after {
   transform: rotate(90deg);
   color: #ff4d00;
 }
@@ -833,7 +834,7 @@ button.list-group-item {
   right: 0;
   top: 0;
   font-family: 'Conv_SourceSansPro-Light';
-}
+} */
 .product-cat-filter {
   transition: 0.5s ease all;
 }

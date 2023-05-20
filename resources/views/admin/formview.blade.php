@@ -14,10 +14,11 @@
             <div class="row align-items-stretch contact-wrap">
                 <div class="col-md-12">
                     <div class="form h-100">
+                        {{ $formAction = 'add'; }}
                         @if(array_key_exists('edit',$action))
-                        $action = $action['add'];
+                        {{ $formAction = $action['add']; }}
                         @endif
-                        <form method="post" action="{{ route($action) }}" enctype="multipart/form-data" id="contactForm" class="contactForm mb-5">
+                        <form method="post" action="{{ route($formAction) }}" enctype="multipart/form-data" id="contactForm" class="contactForm mb-5">
                             @csrf
                             <div class="row">
                                 <div class="col-md-6 form-group mb-3">
@@ -136,7 +137,6 @@
                     </div>
                 </div>
             </div>
-        </section><!-- End Inquiry Section -->
+        </section><!-- End form Section -->
     </main><!-- End #main -->
-</x-app-layout>
 </x-app-layout>
