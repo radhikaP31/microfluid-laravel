@@ -42,6 +42,7 @@ class InquiryController extends Controller
     }
     /**
      * create Inquiry.
+     * @param object $request
      *
      * @return \Illuminate\View\View
      */

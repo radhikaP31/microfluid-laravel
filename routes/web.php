@@ -85,8 +85,8 @@ Route::get('signout', [LoginController::class, 'signOut'])->name('signout');
 
 Route::controller(MasterController::class)->group(function () {
     Route::get('/common-type', 'index')->name('common_type_list'); //Display contact page
-    Route::post('/common-type/add', 'create')->name('common_type_add'); //Create common-type
-    Route::post('/common-type/edit/{id}', 'create')->name('common_type_edit'); //Edit common-type
-    Route::post('/common-type/delete/{id}', 'delete')->name('common_type_delete'); //Delete common-type
+    Route::any('/common-type/add', 'create')->name('common_type_add'); //Create common-type
+    Route::any('/common-type/edit/{id}', 'create')->name('common_type_edit'); //Edit common-type
+    Route::get('/common-type/delete/{id}', 'delete')->name('common_type_delete'); //Delete common-type
 });
 //Admin Routes end
