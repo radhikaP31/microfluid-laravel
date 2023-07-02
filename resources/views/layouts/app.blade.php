@@ -1,6 +1,6 @@
 @props([
-    'metaname' => 'Microfluid',
-    'meta-content' => 'Microfluid Process Equipment',
+'metaname' => 'Microfluid',
+'meta-content' => 'Microfluid Process Equipment',
 ])
 
 <!DOCTYPE html>
@@ -8,6 +8,8 @@
 
 <head>
     <meta charset="utf-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="{{$metaname}}" name="description">
     <meta content="homogenizer, high pressure homogenizer,milk homogenizer,icecream homogenizer,pressure homogenizer,microfluid,dairy,process,icecream process,equipment" name="keywords">
@@ -24,8 +26,9 @@
     <div class="min-h-screen bg-gray-100">
         @include('layouts.headerscroll')
         <!-- Page Content -->
-            {{ $slot }}
+        {{ $slot }}
     </div>
     @include('layouts.footer')
 </body>
+
 </html>
