@@ -1,6 +1,12 @@
 <x-app-layout>
-  <x-slot name="title" metaname="{{ __('tagstitle') }}" meta-content="{{ __('content') }}">
-    {{ __('Home | Microfluid Process Equipment') }}
+  <x-slot name="title">
+    {{ __('Products | Microfluid Process Equipment') }}
+  </x-slot>
+  <x-slot name="metaname">
+    {{ __('Products') }}
+  </x-slot>
+  <x-slot name="metadesc">
+    {{ __('Microfluid process equipment was founded in 2019 by highly qualified engineers, who have more than 25 years experience in manufacturing and process industries and high pressure reciprocating pumps.') }}
   </x-slot>
 
   @if ($message = Session::get('success'))
@@ -10,7 +16,7 @@
   </div>
   @endif
 
-  {{ Breadcrumbs::render('product') }}
+  {{ Breadcrumbs::render('product',$productData->p_name) }}
   <main id="main" class="all-product-main">
     <!-- ======= Product Section ======= -->
     <section class="product row white-bg" id="product">
@@ -76,7 +82,6 @@
           <ul class="navbar-nav">
             @if ($productData->key->count() > 0)
             <!-- product key start 1 -->
-            @php $count = 1; @endphp
             @foreach($productData->key as $key => $product_key)
             <!-- product key start 2 -->
             @foreach($navDetails[$product_key->tab_name] as $navKey => $navValue)
@@ -84,7 +89,6 @@
               <a class="nav-link font-17" href="#{{ $navValue->key_name }}"><?= $navValue->name; ?></a>
             </li>
             @endforeach
-            @php $count++; @endphp
             @endforeach
             <!-- product key end 2 -->
             @endif
@@ -103,7 +107,7 @@
           <h4 class="primary-text product-header-font-size text-left mb-3">{{ $navValue->name }}</h4>
           @php echo $navValue->description @endphp
         </div>
-          @endforeach
+        @endforeach
         @endforeach
         <!-- product key end 1 -->
         @endif

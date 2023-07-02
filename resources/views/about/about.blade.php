@@ -1,7 +1,13 @@
 <x-app-layout>
-  <x-slot name="title" metaname="{{ __('tagstitle') }}" meta-content="{{ __('content') }}">
-    {{ __('Home | Microfluid Process Equipment') }}
-  </x-slot>
+	<x-slot name="title">
+		{{ __('About Us | Microfluid Process Equipment') }}
+	</x-slot>
+	<x-slot name="metaname">
+		{{ __('About Us') }}
+	</x-slot>
+	<x-slot name="metadesc">
+		{{ __('Microfluid process equipment was founded in 2019 by highly qualified engineers, who have more than 25 years experience in manufacturing and process industries and high pressure reciprocating pumps.') }}
+	</x-slot>
 
   @if ($message = Session::get('success'))
   <div class="alert alert-success alert-block container mb-3">

@@ -1,6 +1,12 @@
 <x-app-layout>
-  <x-slot name="title" metaname="{{ __('tagstitle') }}" meta-content="{{ __('content') }}">
+  <x-slot name="title">
     {{ __('Industries | Microfluid Process Equipment') }}
+  </x-slot>
+  <x-slot name="metaname">
+    {{ __('Industries') }}
+  </x-slot>
+  <x-slot name="metadesc">
+    {{ __('Microfluid process equipment was founded in 2019 by highly qualified engineers, who have more than 25 years experience in manufacturing and process industries and high pressure reciprocating pumps.') }}
   </x-slot>
 
   @if ($message = Session::get('success'))
@@ -32,20 +38,20 @@
                 <div class="section-field">
                   <div class="field-header">
                     <a target="_self" href="<?php echo config('app.base_url') . '/industry/' . $field->slug; ?>">
-                    <div class="section-background"></div>
+                      <div class="section-background"></div>
                       <img alt="{{ $field->mstr_nm }}" src="{{ url($field->mstr_img) }}">
                       <div class="section-text">
                         <h3 class="industry-title-text font-size-20 font-family-sans-serif text-white">{{ $field->mstr_nm }}</h3>
                       </div>
                     </a>
                   </div>
-                  </div>
                 </div>
-                @endforeach
-                @endif
               </div>
-              <br>
+              @endforeach
+              @endif
             </div>
+            <br>
+          </div>
         </section>
       </div>
     </section><!-- End Industries Section -->

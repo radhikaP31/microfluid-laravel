@@ -1,6 +1,12 @@
 <x-app-layout>
-    <x-slot name="title" metaname="{{ __('tagstitle') }}" meta-content="{{ __('content') }}">
+    <x-slot name="title">
         {{ __('Contact | Microfluid Process Equipment') }}
+    </x-slot>
+    <x-slot name="metaname">
+        {{ __('Contact') }}
+    </x-slot>
+    <x-slot name="metadesc">
+        {{ __('Microfluid process equipment was founded in 2019 by highly qualified engineers, who have more than 25 years experience in manufacturing and process industries and high pressure reciprocating pumps.') }}
     </x-slot>
 
     {{ Breadcrumbs::render('contact') }}
@@ -103,7 +109,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="text-center mt-4"><button type="submit" class="btn btn-primary primary-text rounded-0 py-2 px-4 submit_inquiry">Send Message</button></div>
+                            <div class="text-center mt-4"><button type="submit" class="btn btn-primary primary-text rounded-0 py-2 px-4 submit_inquiry font-16"><b>Send Message</b></button></div>
                         </form>
                     </div>
                 </div>

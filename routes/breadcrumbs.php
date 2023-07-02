@@ -31,12 +31,12 @@ Breadcrumbs::for('about', function (BreadcrumbTrail $trail): void {
 
 Breadcrumbs::for('products', function (BreadcrumbTrail $trail): void {
     $trail->parent('home');
-    $trail->push('Products', route('products'));
+    $trail->push('Products', route('product', 1));
 });
 
-Breadcrumbs::for('product', function (BreadcrumbTrail $trail): void {
+Breadcrumbs::for('product', function (BreadcrumbTrail $trail, $name): void {
     $trail->parent('products');
-    $trail->push('product', route('product'));
+    $trail->push($name, route('products', 'mf320-homogenizer'));
 });
 
 Breadcrumbs::for('blogs', function (BreadcrumbTrail $trail): void {
