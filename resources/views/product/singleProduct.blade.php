@@ -45,13 +45,13 @@
           <span class="iconify secondary-text" data-icon="ic:round-keyboard-double-arrow-right" data-width="32" data-height="32"></span>
         </a>
 
-        <div class="col-md-12">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           @if ($productData->image->count() > 0)
           <!-- product image start 1 -->
           @php $count = 1; @endphp
           @foreach($productData->image as $key => $image)
           <!-- product image start 2 -->
-          <div class="col-md-3" style="width:auto;">
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="width:auto;">
             <img class="product-image product-cursor " src="{{ url($image['img_path']) }}" style="width: auto; height: 70px;
     padding-bottom: 6px" data-slide="<?= $count; ?>">
           </div>
@@ -63,7 +63,7 @@
         </div>
       </div>
 
-      <div class="col-md-7">
+      <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="padding-bottom: 2%;">
           <p class="letter-spacing text-justify font-family-sans-serif font-16 text-gray">@php echo $productData->p_description @endphp</p>
         </div>
@@ -78,23 +78,21 @@
       <!-- product keys nav section start -->
       <!-- <hr style="width: 100%;border-top: 1px solid var(--secondary_color);margin-bottom: 0px;"> -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light secondary-page-menu col-md-12">
-        <div class="" id="navbarNav">
-          <ul class="navbar-nav">
-            @if ($productData->key->count() > 0)
-            <!-- product key start 1 -->
-            @foreach($productData->key as $key => $product_key)
-            <!-- product key start 2 -->
-            @foreach($navDetails[$product_key->tab_name] as $navKey => $navValue)
-            <li class="nav-item active">
-              <a class="nav-link font-17" href="#{{ $navValue->key_name }}"><?= $navValue->name; ?></a>
-            </li>
-            @endforeach
-            @endforeach
-            <!-- product key end 2 -->
-            @endif
-            <!-- product key end 1 -->
-          </ul>
-        </div>
+        <ul class="navbar-nav">
+          @if ($productData->key->count() > 0)
+          <!-- product key start 1 -->
+          @foreach($productData->key as $key => $product_key)
+          <!-- product key start 2 -->
+          @foreach($navDetails[$product_key->tab_name] as $navKey => $navValue)
+          <li class="nav-item active">
+            <a class="nav-link font-17" href="#{{ $navValue->key_name }}"><?= $navValue->name; ?></a>
+          </li>
+          @endforeach
+          @endforeach
+          <!-- product key end 2 -->
+          @endif
+          <!-- product key end 1 -->
+        </ul>
       </nav>
 
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container" style="padding-bottom: 2%;">
@@ -103,7 +101,7 @@
         @foreach($productData->key as $key => $product_key)
         <!-- product feature start 2 -->
         @foreach($navDetails[$product_key->tab_name] as $navKey => $navValue)
-        <div class="col-md-12" id="{{ $navValue->key_name }}" style="padding-top: 4%;">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="{{ $navValue->key_name }}" style="padding-top: 4%;">
           <h4 class="primary-text product-header-font-size text-left mb-3">{{ $navValue->name }}</h4>
           @php echo $navValue->description @endphp
         </div>
