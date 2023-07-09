@@ -11,9 +11,10 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>{{$title}}</title>
-    <meta content="{{$metaname}}" name="description">
-    <meta content="homogenizer, high pressure homogenizer,milk homogenizer,icecream homogenizer,pressure homogenizer,microfluid,dairy,process,icecream process,equipment" name="keywords">
+    <title>@yield('title')</title>
+    <meta content="@yield('metadesc')" name="description">
+    <meta content="@yield('metakeyword')" name="keywords">
+    <meta content="Microfluid Process Equipment" name="author">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="canonical" href="https://microfluidprocess.com/">

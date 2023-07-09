@@ -29,7 +29,7 @@ Route::controller(HomeController::class)->group(function () {
 });
 
 Route::controller(AboutController::class)->group(function () {
-    Route::get('/about', 'index')->name('about'); //Display About Page
+    Route::get('/about-us', 'index')->name('about'); //Display About Page
 });
 
 Route::controller(ProductController::class)->group(function () {
@@ -57,10 +57,11 @@ Route::controller(BlogsController::class)->group(function ($id = null) {
 
 Route::controller(IndustriesController::class)->group(function () {
     Route::get('/industries', 'getIndustry')->name('industries'); //Display all industry data
+    Route::get('/download', 'getDownload')->name('download'); //Display download data
 });
 
 Route::controller(IndustriesController::class)->group(function ($slug = '') {
-    Route::get('/industry/{slug?}', 'getIndustry')->name('industry'); //Display display single industry data
+    Route::get('/industry/{slug?}', 'getIndustry')->name('industry'); //Display single industry data
 });
 
 /* Route::controller(InquiryController::class)->group(function () {
@@ -70,7 +71,7 @@ Route::controller(IndustriesController::class)->group(function ($slug = '') {
 }); */
 
 Route::controller(ContactController::class)->group(function () {
-    Route::get('/contact', 'index')->name('contact'); //Display contact page
+    Route::get('/contact-us', 'index')->name('contact'); //Display contact page
     Route::post('/contact/add', 'create')->name('contact_add'); //Create contact
     Route::post('/contact/quoteAdd', 'quoteAdd')->name('quote_add'); //Request quote
 });

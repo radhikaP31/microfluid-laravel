@@ -7,7 +7,7 @@ use App\Models\Common;
 class IndustriesController extends Controller
 {
   /**
-   * get all blog data
+   * get all industry data
    * @param string $slug
    *
    * @return \Illuminate\View\View
@@ -25,6 +25,22 @@ class IndustriesController extends Controller
 
     return view($viewName, [
       'fieldApplication' => $fieldApplication,
+      'metaDetails' => $common->getMetaDataOfPage('industry'),
+    ]);
+  }
+
+  /**
+   * get all download data
+   *
+   * @return \Illuminate\View\View
+   */
+  public function getDownload()
+  {
+    $common = new Common;
+
+    return view('download.download', [
+      'downloadData' => $common->getDownloadData(),
+      'metaDetails' => $common->getMetaDataOfPage('contact_us'),
     ]);
   }
 }

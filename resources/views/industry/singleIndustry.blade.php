@@ -1,13 +1,7 @@
 <x-app-layout>
-  <x-slot name="title">
-    {{ __('Industry | Microfluid Process Equipment') }}
-  </x-slot>
-  <x-slot name="metaname">
-    {{ __('Industry') }}
-  </x-slot>
-  <x-slot name="metadesc">
-    {{ __('Microfluid process equipment was founded in 2019 by highly qualified engineers, who have more than 25 years experience in manufacturing and process industries and high pressure reciprocating pumps.') }}
-  </x-slot>
+  @section('title',"$metaDetails->meta_title")
+  @section('metadesc',"$metaDetails->meta_description")
+  @section('metakeyword',"$metaDetails->meta_keywords")
 
   @if ($message = Session::get('success'))
   <div class="alert alert-success alert-block container mb-3">

@@ -1731,7 +1731,7 @@ li.nav-item {
 .carousel .slick-next:before,
 .carousel .slick-prev:before {
 content: "";
-/* background-image: url(../images/next-arrow.svg); */
+background-image: url("/images/slide/next-arrow.svg");
 position: absolute;
 width: 28px;
 height: 26px;

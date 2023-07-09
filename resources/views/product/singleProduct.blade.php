@@ -1,13 +1,7 @@
 <x-app-layout>
-  <x-slot name="title">
-    {{ __('Products | Microfluid Process Equipment') }}
-  </x-slot>
-  <x-slot name="metaname">
-    {{ __('Products') }}
-  </x-slot>
-  <x-slot name="metadesc">
-    {{ __('Microfluid process equipment was founded in 2019 by highly qualified engineers, who have more than 25 years experience in manufacturing and process industries and high pressure reciprocating pumps.') }}
-  </x-slot>
+  @section('title',"$productData->meta_title")
+  @section('metadesc',"$productData->meta_description")
+  @section('metakeyword',"$productData->meta_keywords")
 
   @if ($message = Session::get('success'))
   <div class="alert alert-success alert-block container mb-3">
@@ -45,7 +39,7 @@
           <span class="iconify secondary-text" data-icon="ic:round-keyboard-double-arrow-right" data-width="32" data-height="32"></span>
         </a>
 
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top:10px;">
           @if ($productData->image->count() > 0)
           <!-- product image start 1 -->
           @php $count = 1; @endphp

@@ -27,6 +27,7 @@ class ProductController extends Controller
           $product_tab = ProductCategory::where('is_deleted',0)->where('id',$id)->orderBy('sequence')->get(); //get category wise products product
           $product_data = Product::where('is_deleted',0)->where('category_id',$id)->orderBy('sequence')->get();
         }
+        $common = new Common;
 
         return view('product.allProducts', [
             'category_id' => $id,
@@ -34,6 +35,7 @@ class ProductController extends Controller
             'allCategory' => ProductCategory::with('subCategory')->where(['is_deleted'=>0])->orderBy('sequence')->get(),
             'productData' => $product_tab,
             'product_data' => $product_data,
+            'metaDetails' => $common->getMetaDataOfPage('products'),
         ]);
     }
 

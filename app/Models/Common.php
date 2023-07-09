@@ -115,7 +115,7 @@ class Common extends Model
     }
 
     /** get table data
-     * 
+     *
      * @param int $id
      */
     public function getDataOfId($tableName = '', $id = 0) {
@@ -124,5 +124,24 @@ class Common extends Model
         }
 
         return DB::table($tableName)->where('id', $id)->get();
+    }
+
+    /** get meta details
+     *
+     * @param varchar page key
+     * @return array
+     */
+    public function getMetaDataOfPage($pageKey='')
+    {
+        return DB::table('meta_info')->where('page_key', $pageKey)->first();
+    }
+
+    /** get download data
+     *
+     * @return array
+     */
+    public function getDownloadData()
+    {
+        return DB::table('web_product_download')->select('*')->where('is_unique' , 1)->where('is_deleted' , 0)->get();
     }
 }

@@ -21,6 +21,7 @@ class ContactController extends Controller
         $common = new Common();
         return view('contact.contact', [
             'country_code' => $common->getAllCountryCode(),
+            'metaDetails' => $common->getMetaDataOfPage('contact_us'),
         ]);
     }
 

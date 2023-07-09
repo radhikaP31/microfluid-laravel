@@ -6,14 +6,14 @@
           <h4 class="usefull-links header-font-size">Microfluid</h4>
           <ul>
             <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url'); ?>">Home</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/about'; ?>">About Us</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/about-us'; ?>">About Us</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/product/1'; ?>">Products</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/industries'; ?>">Industries</a></li>
             <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Service</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Clients</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Blogs</a></li> -->
             <!-- <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/inquiry'; ?>">Inquiry</a></li> -->
-            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/contact'; ?>">Contact</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo config('app.base_url') . '/contact-us'; ?>">Contact</a></li>
           </ul>
         </div>
 
@@ -37,10 +37,10 @@
           </ul>
           <div class="pt-3 social-links" style="line-height: 53px;">
             <a href="https://api.whatsapp.com/send?phone=917016865019&amp;text=Hi, I want to business with you!!" target="_blank" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
-            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-            <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
-            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="https://www.facebook.com/Microfluid" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <!-- <a href="#" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a> -->
+            <a href="https://www.linkedin.com/company/microfluid/?viewAsMember=true" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+            <!-- <a href="#" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a> -->
             <!-- <a href="#" class="pinterest"><i class="bx bxl-pinterest"></i></a>
             <a href="#" class="youtube"><i class="bx bxl-youtube"></i></a> -->
             <!-- <a href="#" class="skype"><i class="bx bxl-skype"></i></a> -->
@@ -54,7 +54,7 @@
 
     <div class="mr-md-auto text-center text-md-left container">
       <p class="text-white" style="letter-spacing: 1.2px;">
-        <a class="text-white">Download</a> |
+        <a href="{{route('download')}}" class="text-white">Download</a> |
         <a class="text-white">Career</a> |
         <!-- <a class="text-white">HR Policy</a> |
         <a class="text-white">Terms & Conditions</a> | -->

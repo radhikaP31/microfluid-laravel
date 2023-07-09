@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Common;
 
+use function Psy\debug;
+
 class HomeController extends Controller
 {
     /**
@@ -14,9 +16,11 @@ class HomeController extends Controller
     public function home()
     {
         $common = new Common;
+
         return view('home.home', [
             'whatWeOfferData' => $common->getIndependentDataByTypeCode('WTOFR'),
-            'fieldApplication' => $common->getIndependentDataByTypeCode('FOA')
+            'fieldApplication' => $common->getIndependentDataByTypeCode('FOA'),
+            'metaDetails' => $common->getMetaDataOfPage('home'),
         ]);
     }
 }

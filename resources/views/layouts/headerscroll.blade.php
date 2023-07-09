@@ -8,7 +8,7 @@
   </div>
 
   <div class="container-fluid d-flex align-items-center padding0 primary-bg header" id="myHeader">
-    <div class="list-logo" style="margin-left:5%;top: 4px;"><a href="http://127.0.0.1:8000" class="logo mr-auto"><img src="http://127.0.0.1:8000/images/Logo.png" alt="" class="img-fluid"></a>
+    <div class="list-logo" style="margin-left:5%;top: 4px;"><a href="<?php echo config('app.base_url'); ?>" class="logo mr-auto"><img src="{{ asset('images/Logo.png') }}" alt="" class="img-fluid"></a>
     </div>
     <nav class="nav-menu d-none d-lg-block">
       <div class="list-logo" style="margin-left:5%;top: 4px;"><a href="<?php echo config('app.base_url'); ?>" class="logo mr-auto"><img src="{{ asset('images/Logo.png') }}" alt="" class="img-fluid"></a>
@@ -35,15 +35,18 @@
         <x-nav-link :active="request()->routeIs('contact')">
           <a href="{{route('contact')}}">{{ __('Contact') }}</a>
         </x-nav-link>
+        <x-nav-link :active="request()->routeIs('download')">
+          <a href="{{route('download')}}">{{ __('Download') }}</a>
+        </x-nav-link>
       </ul>
     </nav><!-- .nav-menu -->
 
     <div class="header-social-links">
       <!-- <a href="#" class="twitter"><i class="icofont-twitter"></i></a> -->
       <a href="https://api.whatsapp.com/send?phone=917016865019&amp;text=Hi, I want to business with you!!" target="_blank" class="whatsapp font-17"><i class="bx bxl-whatsapp"></i></a>
-      <a href="#" class="facebook font-17"><i class="icofont-facebook"></i></a>
-      <a href="#" class="linkedin font-17"><i class="icofont-linkedin"></i></i></a>
-      <a href="#" class="instagram font-17"><i class="icofont-instagram"></i></a>
+      <a href="https://www.facebook.com/Microfluid" class="facebook font-17" target="_blank"><i class="icofont-facebook"></i></a>
+      <a href="https://www.linkedin.com/company/microfluid/?viewAsMember=true" class="linkedin font-17" target="_blank"><i class="icofont-linkedin"></i></i></a>
+      <!-- <a href="#" class="instagram font-17" target="_blank"><i class="icofont-instagram"></i></a> -->
     </div>
     <button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>
   </div>
