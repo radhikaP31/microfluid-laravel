@@ -77,17 +77,17 @@ Route::controller(ContactController::class)->group(function () {
 });
 
 //Admin Routes start
-Route::get('dashboard', [LoginController::class, 'dashboard'])->name('dashboard'); 
-Route::get('login', [LoginController::class, 'index'])->name('login');
-Route::post('custom-login', [LoginController::class, 'customLogin'])->name('login.verify'); 
-Route::get('registration', [LoginController::class, 'registration'])->name('register-user');
-Route::post('custom-registration', [LoginController::class, 'customRegistration'])->name('register.custom'); 
-Route::get('signout', [LoginController::class, 'signOut'])->name('signout');
+// Route::get('dashboard', [LoginController::class, 'dashboard'])->name('dashboard'); 
+// Route::get('login', [LoginController::class, 'index'])->name('login');
+// Route::post('custom-login', [LoginController::class, 'customLogin'])->name('login.verify'); 
+// Route::get('registration', [LoginController::class, 'registration'])->name('register-user');
+// Route::post('custom-registration', [LoginController::class, 'customRegistration'])->name('register.custom'); 
+// Route::get('signout', [LoginController::class, 'signOut'])->name('signout');
 
-Route::controller(MasterController::class)->group(function () {
-    Route::get('/common-type', 'index')->name('common_type_list'); //Display contact page
-    Route::any('/common-type/add', 'create')->name('common_type_add'); //Create common-type
-    Route::any('/common-type/edit/{id}', 'create')->name('common_type_edit'); //Edit common-type
-    Route::get('/common-type/delete/{id}', 'delete')->name('common_type_delete'); //Delete common-type
-});
+// Route::controller(MasterController::class)->group(function () {
+//     Route::get('/common-type', 'index')->name('common_type_list'); //Display contact page
+//     Route::any('/common-type/add', 'create')->name('common_type_add'); //Create common-type
+//     Route::any('/common-type/edit/{id}', 'create')->name('common_type_edit'); //Edit common-type
+//     Route::get('/common-type/delete/{id}', 'delete')->name('common_type_delete'); //Delete common-type
+// });
 //Admin Routes end
